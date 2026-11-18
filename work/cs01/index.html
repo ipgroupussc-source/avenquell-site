@@ -13,6 +13,58 @@
 
   <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
   <link rel="stylesheet" href="/style.css">
+  <!-- Аналитика и согласие на cookie.
+       Consent Mode v2: счётчик работает всегда, но до согласия не пишет cookies —
+       так сохраняются и метрики, и требования GDPR. Баннер при согласии поднимает
+       analytics_storage. Раньше вызывался silktideCookieBannerManager.updateCookieBanner,
+       которого в библиотеке нет, — баннер падал с TypeError и согласие не собиралось. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EELCSC67F0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('config', 'G-EELCSC67F0');
+  </script>
+
+  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
+  <script src="/cookie-banner/silktide-consent-manager.js"></script>
+  <script>
+    silktideCookieBannerManager.updateCookieBannerConfig({
+      background: { showBackground: false },
+      position: { banner: "bottomRight" },
+      cookieIcon: { show: false },
+      cookieTypes: [
+        {
+          id: "necessary",
+          name: "Necessary",
+          description: "<p>Required for the site to work. Always on.</p>",
+          required: true
+        },
+        {
+          id: "analytics",
+          name: "Analytics",
+          description: "<p>Helps us see which pages are useful, so we can improve them.</p>",
+          onAccept: function () {
+            gtag('consent', 'update', { analytics_storage: 'granted' });
+          },
+          onReject: function () {
+            gtag('consent', 'update', { analytics_storage: 'denied' });
+          }
+        }
+      ]
+    });
+  </script>
+  <link rel="canonical" href="https://avenquell.com/work/cs01/" />
+  <meta property="og:title" content="Concept Study 01 — Premium Home Fragrance Launch" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/work/cs01/" />
 </head>
 
 <body>
