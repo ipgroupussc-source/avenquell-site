@@ -290,7 +290,9 @@
               </div>
             </div>
 
-            <form class="contact-form" action="https://formspree.io/f/maqpgeyk" method="POST">
+            <form class="contact-form" action="https://links.avenquell.com/site-inquiry" method="POST">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+                     style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
               <input type="text" name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Your Email" required />
               <input type="tel" name="phone" placeholder="Mobile Phone (optional)" autocomplete="tel" />
@@ -486,6 +488,14 @@
           });
 
           if (response.ok) {
+            // Событие в аналитику: заявка — это то, ради чего существует страница.
+            // gtag может отсутствовать, если посетитель отказался от аналитики.
+            if (typeof gtag === 'function') {
+              gtag('event', 'generate_lead', {
+                form_location: 'contact_page',
+                interest: (data.get('interest') || '').toString()
+              });
+            }
             form.reset();
             success.style.display = 'block';
           } else {
