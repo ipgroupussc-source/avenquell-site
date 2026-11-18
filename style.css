@@ -61,7 +61,7 @@
     .nav-links-desktop { display: flex; gap: 24px; align-items: center; margin-left: auto; }
     .nav-links-desktop a { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ivory-deep); transition: color .25s ease; }
     .nav-links-desktop a:hover { color: var(--gold-soft); }
-    .nav-cta { padding: 13px 18px; border-radius: 999px; background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: #111; font-weight: 700; }
+    .nav-cta { padding: 13px 18px; border-radius: 999px; background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: #111; font-weight: 700; white-space: nowrap; }
 
     .mobile-menu-wrap { display: none; position: relative; margin-left: auto; }
     .menu-button { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.025); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
