@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Avenquell Studio | Who we are</title>
+  <meta name="description" content="Avenquell Studio was built to hand businesses the ideas and decisions they need — named in writing, before another dollar is spent. Based in Charleston, SC." />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="About Avenquell Studio" />
+  <meta property="og:description" content="Why the studio exists, where it works from, and what its name carries." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/about/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Avenquell Method | Avenquell Studio" />
+  <meta name="twitter:description" content="A direction-first creative production system for campaign-ready content." />
+  <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+
+  <link rel="canonical" href="https://avenquell.com/about/" />
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* ── GATE BADGE ── */
+    .method-card {
+      position: relative;
+    }
+    .method-card.is-gate {
+      /* inherits your existing .method-card styles */
+    }
+    .gate-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: 2px 7px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #B8875D;
+    }
+
+    /* ── WORK DROPDOWN NAVIGATION ── */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+  <!-- Аналитика и согласие на cookie.
+       Consent Mode v2: счётчик работает всегда, но до согласия не пишет cookies —
+       так сохраняются и метрики, и требования GDPR. Баннер при согласии поднимает
+       analytics_storage. Раньше вызывался silktideCookieBannerManager.updateCookieBanner,
+       которого в библиотеке нет, — баннер падал с TypeError и согласие не собиралось. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EELCSC67F0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('config', 'G-EELCSC67F0');
+  </script>
+
+  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
+  <script src="/cookie-banner/silktide-consent-manager.js"></script>
+  <script>
+    silktideCookieBannerManager.updateCookieBannerConfig({
+      background: { showBackground: false },
+      position: { banner: "bottomRight" },
+      cookieIcon: { show: false },
+      cookieTypes: [
+        {
+          id: "necessary",
+          name: "Necessary",
+          description: "<p>Required for the site to work. Always on.</p>",
+          required: true
+        },
+        {
+          id: "analytics",
+          name: "Analytics",
+          description: "<p>Helps us see which pages are useful, so we can improve them.</p>",
+          onAccept: function () {
+            gtag('consent', 'update', { analytics_storage: 'granted' });
+          },
+          onReject: function () {
+            gtag('consent', 'update', { analytics_storage: 'denied' });
+          }
+        }
+      ]
+    });
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+          <span class="brand-subtitle">Direction-First Creative Production</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/">Home</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/about/">About</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/contact/">Request the Deck</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/">Home</a>
+            <a href="/method/">Method</a>
+            <a href="/standard/">Standard</a>
+            <a href="/services/">Services</a>
+            <div class="nav-item-dropdown">
+              <a href="/work/" class="nav-dropdown-toggle">Work</a>
+              <div class="nav-dropdown-menu">
+                <a href="/work/">
+                  <span class="nav-dropdown-label">Overview</span>
+                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
+                </a>
+                <a href="/work/cs01/">
+                  <span class="nav-dropdown-label">Case Study 01</span>
+                  <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+                </a>
+              </div>
+            </div>
+            <a href="/about/">About</a>
+        <a href="/pricing/">Pricing</a>
+            <a href="/contact/">Contact</a>
+            <a href="/contact/">Request the Deck</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Who we are</span>
+          <h1>The ideas were never the problem.</h1>
+          <p class="lead">
+            I have always had more ideas than places to put them — campaigns, angles, ways to make
+            a product finally look like what it actually is. For a long time the only thing I
+            regretted was that I couldn't hand those ideas to the businesses that needed them:
+            the ones doing real work, quietly, while louder and emptier things took the attention.
+          </p>
+        </div>
+
+        <div class="panel">
+          <p>
+            That is what Avenquell is for. Not to produce more content — to take some of the
+            decisions off a founder's desk and hand back something they can act on.
+            Here is what is broken. Here is why. Here is the order to fix it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Why this work</span>
+          <h2>Cheap tools were supposed to help. They filled the field with glitter.</h2>
+        </div>
+        <div class="panel">
+          <p>
+            Digital tools became cheap and available, and that was supposed to help. Instead it
+            filled the field with people who look professional and aren't. For an owner who
+            genuinely needs help, the glitter makes it impossible to tell what to look at —
+            they can't judge the work, so they buy the louder pitch.
+          </p>
+          <p>
+            So we start by naming the problem in writing, before anyone spends another dollar.
+            Every price is published. Nothing ships without a person reviewing it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Charleston</span>
+          <h2>A city that kept itself.</h2>
+        </div>
+        <div class="panel">
+          <p>
+            We work out of Charleston, South Carolina. It has grown, and it is still recognisably
+            its own: its history intact, its character not flattened into another skyline.
+            That is the same thing we try to do for a brand — growth that doesn't cost you your face.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">The name</span>
+          <h2>A vessel someone holds, and pours from.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Aven</h3>
+            <p>
+              From <em>awen</em> — the Welsh word for poetic inspiration, the muse of the bards.
+              Underneath it lies an older sense: to breathe, to blow. Air. In the myth the
+              inspiration is brewed in a cauldron, and it has to be ladled out — carried to
+              someone before it is worth anything.
+            </p>
+          </article>
+          <article class="faq-item">
+            <h3>Quell</h3>
+            <p>
+              From the German <em>Quelle</em>: a spring, a source. It is also the English
+              <em>quell</em> — to settle, to quiet.
+            </p>
+          </article>
+        </div>
+        <div class="panel" style="margin-top:18px">
+          <p>
+            Air and water, a cauldron and a spring — it is all one image: a vessel someone holds
+            and pours from. That is the work. We carry what you need and set it down where you can
+            use it, and quiet the glitter around it, so what matters is finally visible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Next Step</span>
+          <h2>Tell us what you are preparing for.</h2>
+          <p class="lead">
+            A launch, monthly content system, product campaign, or visual audit.
+            We will help you identify the right starting point.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contact/">Start the Conversation</a>
+          <a class="btn btn-secondary" href="/method/">How We Work</a>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell creates direction-first creative production systems for brands that need campaign-ready content they can actually use.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Site</span>
+        <a href="/">Home</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/about/">About</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="/contact/">Contact form</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  </script>
+</body>
+</html>

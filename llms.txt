@@ -11,6 +11,7 @@ ongoing output. Every price is published. Human review before anything ships.
 ## Pages
 
 - [Home](https://avenquell.com/): what the studio does and how an engagement starts
+- [About](https://avenquell.com/about/): why the studio exists, where it works from, what the name carries
 - [Method](https://avenquell.com/method/): six steps, two client approval gates
 - [Standard](https://avenquell.com/standard/): what we refuse to deliver, and why
 - [Services](https://avenquell.com/services/): every service by stage and vertical
