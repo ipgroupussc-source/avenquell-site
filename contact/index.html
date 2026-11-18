@@ -188,7 +188,6 @@
         <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
         <div class="brand-copy">
           <span class="brand-title">Avenquell Studio</span>
-          <span class="brand-subtitle">Direction-First Creative Production</span>
         </div>
       </a>
 
@@ -509,6 +508,26 @@
         }
       });
     }
+  </script>
+  <script>
+    // Человек пришёл из подбора на главной — услуга уже выбрана им там.
+    // Не заставляем выбирать второй раз: подставляем и подсвечиваем, что учли.
+    (function () {
+      var want = new URLSearchParams(location.search).get('interest');
+      if (!want) return;
+      var sel = document.querySelector('.contact-form select[name="interest"]');
+      if (!sel) return;
+      var hit = Array.prototype.find.call(sel.options, function (o) {
+        return o.value === want || o.textContent.trim() === want;
+      });
+      if (!hit) return;
+      sel.value = hit.value || hit.textContent.trim();
+      sel.classList.add('prefilled');
+      var note = document.createElement('p');
+      note.className = 'small full prefilled-note';
+      note.textContent = 'Carried over from your answers: ' + hit.textContent.trim() + '. Change it if needed.';
+      sel.insertAdjacentElement('afterend', note);
+    })();
   </script>
 </body>
 </html>
