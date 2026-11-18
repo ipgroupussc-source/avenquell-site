@@ -1,41 +1,54 @@
 # Avenquell Studio
 
-Avenquell Studio is an AI-first creative studio specializing in luxury, wellness, beauty, hospitality, and lifestyle brands.
+> Creative and marketing studio in Charleston, SC. We diagnose what is broken in a
+> brand's visuals, ads and measurement before anyone spends more on production.
+> Direction before production. Diagnosis before spend.
 
-## Core Services
+Avenquell works in three stages: a paid diagnostic that states the problem in writing,
+one-off projects scoped from that diagnosis, and monthly systems for brands that need
+ongoing output. Every price is published. Human review before anything ships.
 
-- AI-assisted creative direction
-- Luxury brand storytelling
-- Product launch campaigns
-- AI-generated commercial visuals
-- Social media content systems
-- Brand identity development
+## Pages
 
-## Industries
+- [Home](https://avenquell.com/): what the studio does and how an engagement starts
+- [Method](https://avenquell.com/method/): six steps, two client approval gates
+- [Standard](https://avenquell.com/standard/): what we refuse to deliver, and why
+- [Services](https://avenquell.com/services/): every service by stage and vertical
+- [Pricing](https://avenquell.com/pricing/): all prices, terms, guarantee and credit rules
+- [Work](https://avenquell.com/work/): concept studies, clearly labelled as speculative
+- [Concept Study 01](https://avenquell.com/work/cs01/): premium home fragrance launch
+- [Contact](https://avenquell.com/contact/): inquiry form
 
-- Luxury
-- Beauty
-- Wellness
-- Hospitality
-- Fashion
-- Lifestyle
+## Diagnostics
 
-## Ideal Clients
+- Premium Visual Audit — $1,500 (visual review) / $2,500 (plus performance read), 3 business days
+- Ad Diagnostic — $3,500, 5 business days. Includes 3-5 ad concepts. Named cause or refund
+- Marketing Research — $7,500 (2 weeks) / $12,500 (4 weeks)
 
-Marketing teams, founders, startups, luxury hotels, wellness companies, beauty brands, skincare companies, and premium consumer brands.
+## Projects
 
-## Website
+- Conversion Foundation — $6,500 / $9,500 with server-side tracking
+- Campaign Build — $2,500 per channel
+- Website — $9,500 / $14,000 in regulated categories
+- Strategy & Positioning — from $5,000
+- Launch Creative Package — from $6,500, 2-4 weeks
 
-https://avenquell.com
+## Monthly
 
-## Contact
+- Monthly Creative Content System — from $9,500/mo, two-month minimum
+- Paid Media Management — $3,500/mo first channel, +$1,500 each additional
+- Content Plan & Scripts — from $5,000/mo
+- Analytics & Reporting — $2,500/mo
+- Quantitative & Segment Analytics — from $5,000 one-time
+- Full Creative & Strategy System — $12,500/mo (one segment) / $18,000/mo (two to three)
 
-https://avenquell.com/contact
+## Good to know
 
-## Portfolio
-
-https://avenquell.com/work
-
-## About
-
-https://avenquell.com/about
+- Based in Charleston, South Carolina. Works with brands worldwide
+- Verticals: DTC fashion, beauty and skincare, boutique hospitality, wellness and supplements
+- No annual contracts, no platform fee, no prepayment for the year. Cancel with 30 days notice
+- Ad budgets go directly to the platforms. All ad and analytics accounts are opened in the
+  client's own name
+- Diagnostics work from client exports and screenshots. No account access required
+- The studio does not guarantee sales, ROAS, followers or bookings, and says so on the site
+- Portfolio pieces are speculative concept studies, labelled as such. They are not client work

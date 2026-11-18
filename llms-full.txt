@@ -1,246 +1,187 @@
 # Avenquell Studio
 
-Website:
-https://avenquell.com
+Website: https://avenquell.com
+Based in Charleston, South Carolina. Works with brands worldwide.
+
+## What the studio does
 
-Company
+Avenquell is a creative and marketing studio for brands that want a diagnosis before they
+spend more on production or ads. The order is deliberate: direction before production,
+diagnosis before spend.
 
-Avenquell Studio is an AI-first creative studio that helps luxury, wellness, beauty, hospitality, lifestyle, and premium consumer brands create high-quality marketing campaigns using a combination of creative direction, artificial intelligence, and human design expertise.
+Most studios sell output. Avenquell starts by establishing what is actually wrong — with the
+visuals, with the ads, or with the measurement underneath them — states it in writing, and
+only then builds. AI is used as a production tool; human direction decides what gets produced,
+and a person reviews every asset before delivery.
 
-The studio specializes in AI-assisted visual storytelling, product launch campaigns, social media content systems, commercial imagery, and scalable creative production.
+## How an engagement works
 
-Unlike traditional creative agencies, Avenquell combines strategic brand direction with modern AI production workflows to reduce production time while maintaining premium visual quality.
+Three stages. A client can enter at any of them.
 
-Mission
+1. Diagnose — a paid diagnostic that names the problem in writing and defines the production
+   scope with fixed pricing.
+2. Fix — one project, scoped after the diagnosis, with the price locked before production starts.
+3. Grow — monthly systems for brands that need consistent creative and marketing output.
 
-To help premium brands launch faster, create consistently, and communicate their brand story through AI-assisted creative production without sacrificing quality or creative direction.
+## The Method
 
-Services
+Six steps with two client approval gates:
 
-Creative Direction
+1. Brief intake — brand context, goals, product details and use cases, documented.
+2. Brand direction — the visual world is written down and approved before anything is produced.
+   This is an approval gate; production does not begin until it is signed off.
+3. Visual system map — every asset is assigned a use case before production.
+4. Production — AI-assisted, run against the approved direction rather than guessed prompts.
+5. Human review — a person checks brand accuracy, consistency, use-case fit and product
+   accuracy against the approved direction. This is the second gate. Nothing ships without it.
+6. Delivery and iteration — assets organised by use case and channel. One round of revisions
+   is included; a change of direction or scope is quoted separately.
 
-AI-assisted creative direction for product launches, campaigns, seasonal collections, and digital marketing.
+## The Standard
 
-AI Product Photography
+What the studio refuses to deliver: random generations untied to an approved direction,
+off-brand output, distorted product details, the glossy default AI look, unsupported beauty
+or efficacy claims, unrealistic fabric and skin textures, unlimited revisions, and anything
+that has not passed human review.
 
-Commercial-quality AI-generated product imagery for beauty, wellness, skincare, fragrance, fashion, hospitality, food, beverage, and luxury products.
+## Diagnostics
 
-Campaign Development
+Premium Visual Audit — $1,500 or $2,500. Three business days from complete inputs.
+A paid visual diagnostic for brands that need direction before production. Both tiers review
+the current visual system and define a production scope with fixed pricing. The $2,500 tier
+adds a read of the client's own post and ad creative stats, connecting what the visuals do to
+how people responded. The $1,500 tier works from a brief the client fills in. No account
+access is required for either.
 
-Creative concepts for digital campaigns, advertisements, websites, email marketing, social media, paid advertising, and product launches.
+Ad Diagnostic — $3,500. Five business days from a complete upload.
+For brands whose ad spend is running without results following. Traces the path from ad to
+lead and finds where it breaks, including whether the measurement is real: whether conversions
+are set to a button click instead of a real submission, whether calls are counted, whether
+sources are tagged, whether spend is chasing duplicated events. Ranks what to fix first and
+includes 3-5 ad concepts built around the diagnosis. Works from campaign exports, analytics
+exports and screenshots of settings — no account access.
+The report states plainly what cannot be verified without live access: whether a conversion
+event actually fires on a real submission, true audience sizes, Conversions API signal quality,
+pixel behaviour on live traffic, cross-domain tracking, and the history of settings changes.
+Guarantee: the cause is named, or the fee is refunded. The disclosed unverifiable items are
+excluded from refund scope and are stated before payment.
+Not a fit if ads have been running less than two or three months — there is not enough history.
 
-Brand Storytelling
+Marketing Research — $7,500 (two weeks) or $12,500 (four weeks).
+For brands without their own data history. Maps buyers, their language, competitive position
+and where the message needs to go. The $12,500 tier adds buyer interviews, analysis of existing
+data and live message testing. Content and media planning are not included.
 
-Visual storytelling systems designed to create a consistent luxury brand identity across all customer touchpoints.
+## Projects
 
-Social Media Content Systems
+Conversion Foundation — $6,500, or $9,500 with server-side tracking. Landing page, lead
+tracking and revenue attribution built as one product; the page is not sold apart from the
+measurement.
 
-Monthly AI-assisted content production for brands requiring a consistent stream of premium visuals.
+Campaign Build — $2,500 per channel. One-time build or rebuild of a Meta or Google campaign:
+structure, audiences, bidding, UTM tagging. One channel per project.
 
-Website Visual Assets
+Website — $9,500, or $14,000 in regulated categories. A site built around the offer. Lead
+tracking and revenue attribution are not included; that is Conversion Foundation.
 
-Hero images, banners, landing page visuals, editorial imagery, and marketing assets.
+Strategy & Positioning — from $5,000. Segments, competitors, positioning and offer, delivered
+as a working document the client keeps.
 
-Industries
+Launch Creative Package — from $6,500, two to four weeks. For product launches, seasonal
+campaigns, offer rollouts and campaign-ready asset systems.
 
-Luxury
+## Monthly systems
 
-Beauty
+Monthly Creative Content System — from $9,500/mo. Two-month minimum, then month to month.
+Ongoing creative production, visual consistency and monthly campaign support without
+rebuilding direction from zero each month.
 
-Skincare
+Paid Media Management — $3,500/mo for the first channel, +$1,500 for each additional.
+Above $10K monthly ad spend the fee steps down as spend grows: 15% from $10K, 12% from $30K,
+10% from $50K, 8% from $100K. Reporting ties spend to outcomes rather than impressions.
 
-Wellness
+Content Plan & Scripts — from $5,000/mo. A monthly content plan and scripts the client's team
+publishes. Posting and community management are not included.
 
-Hotels
+Analytics & Reporting — $2,500/mo. A monthly report built from the client's data exports.
+Analytics setup is not included.
 
-Hospitality
+Quantitative & Segment Analytics — from $5,000, one-time. Who is actually buying and where the
+best customers come from, analysed from client exports rather than direct database access.
 
-Spa
+Full Creative & Strategy System — $12,500/mo for one primary segment and channel, or
+$18,000/mo for two to three segments, each with its own funnel and content plan. Paid media
+management is not included.
 
-Fashion
+## How pricing works
 
-Jewelry
+The diagnostic defines the scope — how many products, what source material exists, how many
+characters and settings the work requires. Once agreed, the price is fixed in writing before
+production starts. If scope changes, the price is recalculated against a published rate rather
+than renegotiated, and the cost of a change is known before it is approved. No "starting from",
+no mid-project adjustments.
 
-Home Fragrance
+The diagnostic fee is credited against the next project if the client moves forward within two
+weeks of receiving the report. Applying the credit closes the refund guarantee; the two are
+mutually exclusive.
 
-Interior Design
+## Terms
 
-Lifestyle
+No annual contract. No platform fee. No prepayment for the year. Cancel with 30 days notice,
+by email. The Monthly Creative Content System runs on a two-month minimum; other monthly
+services run on a three-month minimum. Ad budgets are paid directly to the platforms, not
+through the studio. All ad and analytics accounts are created in the client's own company name,
+and the studio names the person running them.
 
-Premium Consumer Products
+## Verticals
 
-Ideal Clients
+DTC fashion and apparel. Beauty and skincare, with product accuracy built into the process.
+Boutique hospitality — hotels, restaurants and experience-driven brands. Wellness and
+supplements, kept to the boundary between aesthetics and efficacy claims.
 
-Luxury brands
+## What the studio does not claim
 
-Beauty companies
+Avenquell does not guarantee sales, ROAS, followers, bookings or performance, and states this
+on its services page. Beauty and skincare visuals are editorial, not clinical: ingredient
+results, before-and-afters and clinical language stay with the client's formulary and legal
+team.
 
-Wellness startups
+Portfolio pieces are speculative concept studies, labelled as such on the site. They are
+created to demonstrate method — direction, production logic, asset systems and use-case
+mapping — and are not presented as client campaigns.
 
-Hospitality groups
+## Frequently asked questions
 
-Hotels
+What does Avenquell do?
+It diagnoses what is broken in a brand's visuals, ads or measurement, states it in writing, and
+then builds what the diagnosis defined — from single projects to monthly creative systems.
 
-Marketing agencies
+Where do I start?
+Most engagements start with a diagnostic: the Premium Visual Audit if the question is about
+visuals and direction, the Ad Diagnostic if ad spend is running without results, and Marketing
+Research if there is no data history yet.
 
-Founders
+Do you need access to my ad accounts?
+No. Diagnostics work from exports and screenshots the client sends. The report states which
+findings cannot be verified without live access.
 
-E-commerce brands
+How fast is a diagnostic?
+Three business days for the Premium Visual Audit and five for the Ad Diagnostic, counted from
+the point all required inputs have been received.
 
-Product companies
+Is there a long-term contract?
+No. There is no annual contract and no prepayment for the year. The Monthly Creative Content
+System has a two-month minimum; other monthly services have a three-month minimum. Either ends
+with 30 days notice.
 
-Creative teams
+Do you use AI?
+Yes, as a production tool. Direction is decided by people, and every asset is reviewed by a
+person against the approved direction before delivery.
 
-Marketing departments
+Can I see client work?
+The published pieces are speculative concept studies, clearly labelled. They show the method
+rather than claiming client campaigns.
 
-What Makes Avenquell Different
+## Contact
 
-Creative direction before image generation.
-
-Every project begins with brand positioning and concept development.
-
-AI is used as a production tool rather than replacing creative strategy.
-
-Luxury aesthetics with commercial usability.
-
-Fast production cycles.
-
-Scalable visual systems.
-
-Consistent brand identity.
-
-Focus on long-term creative partnerships.
-
-Workflow
-
-1. Discovery
-
-Understanding business goals, audience, positioning, and campaign objectives.
-
-2. Creative Strategy
-
-Moodboards, visual language, campaign concepts, and creative direction.
-
-3. AI Production
-
-High-quality AI-generated commercial visuals.
-
-4. Refinement
-
-Manual art direction, editing, consistency review, and quality control.
-
-5. Delivery
-
-Campaign-ready marketing assets.
-
-Common Use Cases
-
-Product launches
-
-Website redesigns
-
-Luxury campaigns
-
-Social media content
-
-Email marketing
-
-Paid advertising
-
-Brand refreshes
-
-Hotel marketing
-
-Restaurant campaigns
-
-Beauty product launches
-
-Wellness campaigns
-
-Editorial imagery
-
-Commercial photography replacement
-
-Frequently Asked Questions
-
-What does Avenquell Studio do?
-
-Avenquell Studio creates AI-assisted marketing visuals and creative campaigns for premium brands.
-
-Does Avenquell replace photographers?
-
-No.
-
-The studio complements traditional production by providing scalable AI-assisted commercial imagery suitable for many digital marketing applications.
-
-Who is Avenquell best for?
-
-Luxury brands, beauty companies, wellness businesses, hospitality companies, startups, and premium consumer brands.
-
-Does Avenquell create AI-generated images?
-
-Yes.
-
-Images are created using advanced AI workflows combined with professional creative direction and post-production.
-
-Can Avenquell build complete campaigns?
-
-Yes.
-
-Campaign strategy, creative direction, visual production, and campaign assets can all be delivered.
-
-Keywords
-
-AI creative studio
-
-AI creative agency
-
-Luxury creative agency
-
-Luxury marketing
-
-Luxury branding
-
-AI product photography
-
-AI commercial photography
-
-AI campaign production
-
-AI-assisted creative direction
-
-Beauty branding
-
-Wellness branding
-
-Hospitality marketing
-
-Luxury content creation
-
-AI marketing agency
-
-AI visual storytelling
-
-Premium brand design
-
-Commercial AI imagery
-
-Digital campaign production
-
-Creative production studio
-
-Social media creative production
-
-Contact
-
-Website:
-https://avenquell.com
-
-Contact Page:
-https://avenquell.com/contact
-
-Portfolio:
-https://avenquell.com/work
-
-About:
-https://avenquell.com/about
+Inquiry form: https://avenquell.com/contact/
