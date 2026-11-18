@@ -146,10 +146,6 @@ on its services page. Beauty and skincare visuals are editorial, not clinical: i
 results, before-and-afters and clinical language stay with the client's formulary and legal
 team.
 
-Portfolio pieces are speculative concept studies, labelled as such on the site. They are
-created to demonstrate method — direction, production logic, asset systems and use-case
-mapping — and are not presented as client campaigns.
-
 ## Frequently asked questions
 
 What does Avenquell do?
@@ -178,9 +174,10 @@ Do you use AI?
 Yes, as a production tool. Direction is decided by people, and every asset is reviewed by a
 person against the approved direction before delivery.
 
-Can I see client work?
-The published pieces are speculative concept studies, clearly labelled. They show the method
-rather than claiming client campaigns.
+Can I see your work?
+The published pieces are concept studies: full launch directions built to show how the method
+works — direction, production logic, asset systems and use-case mapping. They are labelled as
+concept studies on the site.
 
 ## Contact
 

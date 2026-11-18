@@ -15,7 +15,7 @@ ongoing output. Every price is published. Human review before anything ships.
 - [Standard](https://avenquell.com/standard/): what we refuse to deliver, and why
 - [Services](https://avenquell.com/services/): every service by stage and vertical
 - [Pricing](https://avenquell.com/pricing/): all prices, terms, guarantee and credit rules
-- [Work](https://avenquell.com/work/): concept studies, clearly labelled as speculative
+- [Work](https://avenquell.com/work/): concept studies showing the method in practice
 - [Concept Study 01](https://avenquell.com/work/cs01/): premium home fragrance launch
 - [Contact](https://avenquell.com/contact/): inquiry form
 
@@ -51,4 +51,3 @@ ongoing output. Every price is published. Human review before anything ships.
   client's own name
 - Diagnostics work from client exports and screenshots. No account access required
 - The studio does not guarantee sales, ROAS, followers or bookings, and says so on the site
-- Portfolio pieces are speculative concept studies, labelled as such. They are not client work
