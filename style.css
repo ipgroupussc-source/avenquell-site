@@ -947,6 +947,33 @@
   box-shadow: 0 12px 28px rgba(200,164,106,.18);
 }
 
+/* SMS consent: checkbox must not inherit the full-width input styling */
+.contact-form .sms-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(232,221,204,.72);
+  cursor: pointer;
+}
+
+.contact-form .sms-consent input[type="checkbox"] {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  padding: 0;
+  border-radius: 4px;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.contact-form .sms-consent a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 #form-success {
   display: none;
   margin-top: 22px;
