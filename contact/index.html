@@ -270,6 +270,7 @@
               <div class="next-steps">
                 <h3>What happens next.</h3>
                 <p>
+                  The form takes about a minute — only your name, email and a short note are required.
                   After you send the inquiry, we’ll respond within one business day.
                   If we’re a fit, we’ll book a focused discovery call to understand the brand,
                   the campaign, and the creative support you need.
@@ -297,13 +298,13 @@
               <input type="text" name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Your Email" required />
               <input type="tel" name="phone" placeholder="Mobile Phone (optional)" autocomplete="tel" />
-              <input type="text" name="brand" placeholder="Brand / Company" required />
+              <input type="text" name="brand" placeholder="Brand / Company" />
               <input type="url" name="website" placeholder="Website" />
               <input type="text" name="social" placeholder="Instagram / LinkedIn" />
               <input type="text" name="industry" placeholder="Industry" />
 
-              <select name="interest" required>
-                <option value="">Interested in...</option>
+              <select name="interest">
+                <option value="">Interested in... (optional)</option>
                 <option>Premium Visual Audit</option>
                 <option>Ad Diagnostic</option>
                 <option>Marketing Research</option>
@@ -312,8 +313,8 @@
                 <option>Not sure yet</option>
               </select>
 
-              <select name="timeline" required>
-                <option value="">Timeline...</option>
+              <select name="timeline">
+                <option value="">Timeline... (optional)</option>
                 <option>ASAP</option>
                 <option>2-4 weeks</option>
                 <option>1-3 months</option>
@@ -321,8 +322,8 @@
                 <option>Not sure</option>
               </select>
 
-              <select name="budget" required>
-                <option value="">Estimated budget...</option>
+              <select name="budget">
+                <option value="">Estimated budget... (optional)</option>
                 <option>Under $5K</option>
                 <option>$5K-$10K</option>
                 <option>$10K-$20K</option>
@@ -330,8 +331,8 @@
                 <option>Not sure</option>
               </select>
 
-              <select name="preparing_for" required>
-                <option value="">What are you preparing for?</option>
+              <select name="preparing_for">
+                <option value="">What are you preparing for? (optional)</option>
                 <option>Launch</option>
                 <option>Monthly content</option>
                 <option>Product campaign</option>
