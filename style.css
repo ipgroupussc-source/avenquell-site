@@ -1132,6 +1132,18 @@
 
 .finder-restart:hover { color: var(--gold-soft); }
 
+/* Services отвечает «что это и для кого», Pricing — «сколько и на каких условиях».
+   Ссылка связывает их, чтобы цена была в одном месте, а не в двух. */
+.service-price-link {
+  margin: -4px 0 14px;
+  font-size: 14px;
+}
+
+.service-price-link a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 .contact-form select.prefilled {
   border-color: var(--gold);
   background: rgba(200,164,106,.07);
