@@ -1132,6 +1132,19 @@
 
 .finder-restart:hover { color: var(--gold-soft); }
 
+/* Закрывающий блок — призыв, а не текст статьи. При контейнере 1240px текст,
+   ограниченный 820px и прижатый влево, оставлял 420px пустоты справа
+   и читался как съехавший. */
+#contact-preview.home-closing .section-header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#contact-preview.home-closing .section-actions {
+  justify-content: center;
+}
+
 /* Services отвечает «что это и для кого», Pricing — «сколько и на каких условиях».
    Ссылка связывает их, чтобы цена была в одном месте, а не в двух. */
 .service-price-link {
