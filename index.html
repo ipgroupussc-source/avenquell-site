@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Avenquell Studio — Direction-First Creative Production for Modern Brands</title>
+
+  <!-- COOKIE BANNER -->
+  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
+  <script src="/cookie-banner/silktide-consent-manager.js"></script>
+  <script>
+    silktideCookieBannerManager.updateCookieBanner({
+      showBackground: false,
+      position: "bottom-right",
+      cookieIcon: { show: false }
+    });
+  </script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EELCSC67F0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EELCSC67F0');
+  </script>
+
+  <meta name="description" content="Avenquell Studio is a direction-first creative production studio combining human creative direction with AI-assisted production for refined, campaign-ready brand content." />
+  <meta name="keywords" content="creative production studio, creative direction, AI-assisted production, campaign-ready brand content, visual storytelling, premium brand content" />
+  <meta name="author" content="Avenquell Studio" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://avenquell.com/" />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="Avenquell Studio — Direction-First Creative Production" />
+  <meta property="og:description" content="Brand-controlled creative production systems for launches, campaigns, and monthly content needs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Avenquell Studio — Direction-First Creative Production" />
+  <meta name="twitter:description" content="Brand-controlled creative production systems for launches, campaigns, and monthly content needs." />
+  <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta name="theme-color" content="#0b0a08" />
+
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://avenquell.com/#organization",
+      "name": "Avenquell Studio",
+      "url": "https://avenquell.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://avenquell.com/assets/logo.png"
+      },
+      "image": "https://avenquell.com/assets/avenquell-hero-v2.png",
+      "description": "Avenquell Studio is a direction-first creative production studio combining human creative direction with AI-assisted production for refined, campaign-ready brand content.",
+      "email": "studio@avenquell.com",
+      "sameAs": [
+        "https://www.linkedin.com/company/avenquell-studio/",
+        "https://www.instagram.com/avenquell.studio/"
+      ],
+      "knowsAbout": [
+        "Creative direction",
+        "AI-assisted creative production",
+        "Visual storytelling",
+        "Campaign-ready content",
+        "Brand-controlled visual production"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://avenquell.com/#website",
+      "url": "https://avenquell.com/",
+      "name": "Avenquell Studio",
+      "publisher": {
+        "@id": "https://avenquell.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://avenquell.com/#professional-service",
+      "name": "Avenquell Studio",
+      "url": "https://avenquell.com/",
+      "image": "https://avenquell.com/assets/avenquell-hero-v2.png",
+      "description": "Direction-first creative production for modern brands, combining creative direction, human review, and AI-assisted production.",
+      "email": "studio@avenquell.com",
+      "provider": {
+        "@id": "https://avenquell.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "serviceType": [
+        "Creative direction",
+        "AI-assisted creative production",
+        "Campaign visual production",
+        "Brand content systems"
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Work dropdown navigation */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-toggle::after {
+        content: "";
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+
+    /* Clean Home — intentionally brief. Detailed content lives on inner pages. */
+    .home-intro-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: clamp(36px, 7vw, 96px);
+      align-items: start;
+    }
+
+    .home-intro-copy {
+      max-width: 760px;
+    }
+
+    .home-intro-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .about-studio-section {
+      border-top: 1px solid rgba(184, 135, 93, 0.16);
+      border-bottom: 1px solid rgba(184, 135, 93, 0.16);
+    }
+
+    .about-studio-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: clamp(40px, 8vw, 110px);
+      align-items: start;
+    }
+
+    .about-studio-copy {
+      max-width: 760px;
+    }
+
+    .founders-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .founder-card {
+      padding-top: 18px;
+      border-top: 1px solid rgba(184, 135, 93, 0.35);
+    }
+
+    .founder-card h3 {
+      margin: 0 0 5px;
+    }
+
+    .founder-role {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #B8875D;
+    }
+
+    .founder-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .founder-photo-slot {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(184, 135, 93, 0.11), rgba(255, 252, 247, 0.35)),
+        #efe9e1;
+      border: 1px solid rgba(184, 135, 93, 0.18);
+      position: relative;
+    }
+
+    .founder-photo-slot::after {
+      content: "Add founder portrait";
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(35, 29, 24, 0.45);
+    }
+
+    .founder-photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .home-work-section .concept-study-feature {
+      margin-top: 34px;
+    }
+
+    .home-closing {
+      text-align: center;
+    }
+
+    .home-closing .lead {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .home-closing .section-actions {
+      justify-content: center;
+    }
+
+    @media (max-width: 860px) {
+      .home-intro-grid,
+      .about-studio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-photo-grid {
+        max-width: 620px;
+      }
+
+      /* Mobile footer: navigation is already available in the mobile menu. */
+      .footer-site-column {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .founders-list,
+      .founder-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-photo-slot {
+        aspect-ratio: 5 / 6;
+      }
+    }
+
+    /* Home: Diagnose / Fix / Grow steps */
+    .home-steps-section {
+      border-top: 1px solid rgba(184, 135, 93, 0.16);
+      border-bottom: 1px solid rgba(184, 135, 93, 0.16);
+    }
+
+    .home-steps-header {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .home-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(24px, 4vw, 54px);
+    }
+
+    .home-step-card {
+      padding-top: 20px;
+      border-top: 1px solid rgba(184, 135, 93, 0.35);
+    }
+
+    .home-step-card h3 {
+      margin: 0 0 12px;
+    }
+
+    .home-step-card p {
+      margin: 0 0 18px;
+    }
+
+    .home-step-link {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    @media (max-width: 860px) {
+      .home-steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+          <span class="brand-subtitle">Direction before production. Diagnosis before spend.</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/" class="active">Home</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/contact/">Request the Deck</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/" class="active">Home</a>
+            <a href="/method/">Method</a>
+            <a href="/standard/">Standard</a>
+            <a href="/services/">Services</a>
+            <div class="nav-item-dropdown">
+              <a href="/work/" class="nav-dropdown-toggle">Work</a>
+              <div class="nav-dropdown-menu">
+                <a href="/work/">
+                  <span class="nav-dropdown-label">Overview</span>
+                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
+                </a>
+                <a href="/work/cs01/">
+                  <span class="nav-dropdown-label">Case Study 01</span>
+                  <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+                </a>
+              </div>
+            </div>
+            <a href="/pricing/">Pricing</a>
+            <a href="/contact/">Contact</a>
+            <a href="/contact/">Request the Deck</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════
+         01 · HERO
+    ════════════════════════════ -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Avenquell · Creative Production Studio</span>
+
+          <h1>We find what's broken. Then we build what works.</h1>
+
+          <p class="lead">
+            Avenquell is a creative and marketing studio for brands that need a real diagnosis before they spend another dollar on production or ads. We run the diagnostic, fix what we find, and build systems that hold.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/services/#diagnose">Start with a diagnostic</a>
+            <a class="btn btn-secondary" href="/method/">See how we work</a>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-item">
+              <strong>Direction First</strong>
+              <span>Creative thinking before production</span>
+            </div>
+            <div class="trust-item">
+              <strong>Human Review</strong>
+              <span>Every final asset is intentionally reviewed</span>
+            </div>
+            <div class="trust-item">
+              <strong>Campaign Ready</strong>
+              <span>Built for real brand use cases</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-shell">
+          <div class="hero-visual">
+            <img src="/assets/avenquell-hero.png" alt="Premium campaign-ready visual direction by Avenquell Studio" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         02 · DIAGNOSE / FIX / GROW
+    ════════════════════════════ -->
+    <section id="how-we-work" class="section home-steps-section">
+      <div class="container">
+        <div class="home-steps-header">
+          <h2>What it looks like to work with us</h2>
+        </div>
+
+        <div class="home-steps-grid">
+          <article class="home-step-card">
+            <h3>Diagnose</h3>
+            <p>Find out what your visuals, ads, or positioning are actually doing — before you produce more of it.</p>
+            <a class="home-step-link" href="/services/#diagnose">See diagnostics →</a>
+          </article>
+
+          <article class="home-step-card">
+            <h3>Fix</h3>
+            <p>Websites, campaigns, visual systems, content — built to the spec the diagnostic defined.</p>
+            <a class="home-step-link" href="/services/#fix">See production services →</a>
+          </article>
+
+          <article class="home-step-card">
+            <h3>Grow</h3>
+            <p>Monthly systems for brands that need consistent creative and marketing output at a standard that holds.</p>
+            <a class="home-step-link" href="/services/#grow">See monthly options →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         03 · SHORT INTRO
+         Detailed service/method content belongs on the inner pages.
+    ════════════════════════════ -->
+    <section id="what-we-do" class="section what-section">
+      <div class="container home-intro-grid">
+        <div>
+          <span class="eyebrow">What We Do</span>
+          <h2>Creative direction, visual storytelling, and AI-assisted production — under one clear point of view.</h2>
+        </div>
+
+        <div class="home-intro-copy">
+          <p class="lead">
+            Avenquell helps brands turn ideas, launches, products, and campaigns into a controlled visual world.
+            AI expands what can be produced; human direction decides what should be produced.
+          </p>
+
+          <p>
+            We work across premium consumer brands, fashion, beauty, hospitality, wellness, technology,
+            real estate, and other visually driven categories.
+          </p>
+
+          <div class="home-intro-links">
+            <a class="btn btn-secondary" href="/services/">Explore Services</a>
+            <a class="btn btn-secondary" href="/method/">How We Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ═══════════════════════════
+         04 · FINAL CTA
+    ════════════════════════════ -->
+    <section id="contact-preview" class="section contact-preview-section home-closing">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Start the Conversation</span>
+          <h2>Have a launch, campaign, or visual direction in mind?</h2>
+          <p class="lead">
+            Tell us what you are building. We will help you identify the clearest creative starting point.
+          </p>
+        </div>
+
+        <div class="section-actions">
+          <a class="btn btn-primary" href="/contact/">Start an Inquiry</a>
+          <a class="btn btn-secondary" href="/services/">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell Studio combines human creative direction with AI-assisted production for refined, campaign-ready brand content.
+        </p>
+      </div>
+
+      <div class="footer-column footer-site-column">
+        <span class="footer-heading">Site</span>
+        <a href="/">Home</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  </script>
+</body>
+</html>

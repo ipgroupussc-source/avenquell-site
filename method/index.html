@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Avenquell Method | Avenquell Studio</title>
+  <meta 
+    name="description" 
+    content="The Avenquell Method is a direction-first creative production system with six steps, two approval gates, and one standard." 
+  />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="The Avenquell Method | Avenquell Studio" />
+  <meta property="og:description" content="Six steps. Two approval gates. One standard. A direction-first creative production system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/method/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Avenquell Method | Avenquell Studio" />
+  <meta name="twitter:description" content="A direction-first creative production system for campaign-ready content." />
+  <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+
+  <link rel="canonical" href="https://avenquell.com/method/" />
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* ── GATE BADGE ── */
+    .method-card {
+      position: relative;
+    }
+    .method-card.is-gate {
+      /* inherits your existing .method-card styles */
+    }
+    .gate-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: 2px 7px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #B8875D;
+    }
+
+    /* ── WORK DROPDOWN NAVIGATION ── */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+          <span class="brand-subtitle">Direction-First Creative Production</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/">Home</a>
+        <a href="/method/" class="active">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/contact/">Request the Deck</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/">Home</a>
+            <a href="/method/" class="active">Method</a>
+            <a href="/standard/">Standard</a>
+            <a href="/services/">Services</a>
+            <div class="nav-item-dropdown">
+              <a href="/work/" class="nav-dropdown-toggle">Work</a>
+              <div class="nav-dropdown-menu">
+                <a href="/work/">
+                  <span class="nav-dropdown-label">Overview</span>
+                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
+                </a>
+                <a href="/work/cs01/">
+                  <span class="nav-dropdown-label">Case Study 01</span>
+                  <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+                </a>
+              </div>
+            </div>
+            <a href="/pricing/">Pricing</a>
+            <a href="/contact/">Contact</a>
+            <a href="/contact/">Request the Deck</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════
+         METHOD STEPS
+    ════════════════════════════ -->
+    <section class="section method-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">The Avenquell Method</span>
+          <h1>Six steps. Two approval gates. One standard.</h1>
+          <p class="lead">
+            The Avenquell Method is a direction-first creative production system that turns brand direction
+            into campaign-ready content. We do not start with random output. We start with the brand,
+            the use case, and the visual system the assets need to support.
+          </p>
+        </div>
+
+        <div class="method-grid">
+
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <h3>Brief Intake</h3>
+            <p>Your brand context, goals, product details, and use cases are clarified upfront and documented as our internal brief. This shapes every decision downstream — nothing moves forward without it.</p>
+          </article>
+
+          <article class="method-card is-gate">
+            <span class="gate-badge">Approval Gate</span>
+            <span class="method-number">02</span>
+            <h3>Brand Direction</h3>
+            <p>The visual world is locked in writing before a single asset is produced. Mood, tone, restraint, references, and product requirements are documented and submitted for client approval. Production does not begin until this is signed off.</p>
+          </article>
+
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <h3>Visual System Map</h3>
+            <p>Every asset is assigned a use case before production begins. Hero image, social format, email banner, paid creative — each piece has a job. This prevents wasted output and keeps delivery organized from the start.</p>
+          </article>
+
+          <article class="method-card">
+            <span class="method-number">04</span>
+            <h3>Production</h3>
+            <p>AI-assisted production runs against the approved direction. The brand brief is the operating system for every frame — not prompts guessed at random. Every output is measured against the approved direction document before it moves to review.</p>
+          </article>
+
+          <article class="method-card is-gate">
+            <span class="gate-badge">Approval Gate</span>
+            <span class="method-number">05</span>
+            <h3>Human Review</h3>
+            <p>Every asset is reviewed by a human before delivery. Brand accuracy, visual consistency, use-case fit, and production quality are checked against the approved direction. Nothing ships without passing this step.</p>
+          </article>
+
+          <article class="method-card">
+            <span class="method-number">06</span>
+            <h3>Delivery &amp; Iteration</h3>
+            <p>Final assets are delivered organized by use case and channel — not dumped in a folder. One round of revisions is included. A revision refines the approved direction. A change request changes the direction, scope, deliverables, or timeline.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         HOW IT WORKS
+    ════════════════════════════ -->
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">How It Works</span>
+          <h2>Direction comes before production.</h2>
+        </div>
+
+        <div class="panel">
+          <p>
+            Before any asset is produced, the visual world is defined in writing.
+            Mood, tone, restraint, references, product requirements, and use cases are clarified first.
+          </p>
+          <br />
+          <p>
+            This keeps the work from becoming random output. The approved direction becomes the operating system
+            for every frame, every review, and every final delivery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         CLOSING PRINCIPLE
+    ════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="case-study-block case-study-dark">
+          <span class="case-number">Closing Principle</span>
+          <h3>Direction governs the tool. The tool serves the direction. The standard protects both of us.</h3>
+          <p>
+            AI can accelerate production, but it does not replace taste, restraint, brand judgment,
+            product accuracy review, or use-case thinking.
+          </p>
+
+          <div class="section-actions">
+            <a class="btn btn-primary" href="/standard/">Read the Standard</a>
+            <a class="btn btn-secondary" href="/contact/">Start the Conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell creates direction-first creative production systems for brands that need campaign-ready content they can actually use.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Site</span>
+        <a href="/">Home</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:studio@avenquell.com">studio@avenquell.com</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  </script>
+</body>
+</html>

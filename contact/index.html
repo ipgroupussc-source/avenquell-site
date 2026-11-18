@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Avenquell Studio</title>
+  <meta 
+    name="description" 
+    content="Contact Avenquell Studio to inquire about visual audits, launch creative packages, monthly creative content systems, and direction-first creative production." 
+  />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="Contact | Avenquell Studio" />
+  <meta property="og:description" content="Start the conversation with Avenquell Studio. Tell us what you are preparing for." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/contact/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Avenquell Studio" />
+  <meta name="twitter:description" content="Start the conversation with Avenquell Studio." />
+  <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+
+  <link rel="canonical" href="https://avenquell.com/contact/" />
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Work dropdown navigation */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+          <span class="brand-subtitle">Direction-First Creative Production</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/">Home</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/" class="active">Contact</a>
+        <a class="nav-cta" href="/contact/">Request the Deck</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/">Home</a>
+            <a href="/method/">Method</a>
+            <a href="/standard/">Standard</a>
+            <a href="/services/">Services</a>
+            <div class="nav-item-dropdown">
+              <a href="/work/" class="nav-dropdown-toggle">Work</a>
+              <div class="nav-dropdown-menu">
+                <a href="/work/">
+                  <span class="nav-dropdown-label">Overview</span>
+                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
+                </a>
+                <a href="/work/cs01/">
+                  <span class="nav-dropdown-label">Case Study 01</span>
+                  <span class="nav-dropdown-title">Premium Home Fragrance Launch</span>
+                </a>
+              </div>
+            </div>
+            <a href="/pricing/">Pricing</a>
+            <a href="/contact/" class="active">Contact</a>
+            <a href="/contact/">Request the Deck</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <span class="eyebrow">Start the Conversation</span>
+              <h1>Tell us what you are preparing for.</h1>
+
+              <p class="contact-copy">
+                A launch, monthly content system, product campaign, or visual audit.
+                We will help you identify the right starting point.
+              </p>
+
+              <div class="next-steps">
+                <h3>What happens next.</h3>
+                <p>
+                  After you send the inquiry, we’ll respond within one business day.
+                  If we’re a fit, we’ll book a focused discovery call to understand the brand,
+                  the campaign, and the creative support you need.
+                </p>
+                <p>
+                  No hard sell. No generic pitch. If we are not the right fit, we will tell you clearly.
+                </p>
+              </div>
+
+              <div class="contact-direct">
+                <p><strong>Direct contact:</strong></p>
+                <a href="mailto:studio@avenquell.com">studio@avenquell.com</a>
+                <span>Charleston-based · Available for brands worldwide</span>
+              </div>
+
+              <div class="contact-note">
+                Start with a $1,500 visual diagnostic. Launch projects start from $6,500.
+                Monthly creative systems begin around $9,500/month depending on scope.
+              </div>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/maqpgeyk" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="text" name="brand" placeholder="Brand / Company" required />
+              <input type="url" name="website" placeholder="Website" />
+              <input type="text" name="social" placeholder="Instagram / LinkedIn" />
+              <input type="text" name="industry" placeholder="Industry" />
+
+              <select name="interest" required>
+                <option value="">Interested in...</option>
+                <option>Premium Visual Audit</option>
+                <option>Launch Creative Package</option>
+                <option>Monthly Creative Content System</option>
+                <option>Not sure yet</option>
+              </select>
+
+              <select name="timeline" required>
+                <option value="">Timeline...</option>
+                <option>ASAP</option>
+                <option>2-4 weeks</option>
+                <option>1-3 months</option>
+                <option>3+ months</option>
+                <option>Not sure</option>
+              </select>
+
+              <select name="budget" required>
+                <option value="">Estimated budget...</option>
+                <option>Under $5K</option>
+                <option>$5K-$10K</option>
+                <option>$10K-$20K</option>
+                <option>$20K+</option>
+                <option>Not sure</option>
+              </select>
+
+              <select name="preparing_for" required>
+                <option value="">What are you preparing for?</option>
+                <option>Launch</option>
+                <option>Monthly content</option>
+                <option>Product campaign</option>
+                <option>Brand refresh</option>
+                <option>Other</option>
+              </select>
+
+              <textarea name="message" placeholder="Tell us a bit about what you’re working on." rows="5" required></textarea>
+
+              <p class="small full">
+                Start with a $1,500 visual diagnostic. Launch projects start from $6,500.
+                Monthly creative systems usually begin around $9.5K/month depending on scope.
+              </p>
+
+              <button type="submit">Send Inquiry</button>
+            </form>
+          </div>
+
+          <p id="form-success">Thank you — we’ll be in touch shortly ✨</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Before You Reach Out</span>
+          <h2>Helpful details to include.</h2>
+        </div>
+
+        <div class="panel">
+          <p>
+            Share what you are preparing for, your timeline, your current visual challenge,
+            your product or service category, and whether this is for a launch, monthly system,
+            campaign refresh, or visual audit.
+          </p>
+          <br />
+          <p>
+            If product accuracy matters, please mention whether you have physical product,
+            studio references, packaging files, or existing brand assets.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="case-study-block case-study-dark">
+          <span class="case-number">Not sure where to start?</span>
+          <h3>Start with the inquiry. We’ll help identify the right entry point.</h3>
+          <p>
+            Some brands need a visual audit. Some need a launch system. Others need monthly production support.
+            The right starting point depends on your timeline, budget, product complexity, and content needs.
+          </p>
+
+          <div class="section-actions">
+            <a class="btn btn-primary" href="/services/">View Services</a>
+            <a class="btn btn-secondary" href="/pricing/">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell creates direction-first creative production systems for brands that need campaign-ready content they can actually use.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Site</span>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:studio@avenquell.com">studio@avenquell.com</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+
+    const form = document.querySelector('.contact-form');
+    const success = document.getElementById('form-success');
+
+    if (form && success) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const data = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            form.reset();
+            success.style.display = 'block';
+          } else {
+            alert('Something went wrong. Please try again.');
+          }
+        } catch (error) {
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
