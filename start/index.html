@@ -363,7 +363,7 @@
             <h2 id="resultName"></h2>
             <p class="finder-result-meta"><span id="resultPrice"></span> &middot; <span id="resultTime"></span></p>
             <p id="resultWhy"></p>
-            <p class="finder-result-then" id="resultThen" hidden></p>
+            <ul class="finder-result-notes" id="resultNotes" hidden></ul>
             <div class="finder-actions">
               <a class="btn btn-primary" id="resultCta" href="/contact/">Start with this</a>
               <a class="btn btn-secondary" id="resultMore" href="/pricing/">See what is included</a>
@@ -460,7 +460,27 @@
             { v: 'numbers', label: 'Exports we can send &mdash; ad, post, or sales numbers', trail: 'Exports available' },
             { v: 'some',    label: 'Some data, but no clear picture of it',                  trail: 'Some data' },
             { v: 'none',    label: 'Almost nothing yet',                                     trail: 'No data yet' }
-          ]
+          ],
+          /* У рекламы своя мера. Прайс прямо говорит: Ad Diagnostic не подходит,
+             если реклама идёт меньше двух-трёх месяцев — читать нечего. Без
+             этого вопроса подбор продавал бы услугу вопреки нашим же условиям. */
+          variantOn: 'situation',
+          variants: {
+            ads: {
+              q: 'How long have the ads been running &mdash; and could you export them?',
+              options: [
+                { v: 'numbers', also: { adsAge: 'readable' },
+                  label: 'Three months or more, and we can export the data',
+                  trail: 'Ads 3+ months, exports ready' },
+                { v: 'some', also: { adsAge: 'readable' },
+                  label: 'Three months or more, but pulling the data would be a struggle',
+                  trail: 'Ads 3+ months, exports hard' },
+                { v: 'some', also: { adsAge: 'young' },
+                  label: 'Less than two or three months',
+                  trail: 'Ads younger than 3 months' }
+              ]
+            }
+          }
         },
         {
           id: 'settled', part: 2,
@@ -520,6 +540,13 @@
         numbers: 'And you can send exports, so the first step can read what actually happened instead of guessing at it. That makes the first step cheaper, not more expensive.',
         some: 'You have data but no picture of it. That is a different problem from having none — and a cheaper one to solve.',
         none: 'There is no history to read yet, so the first step has to work from the material itself rather than from results.'
+      };
+
+      /* В ветке рекламы третий вопрос спрашивал о сроке, а не о данных вообще \u2014
+         вывод должен отвечать на то, что человек на самом деле выбрал. */
+      var READBACK_ADS = {
+        young: 'And the ads are young. There is not enough history in them to read yet \u2014 which does not mean nothing can be done, it means the honest first step is somewhere else.',
+        readable: 'Three months is enough history to read. Pulling it out is the part that takes effort, and that effort is exactly where the answer tends to be hiding.'
       };
 
       var READBACK_WHO = {
@@ -595,12 +622,6 @@
           why: 'Ongoing production and monthly campaign support, without rebuilding the direction from zero every month. Two cycles minimum because the first month is setup; after that it is month to month, with no annual contract.',
           interest: 'Monthly Content', anchor: 'monthly-creative-content-system'
         },
-        fullSystem: {
-          name: 'Full System', price: '$12,500/mo', time: 'one primary segment and channel',
-          why: 'Strategy, content plan and scripts, visual production, and a monthly report in one line of work — which is what you need when part of the execution is yours and part is ours, and the two have to agree. Paid media management is not included.',
-          then: 'Two to three segments, each with its own funnel and plan, is $18,000/mo.',
-          interest: 'Full System', anchor: 'full-creative-strategy-system'
-        },
         launchThenMonthly: {
           name: 'Launch Package first, then the monthly system', price: 'From $6,500', time: '2\u20134 weeks',
           why: 'You said the launch is close and that time is what matters. A monthly system spends its first cycle on setup and carries a two-month minimum \u2014 it would arrive after your date. The Launch Package is scoped to the launch itself and priced before production starts.',
@@ -631,52 +652,118 @@
         test: 'a first scoped project, from $6,500'
       };
 
+      /* Оговорки. Это места, где честный ответ \u2014 не только название услуги.
+         Каждая либо называет противоречие в ответах, либо то, чего услуга НЕ
+         делает, либо более дешёвый путь. */
+      var NOTES = {
+        adExports: 'The diagnostic works from your exports, not your logins: 60\u201390 days of campaign data, a GA4 export for the same period, and screenshots of your settings screens. If pulling those is the hard part, say so in the form \u2014 we send the step-by-step guide. The refund guarantee holds only when that upload is complete, so it matters.',
+        analysisNoWords: 'One thing this does not give you: the words. Customer Analysis answers who buys and where they come from \u2014 it reads your files, it does not talk to your buyers. If the language is what you are missing, that is Buyer Research, from $7,500.',
+        cheaperCustomerAnalysis: 'If it turns out you only need the numbers side \u2014 who buys and where your best customers come from \u2014 Customer Analysis does that alone from your exports, from $5,000. Cheaper, and it may be all you are missing.',
+        researchSteppedDown: 'The four-week tier is the one that analyses the data you already have. You said budget comes first, so this is the two-week map without that analysis. If you would rather keep it, say so and we will price the longer one.',
+        auditSteppedDown: 'You can send exports, so the $2,500 tier would connect what the material did to how people responded. You said budget comes first, so this is the $1,500 review that works from a brief instead. Either tier ends with the production scope priced.',
+        testIsAudit: 'You said you want to test with something small first. This is the smallest real thing we sell: three business days, a fixed fee, and it ends with the production scope priced \u2014 so the project you commit to afterwards is already costed. The production itself starts from $6,500.',
+        mixedStepUp: 'You said part of the execution stays with you, so this is production only. If you also want the strategy, the plan and a monthly read of results in one line of work, that is the Full System at $12,500/mo \u2014 a step up from here, not a starting point.',
+        volumePlanLoad: 'Worth naming: you said publishing already eats the team, and a plan is something they still have to publish. It takes the thinking off them, not the work. If the work is the problem, Monthly Content produces it instead, from $9,500/mo.',
+        volumeToMonthly: 'You said publishing already eats the team. A plan they still have to execute adds to that load, so this takes the production off them instead. If what you actually want is only the thinking, the Content Plan is from $5,000/mo.',
+        buyerUnknown: 'One thing you said does not fit the other: you are not sure who the buyer is, and you are asking for material. We can produce it \u2014 but material aimed at a buyer nobody has named is the most common way this money goes quiet. If you want that settled first, Buyer Research is from $7,500.',
+        adsWantMaterial: 'You said ads run and results do not follow, and then asked for material. If the break is in the measurement or the funnel, new material goes into the same gap. The Ad Diagnostic names where it breaks for $3,500 and is credited in full against a Launch Package if you move within two weeks.',
+        researchClock: 'Watch the clock: this runs two weeks, the extended tier four. Put your launch date in the form \u2014 if the research lands after it, we will say so plainly instead of taking the work.',
+        reportAddOn: 'If you also want a monthly read of what worked and what did not, the Monthly Report is $2,500/mo on top. It is built from your exports; analytics setup is not included.'
+      };
+
       function resolve(a) {
+        var notes = [];
         var r;
 
         if (a.settled === 'whyvisuals') {
           r = (a.data === 'numbers') ? 'auditFull' : 'auditBasic';
+
         } else if (a.settled === 'adleak') {
-          r = (a.data === 'none') ? 'auditFirstAds' : 'adDiag';
+          /* Прайс: Ad Diagnostic не подходит при рекламе моложе 2\u20133 месяцев. */
+          if (a.adsAge === 'young') {
+            r = 'auditFirstAds';
+          } else {
+            r = 'adDiag';
+            if (a.data !== 'numbers') notes.push(NOTES.adExports);
+          }
+
         } else if (a.settled === 'whospeak') {
-          if (a.data === 'numbers') r = 'customerAnalysis';
-          else if (a.data === 'some') r = 'researchFull';
-          else r = 'researchShort';
+          /* Customer Analysis отвечает «кто покупает», но НЕ «какими словами» \u2014
+             слова есть только в Buyer Research. Поэтому выгрузки сами по себе
+             больше не уводят на анализ: только когда бюджет назван главным. */
+          if (a.data === 'none') {
+            r = 'researchShort';
+          } else if (a.data === 'numbers' && a.constraint === 'budget') {
+            r = 'customerAnalysis';
+            notes.push(NOTES.analysisNoWords);
+          } else {
+            r = 'researchFull';
+            if (a.data === 'numbers') notes.push(NOTES.cheaperCustomerAnalysis);
+          }
+
         } else if (a.settled === 'whatsay') {
           r = 'positioning';
+
         } else {
-          if (a.horizon === 'ongoing') {
-            if (a.who === 'team') r = 'contentPlan';
-            else if (a.who === 'mixed') r = 'fullSystem';
-            else r = 'monthly';
+          if (a.horizon === 'test') {
+            /* «Проба поменьше» за $6,500 \u2014 не проба. Меньший настоящий шаг \u2014
+               диагностика, которая и заканчивается ценой производства. */
+            r = (a.data === 'numbers') ? 'auditFull' : 'auditBasic';
+            notes.push(NOTES.testIsAudit);
+          } else if (a.horizon === 'ongoing') {
+            /* «Часть сами, часть мы» \u2014 не повод отдавать самую дорогую
+               подписку. Производство, а Full System названа ступенью выше. */
+            if (a.who === 'team') {
+              r = 'contentPlan';
+            } else {
+              r = 'monthly';
+              if (a.who === 'mixed') notes.push(NOTES.mixedStepUp);
+            }
           } else {
             r = 'launch';
           }
         }
 
-        /* Бюджет: шаг вниз только там, где меньший первый шаг честно существует. */
-        if (a.constraint === 'budget') {
-          if (r === 'researchFull') r = 'researchShort';
-          if (r === 'fullSystem') r = 'monthly';
-          if (r === 'auditFull') r = 'auditBasic';
+        /* Противоречие: публикации съедают команду, а план добавляет ей работы. */
+        if (a.situation === 'volume' && r === 'contentPlan') {
+          if (a.constraint === 'budget') {
+            notes.push(NOTES.volumePlanLoad);
+          } else {
+            r = 'monthly';
+            notes.push(NOTES.volumeToMonthly);
+          }
         }
 
-        /* Запуск близко и важна скорость: месячная система не успеет —
+        /* Бюджет: шаг вниз только там, где меньший первый шаг честно существует. */
+        if (a.constraint === 'budget') {
+          if (r === 'researchFull') { r = 'researchShort'; notes.push(NOTES.researchSteppedDown); }
+          if (r === 'auditFull') { r = 'auditBasic'; notes.push(NOTES.auditSteppedDown); }
+        }
+
+        /* Запуск близко и важна скорость: месячная система не успеет \u2014
            первый цикл у неё уходит на настройку, минимум два месяца. */
         if (a.situation === 'launch' && a.constraint === 'time' &&
-            (r === 'monthly' || r === 'contentPlan' || r === 'fullSystem')) {
+            (r === 'monthly' || r === 'contentPlan')) {
           r = 'launchThenMonthly';
         }
 
         /* Доказательство до траты: перед производством встаёт диагностика. */
         if (a.constraint === 'certainty' &&
-            (r === 'launch' || r === 'monthly' || r === 'fullSystem' || r === 'contentPlan')) {
-          if (a.situation === 'ads' && a.data !== 'none') r = 'adDiagBeforeWork';
+            (r === 'launch' || r === 'monthly' || r === 'contentPlan' || r === 'launchThenMonthly')) {
+          if (a.situation === 'ads' && a.adsAge !== 'young') r = 'adDiagBeforeWork';
           else if (a.data === 'numbers') r = 'auditFullBeforeWork';
           else r = 'auditBeforeWork';
         }
 
-        return r;
+        /* Оговорки, зависящие от итога, \u2014 только когда итог уже окончателен. */
+        if (a.situation === 'buyer' && a.settled === 'material') notes.push(NOTES.buyerUnknown);
+        if (a.situation === 'ads' && a.settled === 'material') notes.push(NOTES.adsWantMaterial);
+        if (r === 'researchShort' || r === 'researchFull') {
+          if (a.situation === 'launch' && a.constraint === 'time') notes.push(NOTES.researchClock);
+        }
+        if (r === 'monthly' || r === 'contentPlan') notes.push(NOTES.reportAddOn);
+
+        return { key: r, notes: notes };
       }
 
       var answers = {};
@@ -717,15 +804,24 @@
         else elLabel.textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
       }
 
+      /* У вопроса может быть своя редакция под раньше данный ответ —
+         как у вопроса о данных в ветке рекламы. */
+      function shape(step) {
+        if (!step.variants) return step;
+        var v = step.variants[answers[step.variantOn]];
+        if (!v) return step;
+        return { id: step.id, part: step.part, q: v.q, options: v.options };
+      }
+
       function render() {
         if (idx >= QUESTIONS.length) { showResult(); return; }
 
-        var step = QUESTIONS[idx];
+        var step = shape(QUESTIONS[idx]);
         elRead.hidden = true;
         elRes.hidden = true;
         elBody.hidden = false;
         elPart.innerHTML = PARTS[step.part];
-        elQ.textContent = step.q;
+        elQ.innerHTML = step.q;
         elOpts.innerHTML = '';
 
         step.options.forEach(function (opt) {
@@ -746,6 +842,9 @@
 
       function choose(step, opt) {
         answers[step.id] = opt.v;
+        if (opt.also) {
+          Object.keys(opt.also).forEach(function (k) { answers[k] = opt.also[k]; });
+        }
         order = order.slice(0, idx);
         order.push({ id: step.id, trail: opt.trail });
         idx += 1;
@@ -756,9 +855,10 @@
                            (QUESTIONS[idx].part !== step.part);
 
         if (finishedPart && step.part === 1) {
-          readback('What we heard so far',
-                   READBACK_TRIED[answers.tried],
-                   READBACK_DATA[answers.data]);
+          var dataLine = READBACK_DATA[answers.data];
+          if (answers.adsAge === 'young') dataLine = READBACK_ADS.young;
+          else if (answers.adsAge === 'readable' && answers.data === 'some') dataLine = READBACK_ADS.readable;
+          readback('What we heard so far', READBACK_TRIED[answers.tried], dataLine);
         } else if (finishedPart && step.part === 2) {
           readback('What that means',
                    READBACK_WHO[answers.who],
@@ -781,7 +881,8 @@
       }
 
       function showResult() {
-        var key = resolve(answers);
+        var out = resolve(answers);
+        var key = out.key;
         var r = RESULTS[key];
 
         document.getElementById('resultName').textContent = r.name;
@@ -789,15 +890,24 @@
         document.getElementById('resultTime').textContent = r.time;
         document.getElementById('resultWhy').textContent = r.why;
 
-        var elThen = document.getElementById('resultThen');
         var then = r.then;
         if (!then && (key === 'auditBeforeWork' || key === 'auditFullBeforeWork' || key === 'adDiagBeforeWork')) {
           then = 'What follows is the work you came for: ' +
                  (NEXT_AFTER_DIAG[answers.horizon] || NEXT_AFTER_DIAG.project) +
                  ', scoped and priced from the findings.';
         }
-        if (then) { elThen.textContent = then; elThen.hidden = false; }
-        else { elThen.textContent = ''; elThen.hidden = true; }
+
+        /* Сначала продолжение работы, потом оговорки \u2014 то, чего услуга не
+           делает, и противоречия в ответах. Человек должен увидеть их до оплаты. */
+        var elNotes = document.getElementById('resultNotes');
+        elNotes.innerHTML = '';
+        var lines = (then ? [then] : []).concat(out.notes);
+        lines.forEach(function (text) {
+          var li = document.createElement('li');
+          li.textContent = text;
+          elNotes.appendChild(li);
+        });
+        elNotes.hidden = lines.length === 0;
 
         document.getElementById('resultCta').href =
           '/contact/?interest=' + encodeURIComponent(r.interest);

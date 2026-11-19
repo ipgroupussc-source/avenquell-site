@@ -1920,3 +1920,22 @@ a.finder-option {
   color: var(--gold-soft);
   text-decoration: underline;
 }
+
+/* Оговорки под результатом: чего услуга не делает, что в ответах
+   противоречит само себе, где есть путь дешевле. Набраны мельче названия,
+   но не серым до нечитаемости — их должны прочитать до оплаты. */
+.finder-result-notes {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.finder-result-notes li {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gold-soft);
+}
