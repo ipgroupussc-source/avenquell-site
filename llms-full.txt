@@ -74,13 +74,6 @@ data and live message testing. Content and media planning are not included.
 
 ## Projects
 
-Conversion Foundation — $6,500, or $9,500 with server-side tracking. Landing page, lead
-tracking and revenue attribution built as one product; the page is not sold apart from the
-measurement.
-
-Campaign Build — $2,500 per channel. One-time build or rebuild of a Meta or Google campaign:
-structure, audiences, bidding, UTM tagging. One channel per project.
-
 Strategy & Positioning — from $5,000. Segments, competitors, positioning and offer, delivered
 as a working document the client keeps.
 
@@ -92,10 +85,6 @@ campaigns, offer rollouts and campaign-ready asset systems.
 Monthly Creative Content System — from $9,500/mo. Two-month minimum, then month to month.
 Ongoing creative production, visual consistency and monthly campaign support without
 rebuilding direction from zero each month.
-
-Paid Media Management — $3,500/mo for the first channel, +$1,500 for each additional.
-Above $10K monthly ad spend the fee steps down as spend grows: 15% from $10K, 12% from $30K,
-10% from $50K, 8% from $100K. Reporting ties spend to outcomes rather than impressions.
 
 Content Plan & Scripts — from $5,000/mo. A monthly content plan and scripts the client's team
 publishes. Posting and community management are not included.
