@@ -1157,6 +1157,20 @@
   text-decoration: underline;
 }
 
+/* Название услуги человеку ничего не говорит — говорит результат.
+   Эта строка читается первой, поэтому крупнее подписи и светлее названия. */
+.service-outcome {
+  margin: 6px 0 12px;
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: var(--ivory-deep);
+}
+
+.pricing-card .service-outcome {
+  margin: 4px 0 10px;
+  font-size: 15.5px;
+}
+
 .contact-form select.prefilled {
   border-color: var(--gold);
   background: rgba(200,164,106,.07);

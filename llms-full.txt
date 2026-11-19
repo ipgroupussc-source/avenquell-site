@@ -46,7 +46,7 @@ that has not passed human review.
 
 ## Diagnostics
 
-Premium Visual Audit — $1,500 or $2,500. Three business days from complete inputs.
+Visual Audit — $1,500 or $2,500. Three business days from complete inputs.
 A paid visual diagnostic for brands that need direction before production. Both tiers review
 the current visual system and define a production scope with fixed pricing. The $2,500 tier
 adds a read of the client's own post and ad creative stats, connecting what the visuals do to
@@ -67,35 +67,35 @@ Guarantee: the cause is named, or the fee is refunded. The disclosed unverifiabl
 excluded from refund scope and are stated before payment.
 Not a fit if ads have been running less than two or three months — there is not enough history.
 
-Marketing Research — $7,500 (two weeks) or $12,500 (four weeks).
+Buyer Research — $7,500 (two weeks) or $12,500 (four weeks).
 For brands without their own data history. Maps buyers, their language, competitive position
 and where the message needs to go. The $12,500 tier adds buyer interviews, analysis of existing
 data and live message testing. Content and media planning are not included.
 
 ## Projects
 
-Strategy & Positioning — from $5,000. Segments, competitors, positioning and offer, delivered
+Positioning — from $5,000. Segments, competitors, positioning and offer, delivered
 as a working document the client keeps.
 
-Launch Creative Package — from $6,500, two to four weeks. For product launches, seasonal
+Launch Package — from $6,500, two to four weeks. For product launches, seasonal
 campaigns, offer rollouts and campaign-ready asset systems.
 
 ## Monthly systems
 
-Monthly Creative Content System — from $9,500/mo. Two-month minimum, then month to month.
+Monthly Content — from $9,500/mo. Two-month minimum, then month to month.
 Ongoing creative production, visual consistency and monthly campaign support without
 rebuilding direction from zero each month.
 
-Content Plan & Scripts — from $5,000/mo. A monthly content plan and scripts the client's team
+Content Plan — from $5,000/mo. A monthly content plan and scripts the client's team
 publishes. Posting and community management are not included.
 
-Analytics & Reporting — $2,500/mo. A monthly report built from the client's data exports.
+Monthly Report — $2,500/mo. A monthly report built from the client's data exports.
 Analytics setup is not included.
 
-Quantitative & Segment Analytics — from $5,000, one-time. Who is actually buying and where the
+Customer Analysis — from $5,000, one-time. Who is actually buying and where the
 best customers come from, analysed from client exports rather than direct database access.
 
-Full Creative & Strategy System — $12,500/mo for one primary segment and channel, or
+Full System — $12,500/mo for one primary segment and channel, or
 $18,000/mo for two to three segments, each with its own funnel and content plan. Paid media
 management is not included.
 
@@ -114,7 +114,7 @@ mutually exclusive.
 ## Terms
 
 No annual contract. No platform fee. No prepayment for the year. Cancel with 30 days notice,
-by email. The Monthly Creative Content System runs on a two-month minimum; other monthly
+by email. The Monthly Content runs on a two-month minimum; other monthly
 services run on a three-month minimum. Ad budgets are paid directly to the platforms, not
 through the studio. All ad and analytics accounts are created in the client's own company name,
 and the studio names the person running them.
@@ -139,7 +139,7 @@ It diagnoses what is broken in a brand's visuals, ads or measurement, states it 
 then builds what the diagnosis defined — from single projects to monthly creative systems.
 
 Where do I start?
-Most engagements start with a diagnostic: the Premium Visual Audit if the question is about
+Most engagements start with a diagnostic: the Visual Audit if the question is about
 visuals and direction, the Ad Diagnostic if ad spend is running without results, and Marketing
 Research if there is no data history yet.
 
@@ -148,12 +148,12 @@ No. Diagnostics work from exports and screenshots the client sends. The report s
 findings cannot be verified without live access.
 
 How fast is a diagnostic?
-Three business days for the Premium Visual Audit and five for the Ad Diagnostic, counted from
+Three business days for the Visual Audit and five for the Ad Diagnostic, counted from
 the point all required inputs have been received.
 
 Is there a long-term contract?
-No. There is no annual contract and no prepayment for the year. The Monthly Creative Content
-System has a two-month minimum; other monthly services have a three-month minimum. Either ends
+No. There is no annual contract and no prepayment for the year. Monthly Content has a two-month
+minimum; other monthly services have a three-month minimum. Either ends
 with 30 days notice.
 
 Do you use AI?
