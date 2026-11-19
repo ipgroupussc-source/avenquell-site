@@ -72,7 +72,12 @@
     .menu-button.active .menu-icon span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
     .nav-menu { position: absolute; top: calc(100% + 12px); right: 0; width: min(330px, calc(100vw - 28px)); padding: 18px; border-radius: 22px; background: rgba(14,12,10,.98); border: 1px solid var(--line); box-shadow: var(--shadow); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-10px); transition: all .25s ease; z-index: 2000; }
     .nav-menu.open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
-    .nav-links-mobile { display: grid; gap: 6px; }
+    .nav-links-mobile { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+    /* Дети grid по умолчанию не сжимаются меньше своего текста: длинный пункт
+       подменю («Premium Home Fragrance Launch») растягивал колонку до 287px при
+       меню 250px, и страница на телефоне ехала вбок на 6px. */
+    .nav-links-mobile > *, .nav-links-mobile a, .nav-dropdown-menu a { min-width: 0; }
+    .nav-dropdown-title, .nav-dropdown-label { overflow-wrap: anywhere; }
     .nav-links-mobile a { display: block; padding: 14px 12px; border-radius: 14px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ivory-deep); }
 
     .hero { position: relative; overflow: hidden; padding: 70px 0 96px; }
