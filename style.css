@@ -1713,3 +1713,210 @@
     padding-bottom: 30px;
   }
 }
+
+/* ── Страница подбора /start/ ────────────────────────────────────────────
+   Семь вопросов, три части, вывод между частями. Полоса и счёт вопросов
+   видны всегда: начатый путь хочется закончить. Номера частей 01–03 —
+   опорные точки, которых не хватало главной. */
+.start-parts {
+  list-style: none;
+  margin: 34px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start-parts li {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.02);
+}
+
+.start-part-num {
+  display: block;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.start-part-label {
+  display: block;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.start-part-meta {
+  display: block;
+  font-size: 12px;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+.finder-wide { max-width: 760px; }
+
+.finder-part {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.finder-option.is-chosen {
+  border-color: var(--gold);
+  background: rgba(200,164,106,.1);
+}
+
+/* Вывод между частями: это наблюдение о человеке, поэтому набран крупнее
+   вопросов и отбит слева линией — видно, что говорит студия, а не форма. */
+.finder-readback {
+  border-left: 2px solid var(--gold);
+  padding-left: 22px;
+}
+
+.finder-readback-main {
+  font-size: 21px;
+  line-height: 1.45;
+  margin: 0 0 14px;
+}
+
+.finder-readback-sub {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.finder-result-then {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--gold-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.finder-result-note {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.finder-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.finder-trail-wrap {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.finder-trail-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.finder-trail {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.finder-trail li {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.finder-actions-center {
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Вход в подбор на главной: первый вопрос задан прямо здесь, ответ уводит
+   на /start/ и продолжает путь со второго вопроса. */
+.finder-entry {
+  max-width: 760px;
+  margin: 34px auto 0;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+  box-shadow: var(--shadow);
+}
+
+.finder-entry .finder-options { margin-top: 20px; }
+
+.finder-entry-foot {
+  margin: 20px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+a.finder-option {
+  display: block;
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  .start-parts { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .start-parts li { padding: 15px 17px; }
+  .start-part-num { font-size: 22px; margin-bottom: 6px; }
+  .finder-readback { padding-left: 16px; }
+  .finder-readback-main { font-size: 18px; }
+  .finder-readback-sub { font-size: 15px; }
+  .finder-entry { padding: 22px; }
+}
+
+/* Страница подбора: заголовок, части и сам подбор идут одной колонкой 760px
+   по центру. Иначе заголовок стоит по левому краю контейнера 1240px, а
+   карточки — по центру, и страница читается съехавшей. */
+.page-start .section-header,
+.page-start .inquiry-steps {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* В примечании под результатом ссылка шла тем же цветом, что и текст, и не
+   читалась как ссылка. */
+.finder-result-note a {
+  color: var(--gold-soft);
+  text-decoration: underline;
+}
+
+/* Вход в подбор на главной — такой же самостоятельный блок, как закрывающий:
+   заголовок и карточка идут одной колонкой, иначе шапка стоит по левому краю
+   контейнера, а карточка по центру, и блок читается съехавшим. */
+#start .section-header {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finder-entry-foot a {
+  color: var(--gold-soft);
+  text-decoration: underline;
+}

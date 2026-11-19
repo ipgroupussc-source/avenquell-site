@@ -99,6 +99,24 @@ Full System — $12,500/mo for one primary segment and channel, or
 $18,000/mo for two to three segments, each with its own funnel and content plan. Paid media
 management is not included.
 
+## Finding a starting point
+
+The site has a seven-question path at https://avenquell.com/start/ that names one
+starting point rather than listing options. It asks three questions about the client's
+current situation, two about the decision in front of them, and two about how they want
+to work, and returns a single named service with its published price and timeline.
+
+Two rules shape what it returns. If the client says budget matters most, it steps down
+to the smallest version of the same work that is still honest — extended Buyer Research
+becomes the two-week tier, the Full System becomes Monthly Content. If the client says
+they want proof before spending more, it puts a diagnostic in front of any production
+work and names the production as the step after it.
+
+It returns a diagnostic rather than the requested work in two cases: when someone wants
+to know where ad spend leaks but has no ad history to read, and when someone wants
+production but asked for proof first. Nothing is collected from the client to see the
+answer — no email, no form, no account access.
+
 ## How pricing works
 
 The diagnostic defines the scope — how many products, what source material exists, how many

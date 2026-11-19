@@ -672,36 +672,31 @@
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">Find your starting point</span>
-          <h2>Two questions. Then you know where to start.</h2>
+          <h2>Start with one question, not with the price list.</h2>
           <p class="lead">
-            There are fourteen services on the price list. You do not need to read them —
-            answer two questions and we will name the one that fits.
+            You should not have to read a list of services to work out what you need. Answer this
+            one &mdash; and six more on the page it opens &mdash; and we name the single thing to
+            start with, what it costs, and how long it takes. About a minute and a half. No email
+            needed to see the answer.
           </p>
         </div>
 
-        <div class="finder" id="finder" data-step="1">
-          <div class="finder-progress">
-            <span class="finder-progress-bar"><i id="finderBar" style="width:50%"></i></span>
-            <span class="finder-progress-label" id="finderLabel">Step 1 of 2</span>
+        <div class="finder-entry">
+          <span class="finder-part">Question 1 of 7 &middot; Where you are</span>
+          <h3 class="finder-question">What is actually in front of you right now?</h3>
+
+          <div class="finder-options">
+            <a class="finder-option" href="/start/?start=visual">Our material does not work, or no longer looks like us</a>
+            <a class="finder-option" href="/start/?start=ads">Ads are running. Results are not following</a>
+            <a class="finder-option" href="/start/?start=buyer">We are not sure who the buyer really is</a>
+            <a class="finder-option" href="/start/?start=launch">Something is launching, and it is close</a>
+            <a class="finder-option" href="/start/?start=volume">We publish constantly and it is eating the team</a>
           </div>
 
-          <div class="finder-body">
-            <h3 class="finder-question" id="finderQuestion">What is the problem right now?</h3>
-            <div class="finder-options" id="finderOptions"></div>
-          </div>
-
-          <div class="finder-result" id="finderResult" hidden>
-            <span class="finder-result-label">Your starting point</span>
-            <h3 id="resultName"></h3>
-            <p class="finder-result-meta"><span id="resultPrice"></span> · <span id="resultTime"></span></p>
-            <p id="resultWhy"></p>
-            <div class="finder-actions">
-              <a class="btn btn-primary" id="resultCta" href="/contact/">Start with this</a>
-              <a class="btn btn-secondary" id="resultMore" href="/pricing/">See what is included</a>
-            </div>
-          </div>
-
-          <button class="finder-restart" id="finderRestart" hidden>Start over</button>
+          <p class="finder-entry-foot">
+            Or <a href="/start/">open the whole path first</a> &mdash; all seven questions, and
+            nothing collected from you along the way.
+          </p>
         </div>
       </div>
     </section>
@@ -842,6 +837,7 @@
 
       <div class="footer-column footer-site-column">
         <span class="footer-heading">Site</span>
+        <a href="/start/">Find your starting point</a>
         <a href="/method/">Method</a>
         <a href="/standard/">Standard</a>
         <a href="/services/">Services</a>
@@ -904,161 +900,6 @@
     window.addEventListener('resize', function () {
       if (window.innerWidth > 860) closeMenu();
     });
-  </script>
-  <script>
-    // Подбор стартовой точки. Цены и сроки — из прайса, один в один.
-    // Путь короткий намеренно: два вопроса вместо четырнадцати карточек.
-    (function () {
-      var finder = document.getElementById('finder');
-      if (!finder) return;
-
-      var RESULTS = {
-        auditFull: {
-          name: 'Visual Audit — with performance read',
-          price: '$2,500', time: '3 business days',
-          why: 'You have the numbers, so the review connects what the visuals do to how people actually responded. No account access needed — you send exports.',
-          interest: 'Visual Audit'
-        },
-        auditBasic: {
-          name: 'Visual Audit',
-          price: '$1,500', time: '3 business days',
-          why: 'A full review of your current visual system and a production scope with fixed pricing. Works from a brief you fill in.',
-          interest: 'Visual Audit'
-        },
-        adDiag: {
-          name: 'Ad Diagnostic',
-          price: '$3,500', time: '5 business days',
-          why: 'Traces the path from ad to lead and finds where it breaks — including whether your measurement is real. Includes 3–5 ad concepts. We name the cause or refund the fee.',
-          interest: 'Ad Diagnostic'
-        },
-        researchShort: {
-          name: 'Buyer Research',
-          price: '$7,500', time: '2 weeks',
-          why: 'Maps your buyers, their language, your competitive position, and where the message needs to go.',
-          interest: 'Buyer Research'
-        },
-        researchFull: {
-          name: 'Buyer Research — extended',
-          price: '$12,500', time: '4 weeks',
-          why: 'Adds buyer interviews, analysis of your existing data, and live message testing.',
-          interest: 'Buyer Research'
-        },
-        launch: {
-          name: 'Launch Package',
-          price: 'from $6,500', time: '2–4 weeks',
-          why: 'A structured production project for launches, product stories and seasonal campaigns, scoped to your brief and channels.',
-          interest: 'Launch Package'
-        },
-        monthly: {
-          name: 'Monthly Content',
-          price: 'from $9,500/mo', time: 'two-month minimum',
-          why: 'Ongoing production and monthly campaign support without rebuilding direction from zero each month. No annual contract.',
-          interest: 'Monthly Content'
-        },
-        audit_first: {
-          name: 'Visual Audit first',
-          price: '$1,500', time: '3 business days',
-          why: 'Ads need two to three months of history before a diagnostic can read them. Until then the visuals are the part worth fixing.',
-          interest: 'Visual Audit'
-        }
-      };
-
-      var STEPS = {
-        start: {
-          q: 'What is the problem right now?',
-          options: [
-            { label: 'Our visuals do not work, or look off-brand', next: 'visual' },
-            { label: 'Ads are running, results are not following', next: 'ads' },
-            { label: 'We do not know who our buyer really is', next: 'research' },
-            { label: 'We are launching something soon', result: 'launch' },
-            { label: 'We need consistent content every month', result: 'monthly' }
-          ]
-        },
-        visual: {
-          q: 'Can you export your post and ad creative stats?',
-          options: [
-            { label: 'Yes, we have the numbers', result: 'auditFull' },
-            { label: 'No, or not yet', result: 'auditBasic' }
-          ]
-        },
-        ads: {
-          q: 'How long have the ads been running?',
-          options: [
-            { label: 'Three months or more', result: 'adDiag' },
-            { label: 'Less than two or three months', result: 'audit_first' }
-          ]
-        },
-        research: {
-          q: 'Do you have your own data history to work from?',
-          options: [
-            { label: 'Some data, but no clear picture', result: 'researchFull' },
-            { label: 'Almost nothing yet', result: 'researchShort' }
-          ]
-        }
-      };
-
-      var elQ = document.getElementById('finderQuestion');
-      var elOpts = document.getElementById('finderOptions');
-      var elRes = document.getElementById('finderResult');
-      var elBody = finder.querySelector('.finder-body');
-      var elBar = document.getElementById('finderBar');
-      var elLabel = document.getElementById('finderLabel');
-      var elRestart = document.getElementById('finderRestart');
-
-      function render(key) {
-        var step = STEPS[key];
-        elQ.textContent = step.q;
-        elOpts.innerHTML = '';
-        step.options.forEach(function (opt) {
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.className = 'finder-option';
-          b.textContent = opt.label;
-          b.addEventListener('click', function () {
-            if (opt.result) { show(opt.result); } else { step2(opt.next); }
-          });
-          elOpts.appendChild(b);
-        });
-      }
-
-      function step2(key) {
-        finder.setAttribute('data-step', '2');
-        elBar.style.width = '100%';
-        elLabel.textContent = 'Step 2 of 2';
-        render(key);
-        elRestart.hidden = false;
-      }
-
-      function show(key) {
-        var r = RESULTS[key];
-        document.getElementById('resultName').textContent = r.name;
-        document.getElementById('resultPrice').textContent = r.price;
-        document.getElementById('resultTime').textContent = r.time;
-        document.getElementById('resultWhy').textContent = r.why;
-        document.getElementById('resultCta').href =
-          '/contact/?interest=' + encodeURIComponent(r.interest);
-        elBody.hidden = true;
-        elRes.hidden = false;
-        elBar.style.width = '100%';
-        elLabel.textContent = 'Done';
-        elRestart.hidden = false;
-        if (typeof gtag === 'function') {
-          gtag('event', 'finder_result', { starting_point: r.interest });
-        }
-      }
-
-      elRestart.addEventListener('click', function () {
-        finder.setAttribute('data-step', '1');
-        elBar.style.width = '50%';
-        elLabel.textContent = 'Step 1 of 2';
-        elBody.hidden = false;
-        elRes.hidden = true;
-        elRestart.hidden = true;
-        render('start');
-      });
-
-      render('start');
-    })();
   </script>
 </body>
 </html>

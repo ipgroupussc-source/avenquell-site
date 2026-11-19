@@ -11,13 +11,14 @@ ongoing output. Every price is published. Human review before anything ships.
 ## Pages
 
 - [Home](https://avenquell.com/): what the studio does and how an engagement starts
+- [Find your starting point](https://avenquell.com/start/): a seven-question path that names one starting point, its price and its timeline
 - [About](https://avenquell.com/about/): why the studio exists, where it works from, what the name carries
 - [Method](https://avenquell.com/method/): six steps, two client approval gates
 - [Standard](https://avenquell.com/standard/): what we refuse to deliver, and why
 - [Services](https://avenquell.com/services/): every service by stage and vertical
 - [Pricing](https://avenquell.com/pricing/): all prices, terms, guarantee and credit rules
 - [Work](https://avenquell.com/work/): concept studies showing the method in practice
-- [Concept Study 01](https://avenquell.com/work/cs01/): premium home fragrance launch
+- [Concept Study 01](https://avenquell.com/work/cs01/): home fragrance launch
 - [Contact](https://avenquell.com/contact/): inquiry form
 
 ## Diagnostics

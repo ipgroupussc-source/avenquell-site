@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Find Your Starting Point | Avenquell Studio</title>
+  <meta name="description" content="Seven questions, and we name the one thing to start with — what it costs and how long it takes. No email needed to see the answer." />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="Find Your Starting Point | Avenquell Studio" />
+  <meta property="og:description" content="Seven questions. Then you know what to do first, what it costs, and how long it takes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/start/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Find Your Starting Point | Avenquell Studio" />
+  <meta name="twitter:description" content="Seven questions. Then you know what to do first, what it costs, and how long it takes." />
+  <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+
+  <link rel="canonical" href="https://avenquell.com/start/" />
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* ── GATE BADGE ── */
+    .method-card {
+      position: relative;
+    }
+    .method-card.is-gate {
+      /* inherits your existing .method-card styles */
+    }
+    .gate-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: 2px 7px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #B8875D;
+    }
+
+    /* ── WORK DROPDOWN NAVIGATION ── */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+  <!-- Аналитика и согласие на cookie.
+       Consent Mode v2: счётчик работает всегда, но до согласия не пишет cookies —
+       так сохраняются и метрики, и требования GDPR. Баннер при согласии поднимает
+       analytics_storage. Раньше вызывался silktideCookieBannerManager.updateCookieBanner,
+       которого в библиотеке нет, — баннер падал с TypeError и согласие не собиралось. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J06XENM876"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('config', 'G-J06XENM876');
+  </script>
+
+  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
+  <script src="/cookie-banner/silktide-consent-manager.js"></script>
+  <script>
+    silktideCookieBannerManager.updateCookieBannerConfig({
+      background: { showBackground: false },
+      position: { banner: "bottomRight" },
+      cookieIcon: { show: false },
+      cookieTypes: [
+        {
+          id: "necessary",
+          name: "Necessary",
+          description: "<p>Required for the site to work. Always on.</p>",
+          required: true
+        },
+        {
+          id: "analytics",
+          name: "Analytics",
+          description: "<p>Helps us see which pages are useful, so we can improve them.</p>",
+          onAccept: function () {
+            gtag('consent', 'update', { analytics_storage: 'granted' });
+          },
+          onReject: function () {
+            gtag('consent', 'update', { analytics_storage: 'denied' });
+          }
+        }
+      ]
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://avenquell.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Find your starting point",
+          "item": "https://avenquell.com/start/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://avenquell.com/start/#webpage",
+      "url": "https://avenquell.com/start/",
+      "name": "Find your starting point",
+      "description": "A seven-question path that names one starting point, its price, and its timeline.",
+      "dateModified": "2026-11-19",
+      "isPartOf": {
+        "@id": "https://avenquell.com/#website"
+      },
+      "publisher": {
+        "@id": "https://avenquell.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body class="page-start">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/about/">About</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/contact/">Start Inquiry</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/method/">Method</a>
+            <a href="/standard/">Standard</a>
+            <a href="/services/">Services</a>
+            <div class="nav-item-dropdown">
+              <a href="/work/" class="nav-dropdown-toggle">Work</a>
+              <div class="nav-dropdown-menu">
+                <a href="/work/">
+                  <span class="nav-dropdown-label">Overview</span>
+                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
+                </a>
+                <a href="/work/cs01/">
+                  <span class="nav-dropdown-label">Case Study 01</span>
+                  <span class="nav-dropdown-title">Home Fragrance Launch</span>
+                </a>
+              </div>
+            </div>
+            <a href="/about/">About</a>
+        <a href="/pricing/">Pricing</a>
+            <a href="/contact/">Contact</a>
+            <a href="/contact/">Start Inquiry</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- ═══════════════════════════
+         01 · ВХОД: что это и сколько займёт
+    ════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Find your starting point</span>
+          <h1>Seven questions. Then you know what to do first.</h1>
+          <p class="lead">
+            You should not have to read a price list to find out what you need. Answer seven
+            questions &mdash; three about where you are, two about the decision in front of you,
+            two about how you want to work. At the end we name one starting point, what it costs,
+            and how long it takes. No email needed to see the answer.
+          </p>
+        </div>
+
+        <ol class="start-parts">
+          <li>
+            <span class="start-part-num">01</span>
+            <span class="start-part-label">Where you are</span>
+            <span class="start-part-meta">Three questions &middot; 40 seconds</span>
+          </li>
+          <li>
+            <span class="start-part-num">02</span>
+            <span class="start-part-label">The decision in front of you</span>
+            <span class="start-part-meta">Two questions &middot; 30 seconds</span>
+          </li>
+          <li>
+            <span class="start-part-num">03</span>
+            <span class="start-part-label">How you want to work</span>
+            <span class="start-part-meta">Two questions &middot; 20 seconds</span>
+          </li>
+        </ol>
+
+        <div class="finder finder-wide" id="finder">
+          <div class="finder-progress">
+            <span class="finder-progress-bar"><i id="finderBar" style="width:14%"></i></span>
+            <span class="finder-progress-label" id="finderLabel">Question 1 of 7</span>
+          </div>
+
+          <div class="finder-body" id="finderBody">
+            <span class="finder-part" id="finderPart">Part 01 &middot; Where you are</span>
+            <h2 class="finder-question" id="finderQuestion">&nbsp;</h2>
+            <div class="finder-options" id="finderOptions"></div>
+          </div>
+
+          <div class="finder-readback" id="finderReadback" hidden>
+            <span class="finder-result-label" id="readbackLabel">What we heard</span>
+            <p class="finder-readback-main" id="readbackMain"></p>
+            <p class="finder-readback-sub" id="readbackSub"></p>
+            <button class="btn btn-primary" type="button" id="readbackNext">Continue &rarr;</button>
+          </div>
+
+          <div class="finder-result" id="finderResult" hidden>
+            <span class="finder-result-label">Your starting point</span>
+            <h2 id="resultName"></h2>
+            <p class="finder-result-meta"><span id="resultPrice"></span> &middot; <span id="resultTime"></span></p>
+            <p id="resultWhy"></p>
+            <p class="finder-result-then" id="resultThen" hidden></p>
+            <div class="finder-actions">
+              <a class="btn btn-primary" id="resultCta" href="/contact/">Start with this</a>
+              <a class="btn btn-secondary" id="resultMore" href="/pricing/">See what is included</a>
+            </div>
+            <p class="finder-result-note">
+              Not what you expected? <a href="/contact/">Say so in two lines</a> &mdash; if something
+              else fits better, we will tell you, including when that something is cheaper.
+            </p>
+          </div>
+
+          <div class="finder-nav">
+            <button class="finder-restart" type="button" id="finderBack" hidden>&larr; Back</button>
+            <button class="finder-restart" type="button" id="finderRestart" hidden>Start over</button>
+          </div>
+
+          <div class="finder-trail-wrap" id="finderTrailWrap" hidden>
+            <span class="finder-trail-label">Your answers</span>
+            <ol class="finder-trail" id="finderTrail"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         02 · ЧТО БУДЕТ ПОСЛЕ — незакрытая петля закрывается здесь
+    ════════════════════════════ -->
+    <section class="section start-after-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">After you pick</span>
+          <h2>What happens once you have a starting point</h2>
+        </div>
+
+        <ol class="inquiry-steps">
+          <li>
+            <strong>You send two lines.</strong>
+            The form asks for a name, an email, and what you are dealing with. Everything else on
+            it is optional, and you can leave it blank.
+          </li>
+          <li>
+            <strong>We reply within one business day.</strong>
+            Either we confirm the starting point you picked, or we name a different one and say
+            why &mdash; in writing, before any money moves.
+          </li>
+          <li>
+            <strong>The price is fixed before work begins.</strong>
+            Diagnostics are flat-priced. Production is scoped after diagnosis and locked before
+            production starts. No hourly billing, no annual lock-in.
+          </li>
+        </ol>
+
+        <div class="finder-actions finder-actions-center">
+          <a class="btn btn-secondary" href="/pricing/">See every price in full &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    /* ──────────────────────────────────────────────────────────────────────
+       ПОДБОР СТАРТОВОЙ ТОЧКИ — 7 вопросов, 3 части, вывод между частями.
+       Путь линейный: ответы собираются в map, решение считается в конце.
+       Цены и сроки — один в один из /pricing/. Менять только вместе с ним.
+    ────────────────────────────────────────────────────────────────────── */
+    (function () {
+      var finder = document.getElementById('finder');
+      if (!finder) return;
+
+      var QUESTIONS = [
+        {
+          id: 'situation', part: 1,
+          q: 'What is actually in front of you right now?',
+          options: [
+            { v: 'visual',  label: 'Our material does not work, or no longer looks like us', trail: 'Material does not work' },
+            { v: 'ads',     label: 'Ads are running. Results are not following',             trail: 'Ads run, results do not' },
+            { v: 'buyer',   label: 'We are not sure who the buyer really is',                trail: 'Buyer unclear' },
+            { v: 'launch',  label: 'Something is launching, and it is close',                trail: 'Launch coming' },
+            { v: 'volume',  label: 'We publish constantly and it is eating the team',        trail: 'Publishing eats the team' }
+          ]
+        },
+        {
+          id: 'tried', part: 1,
+          q: 'What have you already tried against it?',
+          options: [
+            { v: 'contractor', label: 'Changed who makes the work &mdash; freelancer, agency, in-house', trail: 'Changed the maker' },
+            { v: 'more',       label: 'Made more of it, more often',                                     trail: 'Made more' },
+            { v: 'offer',      label: 'Changed the offer, the price, or the packaging',                   trail: 'Changed the offer' },
+            { v: 'nothing',    label: 'Nothing yet &mdash; this is the first time we are dealing with it', trail: 'Nothing yet' }
+          ]
+        },
+        {
+          id: 'data', part: 1,
+          q: 'What could you put in our hands this week?',
+          options: [
+            { v: 'numbers', label: 'Exports we can send &mdash; ad, post, or sales numbers', trail: 'Exports available' },
+            { v: 'some',    label: 'Some data, but no clear picture of it',                  trail: 'Some data' },
+            { v: 'none',    label: 'Almost nothing yet',                                     trail: 'No data yet' }
+          ]
+        },
+        {
+          id: 'settled', part: 2,
+          q: 'If one thing were settled two weeks from now, which would change the most?',
+          options: [
+            { v: 'whyvisuals', label: 'Knowing why the material we already have is not working', trail: 'Wants: why it fails' },
+            { v: 'adleak',     label: 'Knowing where the ad money goes and what it buys',        trail: 'Wants: where spend leaks' },
+            { v: 'whospeak',   label: 'Knowing who to speak to, and in what words',              trail: 'Wants: who buys' },
+            { v: 'whatsay',    label: 'Knowing what to say about ourselves at all',              trail: 'Wants: what to say' },
+            { v: 'material',   label: 'Having the material itself made',                         trail: 'Wants: material made' }
+          ]
+        },
+        {
+          id: 'who', part: 2,
+          q: 'Once the direction exists, who does the work?',
+          options: [
+            { v: 'team',   label: 'We have people who can execute &mdash; we are missing the direction', trail: 'Team executes' },
+            { v: 'nobody', label: 'No one. It has to be produced for us',                                trail: 'Nobody to execute' },
+            { v: 'mixed',  label: 'Some of it in-house, some of it outside',                             trail: 'Mixed execution' }
+          ]
+        },
+        {
+          id: 'horizon', part: 3,
+          q: 'Is this one piece of work, or something that has to keep running?',
+          options: [
+            { v: 'project', label: 'One project with an end date',                   trail: 'One project' },
+            { v: 'ongoing', label: 'Every month, for the foreseeable future',        trail: 'Ongoing' },
+            { v: 'test',    label: 'Not sure &mdash; we want to test with something small first', trail: 'Wants a small test' }
+          ]
+        },
+        {
+          id: 'constraint', part: 3,
+          q: 'And what matters most about how we start?',
+          options: [
+            { v: 'budget',    label: 'Budget. Start as small as it can honestly be started',  trail: 'Budget first' },
+            { v: 'time',      label: 'Time. It has to be moving soon',                        trail: 'Time first' },
+            { v: 'certainty', label: 'Certainty. I want proof it works before spending more', trail: 'Certainty first' }
+          ]
+        }
+      ];
+
+      var PARTS = {
+        1: 'Part 01 &middot; Where you are',
+        2: 'Part 02 &middot; The decision in front of you',
+        3: 'Part 03 &middot; How you want to work'
+      };
+
+      /* Выводы между частями. Это наблюдение о человеке, а не пересказ ответа. */
+      var READBACK_TRIED = {
+        contractor: 'You changed who makes the work. The brief they were handed stayed the same — and that is usually where it breaks.',
+        more: 'You answered a direction problem with volume. More material built on the same direction repeats the same result, at a higher cost.',
+        offer: 'You changed what you sell. If the way it is shown stayed the same, buyers saw the same thing with a new price on it.',
+        nothing: 'Nothing has been tried against it yet. That is the cheapest place to be standing — there is nothing to undo first.'
+      };
+
+      var READBACK_DATA = {
+        numbers: 'And you can send exports, so the first step can read what actually happened instead of guessing at it. That makes the first step cheaper, not more expensive.',
+        some: 'You have data but no picture of it. That is a different problem from having none — and a cheaper one to solve.',
+        none: 'There is no history to read yet, so the first step has to work from the material itself rather than from results.'
+      };
+
+      var READBACK_WHO = {
+        team: 'You do not need more hands. You need a decision your people can execute against — written down, so it survives the week.',
+        nobody: 'A plan you cannot execute is a cost, not an asset. What you need made is the work itself, not another document about it.',
+        mixed: 'Part of this you can run yourselves. The question is which part — and that is a scoping decision, not a production one.'
+      };
+
+      var READBACK_SETTLED = {
+        whyvisuals: 'What you named is a question, not a project. Questions get answered in days, and cost the least of anything we do.',
+        adleak: 'What you named is a question, not a project. Questions get answered in days, and cost the least of anything we do.',
+        whospeak: 'What you named sits underneath production. Produce before it is settled and you pay for the same work twice.',
+        whatsay: 'What you named sits underneath production. Produce before it is settled and you pay for the same work twice.',
+        material: 'What you named is production. It is the one thing on this list that cannot be shortened by being clever about it.'
+      };
+
+      /* Результаты. price/time — дословно с /pricing/. interest — значение
+         <option> в форме, иначе поле не подставится. */
+      var RESULTS = {
+        auditBasic: {
+          name: 'Visual Audit', price: '$1,500', time: '3 business days',
+          why: 'A paid review of the material you already have: what it is doing, where it stops working, and a production scope with the price fixed. It works from a brief you fill in — no logins, no account access.',
+          interest: 'Visual Audit', anchor: 'premium-visual-audit'
+        },
+        auditFull: {
+          name: 'Visual Audit, with the performance read', price: '$2,500', time: '3 business days',
+          why: 'Same review, plus your own numbers: you send post and ad creative exports, and we connect what the material is doing to how people actually responded. No account access required.',
+          interest: 'Visual Audit', anchor: 'premium-visual-audit'
+        },
+        adDiag: {
+          name: 'Ad Diagnostic', price: '$3,500', time: '5 business days',
+          why: 'It traces the path from ad to lead and names where it breaks — including whether what you are measuring is real. Ends with 3–5 ad concepts built on the diagnosis. We name the cause or refund the fee.',
+          interest: 'Ad Diagnostic', anchor: 'ad-diagnostic'
+        },
+        auditFirstAds: {
+          name: 'Visual Audit first — not the Ad Diagnostic', price: '$1,500', time: '3 business days',
+          why: 'The Ad Diagnostic reads history, and it needs two to three months of it plus your exports. Without that it would be a guess with an invoice attached. The material itself can be read today.',
+          then: 'Once the ads have run long enough and you can export them, the Ad Diagnostic is the next step — $3,500, five business days.',
+          interest: 'Visual Audit', anchor: 'premium-visual-audit'
+        },
+        researchShort: {
+          name: 'Buyer Research', price: '$7,500', time: '2 weeks',
+          why: 'For brands without their own data history. It maps who buys, the words they use, where you sit against competitors, and where the message has to go. Content planning and media planning are not included.',
+          interest: 'Buyer Research', anchor: 'marketing-research'
+        },
+        researchFull: {
+          name: 'Buyer Research, extended', price: '$12,500', time: '4 weeks',
+          why: 'The same map, plus buyer interviews, analysis of the data you do have, and live message testing — which is what turns a partial picture into a decision you can produce against.',
+          interest: 'Buyer Research', anchor: 'marketing-research'
+        },
+        customerAnalysis: {
+          name: 'Customer Analysis', price: 'From $5,000', time: 'one-time',
+          why: 'You have exports, so the answer to who buys is already in your own files — it has not been read yet. This analyses them: who is actually buying, and where your best customers come from. Cheaper than researching from zero what your data already knows.',
+          interest: 'Customer Analysis', anchor: 'quantitative-segment-analytics'
+        },
+        positioning: {
+          name: 'Positioning', price: 'From $5,000', time: 'delivered as a working document',
+          why: 'Your segments, your competitors, your position, and your offer — what to say and what to stop saying. It is a document you keep and brief people from, which is what makes it survive a change of contractor.',
+          interest: 'Positioning', anchor: 'strategy-positioning'
+        },
+        launch: {
+          name: 'Launch Package', price: 'From $6,500', time: '2–4 weeks',
+          why: 'A scoped production project for launches, product stories and seasonal campaigns, built to your brief and your channels. The price is locked before production starts.',
+          interest: 'Launch Package', anchor: 'launch-creative-package'
+        },
+        contentPlan: {
+          name: 'Content Plan', price: 'From $5,000/mo', time: 'monthly',
+          why: 'You have people who can execute, so you are paying for the part you are missing: a monthly plan and the scripts, which your team publishes. Posting and community management are not included — deliberately, because you already have that.',
+          interest: 'Content Plan', anchor: 'content-plan-scripts'
+        },
+        monthly: {
+          name: 'Monthly Content', price: 'From $9,500/mo', time: 'two-month minimum, then month to month',
+          why: 'Ongoing production and monthly campaign support, without rebuilding the direction from zero every month. Two cycles minimum because the first month is setup; after that it is month to month, with no annual contract.',
+          interest: 'Monthly Content', anchor: 'monthly-creative-content-system'
+        },
+        fullSystem: {
+          name: 'Full System', price: '$12,500/mo', time: 'one primary segment and channel',
+          why: 'Strategy, content plan and scripts, visual production, and a monthly report in one line of work — which is what you need when part of the execution is yours and part is ours, and the two have to agree. Paid media management is not included.',
+          then: 'Two to three segments, each with its own funnel and plan, is $18,000/mo.',
+          interest: 'Full System', anchor: 'full-creative-strategy-system'
+        },
+        launchThenMonthly: {
+          name: 'Launch Package first, then the monthly system', price: 'From $6,500', time: '2\u20134 weeks',
+          why: 'You said the launch is close and that time is what matters. A monthly system spends its first cycle on setup and carries a two-month minimum \u2014 it would arrive after your date. The Launch Package is scoped to the launch itself and priced before production starts.',
+          then: 'The monthly system is the right thing to start the month after the launch, from $9,500/mo \u2014 by then it has the launch material to build on instead of starting from zero.',
+          interest: 'Launch Package', anchor: 'launch-creative-package'
+        },
+        auditBeforeWork: {
+          name: 'Visual Audit first, then the production', price: '$1,500', time: '3 business days',
+          why: 'You asked for proof before spending more, and that is the honest order: three days and a fixed fee tell you what is wrong and what the production should cost. Walking in without it means paying to find out.',
+          interest: 'Visual Audit', anchor: 'premium-visual-audit'
+        },
+        auditFullBeforeWork: {
+          name: 'Visual Audit with the performance read, then the production', price: '$2,500', time: '3 business days',
+          why: 'You asked for proof before spending more, and you can send exports — so the review can show what the material did and how people responded, then price the production against it. Three days, fixed fee.',
+          interest: 'Visual Audit', anchor: 'premium-visual-audit'
+        },
+        adDiagBeforeWork: {
+          name: 'Ad Diagnostic first, then the production', price: '$3,500', time: '5 business days',
+          why: 'You asked for proof before spending more, and your spend is already running. Five days names where it leaks, and the fee is credited against the project if you move forward within two weeks of the report.',
+          interest: 'Ad Diagnostic', anchor: 'ad-diagnostic'
+        }
+      };
+
+      /* Сколько стоит ждать: какая работа идёт после диагностики. */
+      var NEXT_AFTER_DIAG = {
+        project: 'Launch Package, from $6,500',
+        ongoing: 'a monthly system, from $9,500/mo',
+        test: 'a first scoped project, from $6,500'
+      };
+
+      function resolve(a) {
+        var r;
+
+        if (a.settled === 'whyvisuals') {
+          r = (a.data === 'numbers') ? 'auditFull' : 'auditBasic';
+        } else if (a.settled === 'adleak') {
+          r = (a.data === 'none') ? 'auditFirstAds' : 'adDiag';
+        } else if (a.settled === 'whospeak') {
+          if (a.data === 'numbers') r = 'customerAnalysis';
+          else if (a.data === 'some') r = 'researchFull';
+          else r = 'researchShort';
+        } else if (a.settled === 'whatsay') {
+          r = 'positioning';
+        } else {
+          if (a.horizon === 'ongoing') {
+            if (a.who === 'team') r = 'contentPlan';
+            else if (a.who === 'mixed') r = 'fullSystem';
+            else r = 'monthly';
+          } else {
+            r = 'launch';
+          }
+        }
+
+        /* Бюджет: шаг вниз только там, где меньший первый шаг честно существует. */
+        if (a.constraint === 'budget') {
+          if (r === 'researchFull') r = 'researchShort';
+          if (r === 'fullSystem') r = 'monthly';
+          if (r === 'auditFull') r = 'auditBasic';
+        }
+
+        /* Запуск близко и важна скорость: месячная система не успеет —
+           первый цикл у неё уходит на настройку, минимум два месяца. */
+        if (a.situation === 'launch' && a.constraint === 'time' &&
+            (r === 'monthly' || r === 'contentPlan' || r === 'fullSystem')) {
+          r = 'launchThenMonthly';
+        }
+
+        /* Доказательство до траты: перед производством встаёт диагностика. */
+        if (a.constraint === 'certainty' &&
+            (r === 'launch' || r === 'monthly' || r === 'fullSystem' || r === 'contentPlan')) {
+          if (a.situation === 'ads' && a.data !== 'none') r = 'adDiagBeforeWork';
+          else if (a.data === 'numbers') r = 'auditFullBeforeWork';
+          else r = 'auditBeforeWork';
+        }
+
+        return r;
+      }
+
+      var answers = {};
+      var order = [];
+      var idx = 0;
+
+      var elQ = document.getElementById('finderQuestion');
+      var elOpts = document.getElementById('finderOptions');
+      var elPart = document.getElementById('finderPart');
+      var elBody = document.getElementById('finderBody');
+      var elBar = document.getElementById('finderBar');
+      var elLabel = document.getElementById('finderLabel');
+      var elBack = document.getElementById('finderBack');
+      var elRestart = document.getElementById('finderRestart');
+      var elRead = document.getElementById('finderReadback');
+      var elReadLabel = document.getElementById('readbackLabel');
+      var elReadMain = document.getElementById('readbackMain');
+      var elReadSub = document.getElementById('readbackSub');
+      var elReadNext = document.getElementById('readbackNext');
+      var elRes = document.getElementById('finderResult');
+      var elTrail = document.getElementById('finderTrail');
+      var elTrailWrap = document.getElementById('finderTrailWrap');
+
+      function drawTrail() {
+        elTrail.innerHTML = '';
+        order.forEach(function (step, i) {
+          var li = document.createElement('li');
+          li.textContent = step.trail;
+          elTrail.appendChild(li);
+        });
+        elTrailWrap.hidden = order.length === 0;
+      }
+
+      function progress() {
+        var pct = Math.round((idx / QUESTIONS.length) * 100);
+        elBar.style.width = Math.max(pct, 8) + '%';
+        if (idx >= QUESTIONS.length) elLabel.textContent = 'Done';
+        else elLabel.textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
+      }
+
+      function render() {
+        if (idx >= QUESTIONS.length) { showResult(); return; }
+
+        var step = QUESTIONS[idx];
+        elRead.hidden = true;
+        elRes.hidden = true;
+        elBody.hidden = false;
+        elPart.innerHTML = PARTS[step.part];
+        elQ.textContent = step.q;
+        elOpts.innerHTML = '';
+
+        step.options.forEach(function (opt) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'finder-option';
+          b.innerHTML = opt.label;
+          if (answers[step.id] === opt.v) b.classList.add('is-chosen');
+          b.addEventListener('click', function () { choose(step, opt); });
+          elOpts.appendChild(b);
+        });
+
+        elBack.hidden = idx === 0;
+        elRestart.hidden = idx === 0;
+        progress();
+        drawTrail();
+      }
+
+      function choose(step, opt) {
+        answers[step.id] = opt.v;
+        order = order.slice(0, idx);
+        order.push({ id: step.id, trail: opt.trail });
+        idx += 1;
+        progress();
+        drawTrail();
+
+        var finishedPart = (idx < QUESTIONS.length) &&
+                           (QUESTIONS[idx].part !== step.part);
+
+        if (finishedPart && step.part === 1) {
+          readback('What we heard so far',
+                   READBACK_TRIED[answers.tried],
+                   READBACK_DATA[answers.data]);
+        } else if (finishedPart && step.part === 2) {
+          readback('What that means',
+                   READBACK_WHO[answers.who],
+                   READBACK_SETTLED[answers.settled]);
+        } else {
+          render();
+        }
+      }
+
+      function readback(label, main, sub) {
+        elBody.hidden = true;
+        elRes.hidden = true;
+        elReadLabel.textContent = label;
+        elReadMain.textContent = main || '';
+        elReadSub.textContent = sub || '';
+        elRead.hidden = false;
+        elBack.hidden = false;
+        elRestart.hidden = false;
+        elReadNext.focus();
+      }
+
+      function showResult() {
+        var key = resolve(answers);
+        var r = RESULTS[key];
+
+        document.getElementById('resultName').textContent = r.name;
+        document.getElementById('resultPrice').textContent = r.price;
+        document.getElementById('resultTime').textContent = r.time;
+        document.getElementById('resultWhy').textContent = r.why;
+
+        var elThen = document.getElementById('resultThen');
+        var then = r.then;
+        if (!then && (key === 'auditBeforeWork' || key === 'auditFullBeforeWork' || key === 'adDiagBeforeWork')) {
+          then = 'What follows is the work you came for: ' +
+                 (NEXT_AFTER_DIAG[answers.horizon] || NEXT_AFTER_DIAG.project) +
+                 ', scoped and priced from the findings.';
+        }
+        if (then) { elThen.textContent = then; elThen.hidden = false; }
+        else { elThen.textContent = ''; elThen.hidden = true; }
+
+        document.getElementById('resultCta').href =
+          '/contact/?interest=' + encodeURIComponent(r.interest);
+        document.getElementById('resultMore').href = '/pricing/#' + r.anchor;
+
+        elBody.hidden = true;
+        elRead.hidden = true;
+        elRes.hidden = false;
+        elBack.hidden = false;
+        elRestart.hidden = false;
+        progress();
+        drawTrail();
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'finder_result', {
+            starting_point: r.interest,
+            finder_path: order.map(function (s) { return answers[s.id]; }).join('>')
+          });
+        }
+      }
+
+      elReadNext.addEventListener('click', function () { render(); });
+
+      elBack.addEventListener('click', function () {
+        if (idx > 0) idx -= 1;
+        order = order.slice(0, idx);
+        render();
+      });
+
+      elRestart.addEventListener('click', function () {
+        answers = {}; order = []; idx = 0;
+        render();
+        finder.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      /* Ответ на первый вопрос мог быть дан на главной: /start/?start=ads */
+      var seed = new URLSearchParams(window.location.search).get('start');
+      var seeded = false;
+      if (seed) {
+        QUESTIONS[0].options.forEach(function (opt) {
+          if (opt.v === seed) {
+            answers.situation = opt.v;
+            order.push({ id: 'situation', trail: opt.trail });
+            idx = 1;
+            seeded = true;
+          }
+        });
+      }
+
+      render();
+
+      if (seeded) {
+        finder.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    })();
+  </script>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell creates direction-first creative production systems for brands that need campaign-ready content they can actually use.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Site</span>
+        <a href="/start/">Find your starting point</a>
+        <a href="/method/">Method</a>
+        <a href="/standard/">Standard</a>
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/about/">About</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="/contact/">Contact form</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  </script>
+</body>
+</html>
