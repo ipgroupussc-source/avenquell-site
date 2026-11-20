@@ -1907,14 +1907,6 @@ a.finder-option {
   text-decoration: underline;
 }
 
-/* Вход в подбор на главной — такой же самостоятельный блок, как закрывающий:
-   заголовок и карточка идут одной колонкой, иначе шапка стоит по левому краю
-   контейнера, а карточка по центру, и блок читается съехавшим. */
-#start .section-header {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .finder-entry-foot a {
   color: var(--gold-soft);
@@ -1938,4 +1930,36 @@ a.finder-option {
   font-size: 15px;
   line-height: 1.6;
   color: var(--gold-soft);
+}
+
+/* Карточка вопроса стоит внутри первого экрана, а не отдельным блоком ниже:
+   человек видит, с чего начать, не прокручивая. Внутри героя она компактнее
+   отдельной — вокруг уже есть воздух колонки. */
+.finder-entry-hero {
+  margin: 30px 0 0;
+  padding: 24px;
+}
+
+.finder-entry-hero .finder-question {
+  font-size: 21px;
+  margin-bottom: 0;
+}
+
+.finder-entry-hero .finder-option {
+  padding: 14px 17px;
+  font-size: 15px;
+}
+
+.finder-entry-hero .finder-options { margin-top: 16px; }
+
+@media (max-width: 860px) {
+  .finder-entry-hero { padding: 20px; margin-top: 24px; }
+  .finder-entry-hero .finder-question { font-size: 19px; }
+}
+
+/* Объяснение стоит ПОД вопросом, а не над ним: до сгиба должны поместиться
+   заголовок и все пять ответов, иначе человек видит вопрос и половину
+   вариантов и не понимает, что список кончается. */
+.hero-lead-under {
+  margin-top: 30px;
 }
