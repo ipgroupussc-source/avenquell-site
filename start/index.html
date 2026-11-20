@@ -668,12 +668,23 @@
         buyerUnknown: 'One thing you said does not fit the other: you are not sure who the buyer is, and you are asking for material. We can produce it \u2014 but material aimed at a buyer nobody has named is the most common way this money goes quiet. If you want that settled first, Buyer Research is from $7,500.',
         adsWantMaterial: 'You said ads run and results do not follow, and then asked for material. If the break is in the measurement or the funnel, new material goes into the same gap. The Ad Diagnostic names where it breaks for $3,500 and is credited in full against a Launch Package if you move within two weeks.',
         researchClock: 'Watch the clock: this runs two weeks, the extended tier four. Put your launch date in the form \u2014 if the research lands after it, we will say so plainly instead of taking the work.',
-        reportAddOn: 'If you also want a monthly read of what worked and what did not, the Monthly Report is $2,500/mo on top. It is built from your exports; analytics setup is not included.'
+        reportAddOn: 'If you also want a monthly read of what worked and what did not, the Monthly Report is $2,500/mo on top. It is built from your exports; analytics setup is not included.',
+        triedContractor: 'You said you have already changed who makes the work. Hire us the same way and we are simply the next one \u2014 the brief goes unchanged and so does the result. That is what the Visual Audit fixes before it starts: $1,500, three business days, and it ends with this project scoped and priced in writing.',
+        triedMore: 'You said you answered this by making more, more often. Production from us is the same move with a different invoice unless the direction changes first. If you want that checked before you commit, the Visual Audit is $1,500 and ends with this project scoped and priced.',
+        triedOffer: 'You said you changed the offer or the price. If the way it is shown stayed the same, buyers saw the same thing with a new number on it. Deciding what the offer says before producing around it is Positioning, from $5,000.',
+        positioningNoBuyers: 'What this works from: your competitors, your segments and your own offer. It does not include talking to your buyers, and you said there is almost nothing to read yet \u2014 so nothing underneath this comes from them. If you want their own words under the decision, Buyer Research is from $7,500, and it is built for brands without a data history.',
+        positioningThenWork: 'This is one document, not a monthly engagement. Once it exists, monthly work has something to execute against \u2014 the Content Plan from $5,000/mo, or Monthly Content with the production included from $9,500/mo.'
       };
+
+      /* Вес оговорки: 1 \u2014 противоречие или граница услуги, 2 \u2014 условие,
+         без которого она не сработает, 3 \u2014 что можно добавить или где дешевле.
+         Больше трёх на одной карточке превращают ответ в лекцию. */
+      var NOTE_CAP = 3;
 
       function resolve(a) {
         var notes = [];
         var r;
+        function note(text, weight) { notes.push({ t: text, w: weight }); }
 
         if (a.settled === 'whyvisuals') {
           r = (a.data === 'numbers') ? 'auditFull' : 'auditBasic';
@@ -684,7 +695,7 @@
             r = 'auditFirstAds';
           } else {
             r = 'adDiag';
-            if (a.data !== 'numbers') notes.push(NOTES.adExports);
+            if (a.data !== 'numbers') note(NOTES.adExports, 2);
           }
 
         } else if (a.settled === 'whospeak') {
@@ -695,10 +706,10 @@
             r = 'researchShort';
           } else if (a.data === 'numbers' && a.constraint === 'budget') {
             r = 'customerAnalysis';
-            notes.push(NOTES.analysisNoWords);
+            note(NOTES.analysisNoWords, 1);
           } else {
             r = 'researchFull';
-            if (a.data === 'numbers') notes.push(NOTES.cheaperCustomerAnalysis);
+            if (a.data === 'numbers') note(NOTES.cheaperCustomerAnalysis, 3);
           }
 
         } else if (a.settled === 'whatsay') {
@@ -709,7 +720,7 @@
             /* «Проба поменьше» за $6,500 \u2014 не проба. Меньший настоящий шаг \u2014
                диагностика, которая и заканчивается ценой производства. */
             r = (a.data === 'numbers') ? 'auditFull' : 'auditBasic';
-            notes.push(NOTES.testIsAudit);
+            note(NOTES.testIsAudit, 2);
           } else if (a.horizon === 'ongoing') {
             /* «Часть сами, часть мы» \u2014 не повод отдавать самую дорогую
                подписку. Производство, а Full System названа ступенью выше. */
@@ -717,7 +728,7 @@
               r = 'contentPlan';
             } else {
               r = 'monthly';
-              if (a.who === 'mixed') notes.push(NOTES.mixedStepUp);
+              if (a.who === 'mixed') note(NOTES.mixedStepUp, 3);
             }
           } else {
             r = 'launch';
@@ -727,17 +738,17 @@
         /* Противоречие: публикации съедают команду, а план добавляет ей работы. */
         if (a.situation === 'volume' && r === 'contentPlan') {
           if (a.constraint === 'budget') {
-            notes.push(NOTES.volumePlanLoad);
+            note(NOTES.volumePlanLoad, 1);
           } else {
             r = 'monthly';
-            notes.push(NOTES.volumeToMonthly);
+            note(NOTES.volumeToMonthly, 2);
           }
         }
 
         /* Бюджет: шаг вниз только там, где меньший первый шаг честно существует. */
         if (a.constraint === 'budget') {
-          if (r === 'researchFull') { r = 'researchShort'; notes.push(NOTES.researchSteppedDown); }
-          if (r === 'auditFull') { r = 'auditBasic'; notes.push(NOTES.auditSteppedDown); }
+          if (r === 'researchFull') { r = 'researchShort'; note(NOTES.researchSteppedDown, 2); }
+          if (r === 'auditFull') { r = 'auditBasic'; note(NOTES.auditSteppedDown, 2); }
         }
 
         /* Запуск близко и важна скорость: месячная система не успеет \u2014
@@ -756,14 +767,38 @@
         }
 
         /* Оговорки, зависящие от итога, \u2014 только когда итог уже окончателен. */
-        if (a.situation === 'buyer' && a.settled === 'material') notes.push(NOTES.buyerUnknown);
-        if (a.situation === 'ads' && a.settled === 'material') notes.push(NOTES.adsWantMaterial);
+        if (a.situation === 'buyer' && a.settled === 'material') note(NOTES.buyerUnknown, 1);
+        if (a.situation === 'ads' && a.settled === 'material') note(NOTES.adsWantMaterial, 1);
         if (r === 'researchShort' || r === 'researchFull') {
-          if (a.situation === 'launch' && a.constraint === 'time') notes.push(NOTES.researchClock);
+          if (a.situation === 'launch' && a.constraint === 'time') note(NOTES.researchClock, 2);
         }
-        if (r === 'monthly' || r === 'contentPlan') notes.push(NOTES.reportAddOn);
+        if (r === 'monthly' || r === 'contentPlan') note(NOTES.reportAddOn, 3);
 
-        return { key: r, notes: notes };
+        /* Что человек уже пробовал, НЕ меняет продукт: он только что сказал,
+           что для него важнее всего, и перебивать его выводом из прошлого \u2014
+           самоуправство. Но если он нанимал подрядчиков или делал больше
+           материала, а теперь покупает у нас производство, это надо назвать:
+           иначе мы просто следующий подрядчик с тем же заданием. */
+        var isProduction = (r === 'launch' || r === 'monthly' ||
+                            r === 'contentPlan' || r === 'launchThenMonthly');
+        if (isProduction) {
+          if (a.tried === 'contractor') note(NOTES.triedContractor, 1);
+          else if (a.tried === 'more') note(NOTES.triedMore, 1);
+          else if (a.tried === 'offer') note(NOTES.triedOffer, 1);
+        }
+
+        /* Positioning не слышал ни одного покупателя и не длится месяцами \u2014
+           обе границы человек должен увидеть до оплаты. */
+        if (r === 'positioning') {
+          if (a.data === 'none') note(NOTES.positioningNoBuyers, 1);
+          if (a.horizon === 'ongoing') note(NOTES.positioningThenWork, 3);
+        }
+
+        notes.sort(function (x, y) { return x.w - y.w; });
+        return {
+          key: r,
+          notes: notes.slice(0, NOTE_CAP).map(function (n) { return n.t; })
+        };
       }
 
       var answers = {};
