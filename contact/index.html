@@ -151,34 +151,7 @@
     gtag('config', 'G-J06XENM876');
   </script>
 
-  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
-  <script src="/cookie-banner/silktide-consent-manager.js"></script>
-  <script>
-    silktideCookieBannerManager.updateCookieBannerConfig({
-      background: { showBackground: false },
-      position: { banner: "bottomRight" },
-      cookieIcon: { show: false },
-      cookieTypes: [
-        {
-          id: "necessary",
-          name: "Necessary",
-          description: "<p>Required for the site to work. Always on.</p>",
-          required: true
-        },
-        {
-          id: "analytics",
-          name: "Analytics",
-          description: "<p>Helps us see which pages are useful, so we can improve them.</p>",
-          onAccept: function () {
-            gtag('consent', 'update', { analytics_storage: 'granted' });
-          },
-          onReject: function () {
-            gtag('consent', 'update', { analytics_storage: 'denied' });
-          }
-        }
-      ]
-    });
-  </script>
+  <script src="/cookie-banner/consent-init.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",

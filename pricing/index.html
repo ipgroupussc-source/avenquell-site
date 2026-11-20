@@ -375,34 +375,7 @@
     gtag('config', 'G-J06XENM876');
   </script>
 
-  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
-  <script src="/cookie-banner/silktide-consent-manager.js"></script>
-  <script>
-    silktideCookieBannerManager.updateCookieBannerConfig({
-      background: { showBackground: false },
-      position: { banner: "bottomRight" },
-      cookieIcon: { show: false },
-      cookieTypes: [
-        {
-          id: "necessary",
-          name: "Necessary",
-          description: "<p>Required for the site to work. Always on.</p>",
-          required: true
-        },
-        {
-          id: "analytics",
-          name: "Analytics",
-          description: "<p>Helps us see which pages are useful, so we can improve them.</p>",
-          onAccept: function () {
-            gtag('consent', 'update', { analytics_storage: 'granted' });
-          },
-          onReject: function () {
-            gtag('consent', 'update', { analytics_storage: 'denied' });
-          }
-        }
-      ]
-    });
-  </script>
+  <script src="/cookie-banner/consent-init.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -728,22 +701,24 @@
 
           <div class="hero-actions pricing-jump">
             <a class="btn btn-primary" href="/start/">Not sure which one? Answer seven questions</a>
-            <a class="btn btn-secondary" href="#diagnose">Diagnose &mdash; paid answers in writing</a>
-            <a class="btn btn-secondary" href="#fix">Fix &mdash; one scoped project</a>
-            <a class="btn btn-secondary" href="#grow">Grow &mdash; month to month</a>
+            <a class="btn btn-secondary" href="#know">Know what is wrong &mdash; days</a>
+            <a class="btn btn-secondary" href="#decide">Decide what to say &mdash; weeks</a>
+            <a class="btn btn-secondary" href="#make">Have it made &mdash; project or monthly</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="diagnose" class="section pricing-service-section">
+    <section id="know" class="section pricing-service-section">
       <div class="container">
         <div class="pricing-stage-header">
-          <span class="eyebrow pricing-group-label">Diagnose</span>
-          <h2>Paid diagnostics that tell you what is wrong, in writing, before you spend more.</h2>
+          <span class="stage-num">01</span>
+          <span class="eyebrow pricing-group-label">Know</span>
+          <h2>Paid answers in writing, before you spend more.</h2>
+          <p class="lead">One-time, three to five business days. Each one works from material or exports you send &mdash; no logins, no account access.</p>
         </div>
 
-        <div class="pricing-service-grid pricing-diagnose-grid">
+        <div class="pricing-service-grid">
           <article id="premium-visual-audit" class="pricing-card">
             <span class="pricing-label">One-time · 3 business days</span>
             <h3>Visual Audit</h3><p class="service-outcome">Why your visuals aren&rsquo;t working</p>
@@ -755,7 +730,6 @@
             <p><strong>Three business days from the point we have everything we need from you.</strong></p>
             <a class="btn btn-secondary" href="/contact/">Book the Audit</a>
           </article>
-
           <article id="ad-diagnostic" class="pricing-card ad-diagnostic-card">
             <span class="pricing-label">One-time · 5 business days</span>
             <h3>Ad Diagnostic</h3><p class="service-outcome">Where your ad spend leaks</p>
@@ -802,7 +776,21 @@
             </div>
             <p class="fine-print">Or DM AUDIT to <a href="https://instagram.com/avenquell.studio" target="_blank" rel="noopener noreferrer">@avenquell.studio</a> on Instagram to start there.</p>
           </article>
+          <article id="quantitative-segment-analytics" class="pricing-card"><h3>Customer Analysis</h3><p class="service-outcome">Who buys, and where they come from</p><div class="pricing-amount">From $5,000 · one-time</div><p>Who is actually buying and where your best customers come from — analyzed from your exports. We work from files you send, not direct database access.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+        </div>
+      </div>
+    </section>
 
+    <section id="decide" class="section pricing-service-section">
+      <div class="container">
+        <div class="pricing-stage-header">
+          <span class="stage-num">02</span>
+          <span class="eyebrow pricing-group-label">Decide</span>
+          <h2>Decisions you keep, and brief people from.</h2>
+          <p class="lead">One-time, two to four weeks. These settle who you are talking to and what you say &mdash; the part that survives a change of contractor.</p>
+        </div>
+
+        <div class="pricing-service-grid">
           <article id="marketing-research" class="pricing-card">
             <h3>Buyer Research</h3><p class="service-outcome">Who actually buys from you</p>
             <div class="pricing-amount">$7,500 · 2 weeks / $12,500 · 4 weeks</div>
@@ -811,38 +799,25 @@
             <p>Content planning and media planning are not included.</p>
             <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
           </article>
+          <article id="strategy-positioning" class="pricing-card"><h3>Positioning</h3><p class="service-outcome">What to say, and what to stop saying</p><div class="pricing-amount">From $5,000</div><p>Your segments, competitors, positioning, and offer — delivered as a working document you keep.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
         </div>
       </div>
     </section>
 
-    <section id="fix" class="section pricing-service-section">
+    <section id="make" class="section pricing-service-section">
       <div class="container">
         <div class="pricing-stage-header">
-          <span class="eyebrow pricing-group-label">Fix</span>
-          <h2>Fix what needs fixing.</h2>
-          <p class="lead">One project, scoped after diagnosis. Price locked before production starts.</p>
+          <span class="stage-num">03</span>
+          <span class="eyebrow pricing-group-label">Make</span>
+          <h2>The work itself &mdash; one project, or month after month.</h2>
+          <p class="lead">Scoped after diagnosis, with the price locked before production starts. No annual contract on anything monthly.</p>
         </div>
 
         <div class="pricing-service-grid">
-<article id="strategy-positioning" class="pricing-card"><h3>Positioning</h3><p class="service-outcome">What to say, and what to stop saying</p><div class="pricing-amount">From $5,000</div><p>Your segments, competitors, positioning, and offer — delivered as a working document you keep.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
           <article id="launch-creative-package" class="pricing-card"><span class="pricing-label">2–4 weeks delivery</span><h3>Launch Package</h3><p class="service-outcome">Everything you need to launch</p><div class="pricing-amount">From $6,500</div><p>For product launches, seasonal campaigns, offer rollouts, and campaign-ready asset systems.</p><a class="btn btn-secondary" href="/contact/">Plan a Launch</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="grow" class="section pricing-service-section">
-      <div class="container">
-        <div class="pricing-stage-header">
-          <span class="eyebrow pricing-group-label">Grow</span>
-          <h2>Systems that run month to month.</h2>
-          <p class="lead">Marketing services require a 3-month minimum, then monthly with 30 days' notice. The Monthly Content runs on a 2-month minimum. Ad budgets go directly to the platforms. All accounts are set up in your name.</p>
-        </div>
-
-        <div class="pricing-service-grid">
           <article id="monthly-creative-content-system" class="pricing-card pricing-card-featured"><span class="pricing-label">Flagship · 2-month minimum</span><h3>Monthly Content</h3><p class="service-outcome">A steady stream of material, every month</p><div class="pricing-amount">From $9,500/mo</div><p>For brands that need ongoing creative production, visual consistency, and monthly campaign support.</p><p>No annual contract. Month-to-month after the initial two cycles.</p><a class="btn btn-primary" href="/contact/">Start the Conversation</a></article>
-<article id="content-plan-scripts" class="pricing-card"><h3>Content Plan</h3><p class="service-outcome">What to post, written for you</p><div class="pricing-amount">From $5,000/mo</div><p>A monthly content plan and scripts your team publishes. Posting and community management are not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+          <article id="content-plan-scripts" class="pricing-card"><h3>Content Plan</h3><p class="service-outcome">What to post, written for you</p><div class="pricing-amount">From $5,000/mo</div><p>A monthly content plan and scripts your team publishes. Posting and community management are not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
           <article id="analytics-reporting" class="pricing-card"><h3>Monthly Report</h3><p class="service-outcome">What worked, what didn&rsquo;t</p><div class="pricing-amount">$2,500/mo</div><p>A monthly report built from your data exports: what worked, what didn't, what to do next. Analytics setup is not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
-          <article id="quantitative-segment-analytics" class="pricing-card"><h3>Customer Analysis</h3><p class="service-outcome">Who buys, and where they come from</p><div class="pricing-amount">From $5,000 · one-time</div><p>Who is actually buying and where your best customers come from — analyzed from your exports. We work from files you send, not direct database access.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
           <article id="full-creative-strategy-system" class="pricing-card"><h3>Full System</h3><p class="service-outcome">Strategy, content and production together</p><div class="pricing-amount">$12,500/mo — one primary segment and channel</div><div class="pricing-amount">$18,000/mo — two to three segments, each with its own funnel and content plan</div><p>Strategy, content plan and scripts, visual production, and a monthly report. Paid media management is not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
         </div>
       </div>

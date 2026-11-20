@@ -33,34 +33,7 @@
     gtag('config', 'G-J06XENM876');
   </script>
 
-  <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css">
-  <script src="/cookie-banner/silktide-consent-manager.js"></script>
-  <script>
-    silktideCookieBannerManager.updateCookieBannerConfig({
-      background: { showBackground: false },
-      position: { banner: "bottomRight" },
-      cookieIcon: { show: false },
-      cookieTypes: [
-        {
-          id: "necessary",
-          name: "Necessary",
-          description: "<p>Required for the site to work. Always on.</p>",
-          required: true
-        },
-        {
-          id: "analytics",
-          name: "Analytics",
-          description: "<p>Helps us see which pages are useful, so we can improve them.</p>",
-          onAccept: function () {
-            gtag('consent', 'update', { analytics_storage: 'granted' });
-          },
-          onReject: function () {
-            gtag('consent', 'update', { analytics_storage: 'denied' });
-          }
-        }
-      ]
-    });
-  </script>
+  <script src="/cookie-banner/consent-init.js" defer></script>
   <link rel="canonical" href="https://avenquell.com/work/cs01/" />
   <meta property="og:title" content="Concept Study 01 — Home Fragrance Launch" />
   <meta property="og:type" content="website" />
@@ -167,7 +140,7 @@
     <section class="section case-study-section">
       <div class="container">
         <div class="case-study-hero">
-          <a class="small" href="/#work">← Back to Work</a>
+          <a class="small" href="/work/">← Back to Work</a>
 
           <span class="eyebrow">Concept Study 01</span>
           <span class="disclaimer">Speculative Concept Study / Not Client Work</span>
@@ -325,7 +298,7 @@
               Download PDF
             </a>
 
-            <a class="btn btn-secondary" href="/#services-pricing">View Services</a>
+            <a class="btn btn-secondary" href="/services/">View Services</a>
           </div>
         </div>
       </div>

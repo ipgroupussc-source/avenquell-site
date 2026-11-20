@@ -21,23 +21,36 @@ ongoing output. Every price is published. Human review before anything ships.
 - [Concept Study 01](https://avenquell.com/work/cs01/): home fragrance launch
 - [Contact](https://avenquell.com/contact/): inquiry form
 
-## Diagnostics
+## Know what is wrong — one-time, 3 to 5 business days
+
+Answers in writing, worked from material or exports the client sends. No logins,
+no account access.
 
 - Visual Audit — $1,500 (visual review) / $2,500 (plus performance read), 3 business days
-- Ad Diagnostic — $3,500, 5 business days. Includes 3-5 ad concepts. Named cause or refund
-- Buyer Research — $7,500 (2 weeks) / $12,500 (4 weeks)
+- Ad Diagnostic — $3,500, 5 business days. Includes 3-5 ad concepts. Named cause or refund.
+  Not a fit when ads have run less than 2-3 months: there is not enough history to read
+- Customer Analysis — from $5,000 one-time. Who buys and where they come from, read from
+  the client's own exports. It does not include the buyers' language
 
-## Projects
+## Decide what to say — one-time, 2 to 4 weeks
 
-- Positioning — from $5,000
+Decisions the client keeps and briefs people from. This is the part that survives a
+change of contractor.
+
+- Buyer Research — $7,500 (2 weeks) / $12,500 (4 weeks). Buyers, their language,
+  competitive position, where the message needs to go. The $12,500 tier adds interviews,
+  analysis of existing data, and live message testing
+- Positioning — from $5,000. Segments, competitors, position and offer, as a working
+  document. Built from competitors and segments, not from talking to the client's buyers
+
+## Have it made — one project, or month to month
+
+Scoped after diagnosis, price locked before production starts. No annual contract.
+
 - Launch Package — from $6,500, 2-4 weeks
-
-## Monthly
-
 - Monthly Content — from $9,500/mo, two-month minimum
-- Content Plan — from $5,000/mo
-- Monthly Report — $2,500/mo
-- Customer Analysis — from $5,000 one-time
+- Content Plan — from $5,000/mo. Plan and scripts; the client's team publishes
+- Monthly Report — $2,500/mo. Built from the client's exports; analytics setup not included
 - Full System — $12,500/mo (one segment) / $18,000/mo (two to three)
 
 ## Good to know

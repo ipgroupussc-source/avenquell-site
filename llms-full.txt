@@ -44,7 +44,7 @@ off-brand output, distorted product details, the glossy default AI look, unsuppo
 or efficacy claims, unrealistic fabric and skin textures, unlimited revisions, and anything
 that has not passed human review.
 
-## Diagnostics
+## Know what is wrong — one-time, 3 to 5 business days
 
 Visual Audit — $1,500 or $2,500. Three business days from complete inputs.
 A paid visual diagnostic for brands that need direction before production. Both tiers review
@@ -67,20 +67,26 @@ Guarantee: the cause is named, or the fee is refunded. The disclosed unverifiabl
 excluded from refund scope and are stated before payment.
 Not a fit if ads have been running less than two or three months — there is not enough history.
 
+Customer Analysis — from $5,000, one-time. Who is actually buying and where the
+best customers come from, analysed from client exports rather than direct database access.
+It does not include the buyers' own language: it reads files, it does not talk to buyers.
+
+## Decide what to say — one-time, 2 to 4 weeks
+
 Buyer Research — $7,500 (two weeks) or $12,500 (four weeks).
 For brands without their own data history. Maps buyers, their language, competitive position
 and where the message needs to go. The $12,500 tier adds buyer interviews, analysis of existing
 data and live message testing. Content and media planning are not included.
 
-## Projects
-
 Positioning — from $5,000. Segments, competitors, positioning and offer, delivered
 as a working document the client keeps.
+It is built from competitors and segments, not from talking to the buyers — when
+there is no data history, Buyer Research is the one that puts their words underneath.
+
+## Have it made — one project, or month to month
 
 Launch Package — from $6,500, two to four weeks. For product launches, seasonal
 campaigns, offer rollouts and campaign-ready asset systems.
-
-## Monthly systems
 
 Monthly Content — from $9,500/mo. Two-month minimum, then month to month.
 Ongoing creative production, visual consistency and monthly campaign support without
@@ -91,9 +97,6 @@ publishes. Posting and community management are not included.
 
 Monthly Report — $2,500/mo. A monthly report built from the client's data exports.
 Analytics setup is not included.
-
-Customer Analysis — from $5,000, one-time. Who is actually buying and where the
-best customers come from, analysed from client exports rather than direct database access.
 
 Full System — $12,500/mo for one primary segment and channel, or
 $18,000/mo for two to three segments, each with its own funnel and content plan. Paid media

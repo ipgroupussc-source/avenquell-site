@@ -1963,3 +1963,19 @@ a.finder-option {
 .hero-lead-under {
   margin-top: 30px;
 }
+
+/* Номер этапа. Единственная повторяющаяся визуальная опора на сайте: одна и
+   та же золотая цифра размечает этапы на главной, в услугах и в прайсе.
+   До этого ритм страницы держался только на размере шрифта, и она читалась
+   сплошной. */
+.stage-num {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+@media (max-width: 860px) {
+  .stage-num { font-size: 25px; }
+}
