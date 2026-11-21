@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>What happens next | Avenquell Studio</title>
+  <meta name="description" content="What to send us after paying for a diagnostic, where to send it, and when the clock starts." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="What happens next | Avenquell Studio" />
+  <meta property="og:description" content="What to send, where to send it, and when the clock starts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/next/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <link rel="canonical" href="https://avenquell.com/next/" />
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* ── GATE BADGE ── */
+    .method-card {
+      position: relative;
+    }
+    .method-card.is-gate {
+      /* inherits your existing .method-card styles */
+    }
+    .gate-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: 2px 7px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #B8875D;
+    }
+
+    /* ── WORK DROPDOWN NAVIGATION ── */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+  <!-- Аналитика и согласие на cookie.
+       Consent Mode v2: счётчик работает всегда, но до согласия не пишет cookies —
+       так сохраняются и метрики, и требования GDPR. Баннер при согласии поднимает
+       analytics_storage. Раньше вызывался silktideCookieBannerManager.updateCookieBanner,
+       которого в библиотеке нет, — баннер падал с TypeError и согласие не собиралось. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J06XENM876"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('config', 'G-J06XENM876');
+  </script>
+
+  <script src="/cookie-banner/consent-init.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://avenquell.com/next/",
+    "name": "What happens next",
+    "description": "Post-purchase instructions for Avenquell Studio diagnostics."
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/services/">Services</a>
+        <a href="/shop/">Shop</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/method/">Method</a>
+        <a href="/answers/">Answers</a>
+        <a href="/about/">About</a>
+        <a class="nav-cta" href="/contact/">Start Inquiry</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/services/">Services</a>
+            <a href="/shop/">Shop</a>
+            <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+            <a href="/method/">Method</a>
+            <a href="/answers/">Answers</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+            <a href="/contact/">Start Inquiry</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container answer-container">
+        <div class="section-header">
+          <span class="eyebrow">Payment Received</span>
+          <h1>Thank you. Here is what happens now.</h1>
+          <p class="lead">
+            Nothing starts until we have what we need from you, and nothing about that is hidden &mdash; the list is short and it is below. Send it, and the clock starts the day it is all in. Not the day you paid, which would make your delay into our missed deadline.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual-diagnosis" class="section answer-section">
+      <div class="container answer-container">
+        <article class="answer-article">
+          <h2>Visual Diagnosis</h2>
+          <p class="answer-short">Send the five things below to <a href="mailto:marcus@avenquell.com?subject=Visual%20Diagnosis">marcus@avenquell.com</a> with your brand name in the subject line. Three business days from the point all of it is in, you get a written report back.</p>
+
+          <h3>What to send</h3>
+          <ul>
+            <li>Brand name, website, and where you actually sell.</li>
+            <li>The accounts or pages whose visuals we should read &mdash; handles or links are enough, you do not need to collect the images.</li>
+            <li>Your product: what it is, what it is made of, what must look exactly right in a photograph.</li>
+            <li>Who you are selling to, in your own words. Two sentences beats a persona document.</li>
+            <li>What you think is not working. Say it plainly, even if you are not sure.</li>
+          </ul>
+
+          <h3>If you bought the tier with the performance read</h3>
+          <ul>
+            <li>Your post statistics for the last 60&ndash;90 days &mdash; exported by you, no access needed.</li>
+            <li>A table of your ad creatives for the same period: spend, click-through rate and cost per result for each one. A screenshot or an export both work.</li>
+          </ul>
+          <p><small>Without those two, the performance read has nothing to read. If pulling them is a problem, write and say so before sending the rest &mdash; we will tell you honestly whether the lower tier is the better buy and refund the difference.</small></p>
+
+          <h3>What comes back</h3>
+          <p>A written report by email, signed by Iryna: where the visual system is losing buyers, what to fix first, and the production scope with a fixed price if you decide to go on. No call unless you want one.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ad-diagnostic" class="section answer-section">
+      <div class="container answer-container">
+        <article class="answer-article">
+          <h2>Ad Diagnostic</h2>
+          <p class="answer-short">Send the required list below to <a href="mailto:marcus@avenquell.com?subject=Ad%20Diagnostic">marcus@avenquell.com</a> with your brand name in the subject line. Five business days from the point all of it is in, you get the written diagnosis with three to five ad concepts built around it.</p>
+
+          <h3>Required</h3>
+          <ul>
+            <li>Campaign exports from Meta Ads Manager or Google Ads &mdash; CSV or XLSX, 60&ndash;90 days. Exports, not screenshots of reports.</li>
+            <li>GA4 export for the same period.</li>
+            <li>Average order value and rough margin.</li>
+            <li>What your business counts as a conversion.</li>
+            <li>Screenshots of your settings screens taken in the last seven days, not from memory: goals and conversions, bid strategy, audiences.</li>
+          </ul>
+
+          <h3>Helpful, not required</h3>
+          <ul>
+            <li>CRM deal export with sources, 90 days.</li>
+            <li>Call tracking export, 60&ndash;90 days.</li>
+          </ul>
+          <p><a href="https://links.avenquell.com/uploads-guide" rel="noopener">How to export each of these &rarr;</a></p>
+
+          <h3>If it turns out this is not a fit</h3>
+          <p>This diagnostic needs two to three months of ad history to read. If your account has less than that, write to us before sending anything and we refund the payment in full &mdash; we would rather return it than sell you a reading of two weeks of data.</p>
+
+          <h3>The guarantee, in short</h3>
+          <p>We name the cause or we refund you. It applies when the required list was complete and the data still did not support a named cause. The things that cannot be verified from exports are listed on the service page before you pay, and they are outside refund scope. <a href="/services/#ad-diagnostic">Full terms are here &rarr;</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container answer-container">
+        <div class="panel">
+          <p><strong>Something wrong with the order?</strong> Write to <a href="mailto:marcus@avenquell.com">marcus@avenquell.com</a> and say what happened. A payment made by mistake is refunded, and you do not have to explain yourself twice.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell Studio names what is broken in a brand&#x27;s visuals, ads and measurement before anyone spends more on production. We work with premium consumer brands &mdash; fashion, beauty, hospitality, wellness, technology and real estate.
+        </p>
+      </div>
+
+      <div class="footer-column footer-site-column">
+        <span class="footer-heading">Site</span>
+        <a href="/start/">Find your starting point</a>
+        <a href="/services/">Services &amp; Pricing</a>
+        <a href="/shop/">Shop</a>
+        <a href="/work/">Work</a>
+        <a href="/method/">Method &amp; Standard</a>
+        <a href="/answers/">Answers</a>
+        <a href="/about/">About</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="/contact/">Contact form</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  </script>
+</body>
+</html>
