@@ -2143,3 +2143,17 @@ a.finder-option {
     grid-template-columns: 1fr;
   }
 }
+
+/* Якорь-псевдоним: старые ссылки вида /pricing/#premium-visual-audit после
+   переименования услуги должны по-прежнему приводить к её карточке. */
+.anchor-alias {
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Шапка липкая и 85 px высотой: без этого карточка, на которую ведёт якорь,
+   оказывается наполовину под ней. */
+[id] {
+  scroll-margin-top: 110px;
+}

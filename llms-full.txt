@@ -46,7 +46,7 @@ that has not passed human review.
 
 ## Know what is wrong — one-time, 3 to 5 business days
 
-Visual Audit — $1,500 or $2,500. Three business days from complete inputs.
+Visual Diagnosis — $1,500 or $2,500. Three business days from complete inputs.
 A paid visual diagnostic for brands that need direction before production. Both tiers review
 the current visual system and define a production scope with fixed pricing. The $2,500 tier
 adds a read of the client's own post and ad creative stats, connecting what the visuals do to
@@ -205,7 +205,7 @@ It diagnoses what is broken in a brand's visuals, ads or measurement, states it 
 then builds what the diagnosis defined — from single projects to monthly creative systems.
 
 Where do I start?
-Most engagements start with a diagnostic: the Visual Audit if the question is about
+Most engagements start with a diagnostic: the Visual Diagnosis if the question is about
 visuals and direction, the Ad Diagnostic if ad spend is running without results, and Marketing
 Research if there is no data history yet.
 
@@ -214,7 +214,7 @@ No. Diagnostics work from exports and screenshots the client sends. The report s
 findings cannot be verified without live access.
 
 How fast is a diagnostic?
-Three business days for the Visual Audit and five for the Ad Diagnostic, counted from
+Three business days for the Visual Diagnosis and five for the Ad Diagnostic, counted from
 the point all required inputs have been received.
 
 Is there a long-term contract?
