@@ -2157,3 +2157,45 @@ a.finder-option {
 [id] {
   scroll-margin-top: 110px;
 }
+
+/* ── Кнопки оплаты и ворота годности (страница услуг) ── */
+.buy-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.fit-gate {
+  margin-top: 22px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255,255,255,.03);
+}
+
+.fit-gate-q {
+  margin: 0 0 12px;
+}
+
+/* Выбранный ответ подсвечиваем: иначе после клика непонятно, что именно сказал
+   человек, и показанный блок выглядит случайным. */
+.fit-gate [data-gate].is-chosen {
+  border-color: var(--gold);
+  color: var(--gold-soft);
+}
+
+.fit-gate-answer {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.fit-gate-answer p {
+  margin: 0 0 12px;
+}
+
+@media (max-width: 640px) {
+  .buy-row .btn { width: 100%; }
+  .fit-gate { padding: 16px; }
+}

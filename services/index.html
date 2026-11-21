@@ -730,7 +730,11 @@
             <p>The $2,500 tier adds a read of your own numbers: you send your post and ad creative stats, and we connect what the visuals are doing to how people actually responded. No account access required.</p>
             <p><small>The $1,500 tier works from a brief you fill in. The $2,500 tier adds your own exported stats — no logins, no account access, nothing to hand over.</small></p>
             <p><strong>Three business days from the point we have everything we need from you.</strong></p>
-            <a class="btn btn-secondary" href="/contact/">Book the Audit</a>
+            <div class="buy-row">
+              <a class="btn btn-primary" href="https://zohosecurepay.com/checkout/dro2tbe-szfxuzpfgmdn6s/Visual-Diagnosis" rel="noopener">Pay $1,500 and start &rarr;</a>
+              <a class="btn btn-secondary" href="https://zohosecurepay.com/checkout/s5g079t-de1zweq1xoazqg/Visual-Diagnosis-with-Performance-Read" rel="noopener">Pay $2,500 &mdash; with the performance read</a>
+            </div>
+            <p class="fine-print">Payment comes first and the page then tells you exactly what to send. If you would rather ask something before paying, <a href="/contact/">write to us</a>. The $2,500 tier needs 60&ndash;90 days of your own post and ad statistics; with less than that, the $1,500 tier is the honest buy.</p>
           </article>
           <article id="ad-diagnostic" class="pricing-card ad-diagnostic-card">
             <span class="pricing-label">One-time · 5 business days</span>
@@ -773,8 +777,25 @@
               </div>
             </details>
 
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="https://links.avenquell.com/review">Get the Ad Diagnostic →</a>
+            <div class="fit-gate" id="adGate">
+              <p class="fit-gate-q"><strong>How long have your ads been running?</strong></p>
+              <div class="buy-row">
+                <button class="btn btn-secondary" type="button" data-gate="yes">Three months or more</button>
+                <button class="btn btn-secondary" type="button" data-gate="no">Less than two or three months</button>
+              </div>
+              <div class="fit-gate-answer" data-answer="yes" hidden>
+                <p>Then there is enough history in the account to read.</p>
+                <div class="buy-row">
+                  <a class="btn btn-primary" href="https://zohosecurepay.com/checkout/95e80qv-k4bir4obftcixa/Ad-Diagnostic" rel="noopener">Pay $3,500 and start &rarr;</a>
+                  <a class="btn btn-secondary" href="https://links.avenquell.com/review">Send the request form instead</a>
+                </div>
+              </div>
+              <div class="fit-gate-answer" data-answer="no" hidden>
+                <p>Then this one is not a fit yet, and we would rather say so than take the payment: two weeks of data makes a guess with an invoice attached. The <a href="#visual-diagnosis">Visual Diagnosis</a> works without ad history, or <a href="/contact/">write to us</a> and we will tell you what is worth doing first.</p>
+              </div>
+              <noscript>
+                <p>Ads running three months or more: <a href="https://zohosecurepay.com/checkout/95e80qv-k4bir4obftcixa/Ad-Diagnostic" rel="noopener">pay $3,500 and start</a>. Less than that, and there is not enough history to read &mdash; take the <a href="#visual-diagnosis">Visual Diagnosis</a> instead.</p>
+              </noscript>
             </div>
             <p class="fine-print">Or DM AUDIT to <a href="https://instagram.com/avenquell.studio" target="_blank" rel="noopener noreferrer">@avenquell.studio</a> on Instagram to start there.</p>
           </article>
@@ -1055,6 +1076,27 @@
     window.addEventListener('resize', function () {
       if (window.innerWidth > 860) closeMenu();
     });
+  </script>
+
+  <script>
+    /* Ворота по сроку рекламы. На странице опубликовано, что диагностика не годится
+       при рекламе моложе 2-3 месяцев; голая кнопка «купить» продавала бы её и таким.
+       Вопрос стоит ДО кассы, а не после оплаты. */
+    (function () {
+      var gate = document.getElementById('adGate');
+      if (!gate) return;
+      gate.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-gate]');
+        if (!b) return;
+        var want = b.getAttribute('data-gate');
+        gate.querySelectorAll('.fit-gate-answer').forEach(function (a) {
+          a.hidden = a.getAttribute('data-answer') !== want;
+        });
+        gate.querySelectorAll('[data-gate]').forEach(function (x) {
+          x.classList.toggle('is-chosen', x === b);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
