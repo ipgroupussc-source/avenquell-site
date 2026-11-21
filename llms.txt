@@ -13,10 +13,12 @@ ongoing output. Every price is published. Human review before anything ships.
 - [Home](https://avenquell.com/): what the studio does and how an engagement starts
 - [Find your starting point](https://avenquell.com/start/): a seven-question path that names one starting point, its price and its timeline
 - [About](https://avenquell.com/about/): why the studio exists, where it works from, what the name carries
-- [Method](https://avenquell.com/method/): six steps, two client approval gates
-- [Standard](https://avenquell.com/standard/): what we refuse to deliver, and why
-- [Services](https://avenquell.com/services/): every service by stage and vertical
-- [Pricing](https://avenquell.com/pricing/): all prices, terms, guarantee and credit rules
+- [Method and Standard](https://avenquell.com/method/): six steps, two client approval gates,
+  and the ten rules that decide what never ships
+- [Services and Pricing](https://avenquell.com/services/): every service by stage, with its
+  price, terms, guarantee and credit rules
+- [Shop](https://avenquell.com/shop/): what can be bought immediately, without a call
+- [Answers](https://avenquell.com/answers/): plain answers to what brands ask before hiring
 - [Work](https://avenquell.com/work/): concept studies showing the method in practice
 - [Concept Study 01](https://avenquell.com/work/cs01/): home fragrance launch
 - [Contact](https://avenquell.com/contact/): inquiry form
@@ -52,6 +54,32 @@ Scoped after diagnosis, price locked before production starts. No annual contrac
 - Content Plan — from $5,000/mo. Plan and scripts; the client's team publishes
 - Monthly Report — $2,500/mo. Built from the client's exports; analytics setup not included
 - Full System — $12,500/mo (one segment) / $18,000/mo (two to three)
+
+## Buy without a call
+
+Two things are sold at a fixed price with no conversation, no scoping and no call. Both are
+for small and medium businesses and are separate from the services above, which start at
+$1,500 and are scoped before they are priced.
+
+- The Avenquell Dispatch — $29 per edition, $49 for both. Ideas for running a sale, each
+  carried by worked examples from real brands. PDF, delivered immediately after payment.
+  Content edition: video, posts and pages. In-store edition: window, shelf and counter
+- One Photo, One Day — from $240. The client sends one product photograph and gets three
+  finished frames back inside one business day. Further frames are priced per item, falling
+  with volume. Anything already paid for a Dispatch edition is credited against it in full,
+  with no deadline
+
+## Answers to common questions
+
+Written answers, each one stating its answer in the first two sentences.
+
+- [Why pay for a review when other studios audit for free](https://avenquell.com/answers/why-pay-when-other-studios-audit-free/):
+  a free audit ends in a proposal, a paid one ends in a document the client can act on
+  without us
+- [How do I know the images won't look AI-generated](https://avenquell.com/answers/how-do-i-know-it-wont-look-ai-generated/):
+  what makes an image read as AI is the absence of a decision, not the tool
+- [Ads are running, sales aren't following — where to look first](https://avenquell.com/answers/ads-running-but-no-sales-where-to-look/):
+  three checks a brand can run itself, starting with what the account counts as a conversion
 
 ## Good to know
 

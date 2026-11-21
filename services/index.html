@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Services & Verticals | Avenquell Studio</title>
+  <title>Services & Pricing | Avenquell Studio</title>
   <meta 
     name="description" 
-    content="Avenquell Studio creates direction-first creative production systems for premium brands across fashion, beauty, boutique hospitality, and wellness." 
+    content="Avenquell Studio pricing and starting points for premium visual audits, launch creative packages, and monthly creative content systems." 
   />
 
   <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
@@ -15,16 +15,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
 
-  <meta property="og:title" content="Services & Verticals | Avenquell Studio" />
-  <meta property="og:description" content="Direction-first creative production systems for brands that need campaign-ready content." />
+  <meta property="og:title" content="Services &amp; Pricing | Avenquell Studio" />
+  <meta property="og:description" content="Start with a $1,500 visual diagnostic. Monthly creative systems from $9,500/month." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://avenquell.com/services/" />
   <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
   <meta property="og:site_name" content="Avenquell Studio" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Services & Verticals | Avenquell Studio" />
-  <meta name="twitter:description" content="Direction-first creative production systems for premium brands." />
+  <meta name="twitter:title" content="Services &amp; Pricing | Avenquell Studio" />
+  <meta name="twitter:description" content="Start with a $1,500 visual diagnostic. Monthly creative systems from $9,500/month." />
   <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
 
   <link rel="canonical" href="https://avenquell.com/services/" />
@@ -132,187 +132,225 @@
     }
 
 
-    /* Services Diagnose / Fix / Grow structure */
-    .services-stage-map {
-      margin-top: 34px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(184, 135, 93, 0.16);
-    }
-
-    .services-stage-map-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 20px;
-      align-items: stretch;
-    }
-
-    .services-stage-map-column {
-      min-height: 100%;
-      padding: 30px 30px 26px;
-      border-radius: 30px;
-      border: 1px solid rgba(184, 135, 93, 0.20);
-      background:
-        linear-gradient(180deg, rgba(26, 20, 16, 0.95), rgba(15, 12, 10, 0.98)),
-        rgba(15, 12, 10, 0.96);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    }
-
-    .services-stage-map-column .eyebrow {
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .services-stage-map-column a {
-      display: block;
-      margin: 0;
-      padding: 8px 0;
-      text-decoration: none;
-      color: rgba(255, 248, 241, 0.92);
-      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-      line-height: 1.35;
-    }
-
-    .services-stage-map-column a:hover {
-      color: #f4ddbe;
-    }
-
-    .services-stage-map-note {
-      margin-top: 22px;
-      max-width: 780px;
-    }
-
-    .services-stage-header {
+    /* Pricing Diagnose / Fix / Grow */
+    .pricing-stage-header {
       margin-bottom: 28px;
     }
 
-    .services-stage-header h2 {
+    .pricing-stage-header h2 {
       margin-bottom: 10px;
     }
 
-    .service-anchor {
+    .pricing-service-section {
       scroll-margin-top: 120px;
     }
 
-    /* What You Receive — integrated group styling */
-    .deliverables-grouped {
+    .pricing-service-section + .pricing-service-section {
+      padding-top: 38px;
+    }
+
+    .pricing-service-grid {
       display: grid;
-      gap: 18px;
-      margin-top: 28px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .deliverables-group {
-      padding: 22px;
-      border: 1px solid rgba(184, 135, 93, 0.18);
-      border-radius: 26px;
-      background: rgba(18, 14, 11, 0.56);
+    .pricing-service-grid .pricing-card {
+      height: 100%;
     }
 
-    .deliverables-group-label {
-      display: block;
-      margin: 0 0 16px;
-      padding-bottom: 13px;
-      border-bottom: 1px solid rgba(184, 135, 93, 0.16);
+    /* Diagnose cards should stay in the same visual row on desktop.
+       Ad Diagnostic is intentionally detailed, but it should not span the full page. */
+    .pricing-diagnose-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+    }
+
+    .pricing-diagnose-grid .pricing-card {
+      height: auto;
+    }
+
+    .pricing-card h4 {
+      margin: 24px 0 10px;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .pricing-card ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    .pricing-card li {
+      margin: 7px 0;
+    }
+
+    .pricing-card .fine-print {
+      font-size: 0.93rem;
+      opacity: 0.82;
+    }
+
+    .pricing-card details {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(184, 135, 93, 0.16);
+    }
+
+    .pricing-card summary {
+      cursor: pointer;
       color: #d8b07d;
-      font-size: 0.76rem;
-      line-height: 1.2;
-      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
-    .deliverables-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+    .pricing-card .section-actions {
+      margin-top: 24px;
     }
 
-    .deliverable-item {
-      margin: 0;
-      padding: 15px 16px;
-      border: 1px solid rgba(184, 135, 93, 0.13);
-      border-radius: 16px;
-      background: rgba(255, 252, 247, 0.035);
-      line-height: 1.35;
+    .pricing-group-label {
+      display: inline-block;
+      margin-bottom: 8px;
     }
 
-    @media (min-width: 861px) {
-      .deliverables-group:first-child .deliverables-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+    .pricing-note-tight {
+      margin-top: 20px;
+    }
 
-      .deliverables-group:nth-child(3) .deliverables-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media (max-width: 1120px) and (min-width: 861px) {
+      .pricing-diagnose-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 860px) {
-      .deliverables-grouped {
-        gap: 14px;
-        margin-top: 20px;
-      }
-
-      .deliverables-group {
-        padding: 18px;
-        border-radius: 22px;
-      }
-
-      .deliverables-group-label {
-        margin-bottom: 12px;
-        padding-bottom: 11px;
-      }
-
-      .deliverables-grid {
+      .pricing-service-grid {
         grid-template-columns: 1fr;
-        gap: 8px;
       }
 
-      .deliverable-item {
-        padding: 13px 14px;
-        border-radius: 14px;
+      .pricing-diagnose-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-service-section + .pricing-service-section {
+        padding-top: 24px;
       }
     }
 
-    /* Compact vertical rhythm between the service and information sections. */
-    .services-section {
-      padding-bottom: 24px !important;
+    /* Compact vertical rhythm for Pricing page */
+    .pricing-section {
+      padding-bottom: 28px !important;
     }
 
-    #know,
-    #decide,
-    #make,
-    .fit-section,
-    .deliverables-section,
-    .process-section,
-    .product-accuracy-section,
-    .not-do-section {
-      padding-top: 24px !important;
-      padding-bottom: 24px !important;
+    .pricing-service-section {
+      padding-top: 30px !important;
+      padding-bottom: 34px !important;
+    }
+
+    .pricing-service-section + .pricing-service-section {
+      padding-top: 30px !important;
+    }
+
+    .pricing-info-section,
+    .pricing-best-fit-section,
+    .pricing-next-step-section {
+      padding-top: 34px !important;
+      padding-bottom: 34px !important;
+    }
+
+    .pricing-stage-header,
+    .pricing-best-fit-section .section-header {
+      margin-bottom: 22px !important;
+    }
+
+    .pricing-info-section .split {
+      gap: clamp(24px, 4vw, 54px);
+    }
+
+    .pricing-info-section .panel {
+      margin-top: 0;
+    }
+
+    .pricing-next-step-section .case-study-block {
+      margin-top: 0;
     }
 
     @media (max-width: 860px) {
-      .services-section {
-        padding-bottom: 14px !important;
+      .pricing-section {
+        padding-bottom: 20px !important;
       }
 
-      #know,
-      #decide,
-      #make,
-      .fit-section,
-      .deliverables-section,
-      .process-section,
-      .product-accuracy-section,
-      .not-do-section {
-        padding-top: 14px !important;
-        padding-bottom: 14px !important;
+      .pricing-service-section,
+      .pricing-service-section + .pricing-service-section,
+      .pricing-info-section,
+      .pricing-best-fit-section,
+      .pricing-next-step-section {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
       }
 
-      .services-stage-map-grid {
-        grid-template-columns: 1fr;
+      .pricing-stage-header,
+      .pricing-best-fit-section .section-header {
+        margin-bottom: 18px !important;
       }
 
-      .services-stage-map-column {
-        padding: 24px 22px;
-        border-radius: 26px;
+      .pricing-info-section .split {
+        gap: 18px;
+      }
+    }
+
+    /* Keep Diagnose cards visually balanced on desktop. */
+    .pricing-diagnose-grid .pricing-card {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+    }
+
+    .pricing-diagnose-grid .pricing-card > .btn,
+    .pricing-diagnose-grid .pricing-card > .section-actions {
+      margin-top: auto;
+    }
+
+    .ad-diagnostic-card details.ad-diagnostic-more {
+      margin: 18px 0 20px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(184, 135, 93, 0.16);
+    }
+
+    .ad-diagnostic-card details.ad-diagnostic-more summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #d8b07d;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      list-style: none;
+    }
+
+    .ad-diagnostic-card details.ad-diagnostic-more summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .ad-diagnostic-card details.ad-diagnostic-more summary::after {
+      content: "+";
+      font-size: 1rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .ad-diagnostic-card details.ad-diagnostic-more[open] summary::after {
+      content: "–";
+    }
+
+    .ad-diagnostic-card .ad-diagnostic-expanded {
+      padding-top: 16px;
+    }
+
+    @media (max-width: 860px) {
+      .pricing-diagnose-grid .pricing-card {
+        align-self: stretch;
       }
     }
 
@@ -341,6 +379,205 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "@id": "https://avenquell.com/services/#catalog",
+  "name": "Avenquell Studio — services and pricing",
+  "url": "https://avenquell.com/services/",
+  "provider": {
+    "@id": "https://avenquell.com/#organization"
+  },
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Visual Audit",
+        "description": "Paid visual diagnostic. Review of the current visual system and a production scope with fixed pricing. Three business days.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 1500,
+        "maxPrice": 2500,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Ad Diagnostic",
+        "description": "Traces the path from ad to lead and finds where it breaks, including whether the measurement is real. Includes 3-5 ad concepts. Five business days.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "price": "3500"
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Buyer Research",
+        "description": "Buyer mapping, language, competitive position and message direction. Two or four weeks.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 7500,
+        "maxPrice": 12500,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Positioning",
+        "description": "Segments, competitors, positioning and offer, delivered as a working document.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 5000,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Launch Package",
+        "description": "Creative production for launches, seasonal campaigns and offer rollouts. Two to four weeks.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 6500,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Monthly Content",
+        "description": "Ongoing creative production and monthly campaign support. Two-month minimum, then month to month.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 9500,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Content Plan",
+        "description": "A monthly content plan and scripts the client's team publishes.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 5000,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Monthly Report",
+        "description": "A monthly report built from the client's data exports.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "price": "2500"
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Customer Analysis",
+        "description": "Who is buying and where the best customers come from, analysed from client exports.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 5000,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Full System",
+        "description": "Strategy, content plan and scripts, visual production and a monthly report.",
+        "provider": {
+          "@id": "https://avenquell.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 12500,
+        "maxPrice": 18000,
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BreadcrumbList",
@@ -354,7 +591,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services",
+          "name": "Services & Pricing",
           "item": "https://avenquell.com/services/"
         }
       ]
@@ -363,7 +600,7 @@
       "@type": "WebPage",
       "@id": "https://avenquell.com/services/#webpage",
       "url": "https://avenquell.com/services/",
-      "name": "Services",
+      "name": "Services & Pricing",
       "dateModified": "2026-11-18",
       "isPartOf": {
         "@id": "https://avenquell.com/#website"
@@ -396,9 +633,8 @@
       </a>
 
       <nav class="nav-links-desktop">
-        <a href="/method/">Method</a>
-        <a href="/standard/">Standard</a>
-        <a href="/services/" class="active">Services</a>
+        <a href="/services/">Services</a>
+        <a href="/shop/">Shop</a>
         <div class="nav-item-dropdown">
           <a href="/work/" class="nav-dropdown-toggle">Work</a>
           <div class="nav-dropdown-menu">
@@ -412,9 +648,9 @@
             </a>
           </div>
         </div>
+        <a href="/method/">Method</a>
+        <a href="/answers/">Answers</a>
         <a href="/about/">About</a>
-        <a href="/pricing/">Pricing</a>
-        <a href="/contact/">Contact</a>
         <a class="nav-cta" href="/contact/">Start Inquiry</a>
       </nav>
 
@@ -428,24 +664,24 @@
 
         <div class="nav-menu" id="navMenu">
           <nav class="nav-links-mobile">
-            <a href="/method/">Method</a>
-            <a href="/standard/">Standard</a>
-            <a href="/services/" class="active">Services</a>
+            <a href="/services/">Services</a>
+            <a href="/shop/">Shop</a>
             <div class="nav-item-dropdown">
-              <a href="/work/" class="nav-dropdown-toggle">Work</a>
-              <div class="nav-dropdown-menu">
-                <a href="/work/">
-                  <span class="nav-dropdown-label">Overview</span>
-                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
-                </a>
-                <a href="/work/cs01/">
-                  <span class="nav-dropdown-label">Case Study 01</span>
-                  <span class="nav-dropdown-title">Home Fragrance Launch</span>
-                </a>
-              </div>
-            </div>
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+            <a href="/method/">Method</a>
+            <a href="/answers/">Answers</a>
             <a href="/about/">About</a>
-        <a href="/pricing/">Pricing</a>
             <a href="/contact/">Contact</a>
             <a href="/contact/">Start Inquiry</a>
           </nav>
@@ -455,52 +691,148 @@
   </header>
 
   <main>
-
-    <!-- ═══════════════════════════
-         01 · HERO + VERTICALS
-    ════════════════════════════ -->
-    <section class="section services-section">
+    <section class="section pricing-section">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">Services &amp; Verticals</span>
-          <h1>Every service starts with a clear problem.</h1>
+          <span class="eyebrow">Services &amp; Pricing</span>
+          <h1>Every service, with its price, on one page.</h1>
           <p class="lead">
-            We work in three stages — diagnosis, execution, ongoing systems. Most clients start with a diagnostic. Some come with a defined project. A few are ready for a monthly system. All three paths lead to the same standard.
+            Three stages: know what is wrong, decide what to say, have it made. Most brands start with a diagnostic, some arrive with a defined project, a few are ready for a monthly system. Every price is published, and the scope is fixed in writing before any work starts.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-actions pricing-jump">
             <a class="btn btn-primary" href="/start/">Not sure which one? Answer seven questions</a>
+            <a class="btn btn-secondary" href="#know">Know what is wrong &mdash; days</a>
+            <a class="btn btn-secondary" href="#decide">Decide what to say &mdash; weeks</a>
+            <a class="btn btn-secondary" href="#make">Have it made &mdash; project or monthly</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="services-stage-map" aria-label="Avenquell service paths">
-          <div class="services-stage-map-grid">
-            <div class="services-stage-map-column">
-              <span class="eyebrow">DIAGNOSE</span>
-              <a href="#premium-visual-audit">Visual Audit</a>
-              <a href="#ad-diagnostic">Ad Diagnostic</a>
-              <a href="#marketing-research">Buyer Research</a>
-            </div>
-
-            <div class="services-stage-map-column">
-              <span class="eyebrow">FIX</span>
-<a href="#strategy-positioning">Positioning</a>
-              <a href="#launch-creative-package">Launch Package</a>
-            </div>
-
-            <div class="services-stage-map-column">
-              <span class="eyebrow">GROW</span>
-              <a href="#monthly-creative-content-system">Monthly Content</a>
-<a href="#content-plan-scripts">Content Plan</a>
-              <a href="#analytics-reporting">Monthly Report</a>
-              <a href="#quantitative-segment-analytics">Customer Analysis</a>
-              <a href="#full-creative-strategy-system">Full System</a>
-            </div>
-          </div>
-          <p class="services-stage-map-note">You don't have to start at the beginning. You start where the problem is.</p>
+    <section id="know" class="section pricing-service-section">
+      <div class="container">
+        <div class="pricing-stage-header">
+          <span class="stage-num">01</span>
+          <span class="eyebrow pricing-group-label">Know</span>
+          <h2>Paid answers in writing, before you spend more.</h2>
+          <p class="lead">One-time, three to five business days. Each one works from material or exports you send &mdash; no logins, no account access.</p>
         </div>
 
-        <!-- VERTICALS GRID — unchanged -->
+        <div class="pricing-service-grid">
+          <article id="premium-visual-audit" class="pricing-card">
+            <span class="pricing-label">One-time · 3 business days</span>
+            <h3>Visual Audit</h3><p class="service-outcome">Why your visuals aren&rsquo;t working</p>
+            <div class="pricing-amount">$1,500 — visual review</div>
+            <div class="pricing-amount">$2,500 — visual review plus performance read</div>
+            <p>A paid visual diagnostic for brands that need direction before production. Both tiers include a full review of your current visual system and a defined production scope with fixed pricing.</p>
+            <p>The $2,500 tier adds a read of your own numbers: you send your post and ad creative stats, and we connect what the visuals are doing to how people actually responded. No account access required.</p>
+            <p><small>The $1,500 tier works from a brief you fill in. The $2,500 tier adds your own exported stats — no logins, no account access, nothing to hand over.</small></p>
+            <p><strong>Three business days from the point we have everything we need from you.</strong></p>
+            <a class="btn btn-secondary" href="/contact/">Book the Audit</a>
+          </article>
+          <article id="ad-diagnostic" class="pricing-card ad-diagnostic-card">
+            <span class="pricing-label">One-time · 5 business days</span>
+            <h3>Ad Diagnostic</h3><p class="service-outcome">Where your ad spend leaks</p>
+            <div class="pricing-amount">$3,500</div>
+            <p>Your ad spend is running. Results aren't following. This diagnostic traces the path from ad to lead — and finds where it breaks.</p>
+            <p>We identify the cause, rank what to fix first, and include 3–5 ad concepts built around the diagnosis. No account access required.</p>
+
+            <details class="ad-diagnostic-more">
+              <summary>Read full details</summary>
+              <div class="ad-diagnostic-expanded">
+                <p>We work from your exports, not your logins. You send campaign exports, analytics pulls, and screenshots of your settings — taken in the last seven days, not from memory. From those, we read what's actually configured: whether conversions are set to a button click instead of a real submission, whether calls are counted at all, whether your sources are tagged, whether your spend is chasing duplicated events. We name the problem, rank what to fix first, and include 3–5 ad concepts built around the diagnosis — so the report ends with something you can act on, not just read. Signed by Iryna.</p>
+
+                <h4>What you upload</h4>
+                <p><strong>Required:</strong></p>
+                <ul>
+                  <li>Campaign exports from Meta Ads Manager or Google Ads — CSV or XLSX, 60–90 days (not report screenshots)</li>
+                  <li>GA4 export for the same period</li>
+                  <li>Average order value and rough margin</li>
+                  <li>What your business counts as a conversion</li>
+                  <li>Screenshots of your settings screens taken in the last 7 days: goals and conversions, bid strategy, audiences</li>
+                </ul>
+                <p><strong>Helpful:</strong></p>
+                <ul>
+                  <li>CRM deal export with sources, 90 days</li>
+                  <li>Call tracking export, 60–90 days</li>
+                </ul>
+                <p class="fine-print"><a href="https://links.avenquell.com/uploads-guide">How to export the reports →</a></p>
+
+                <h4>What we can't verify from your uploads</h4>
+                <p>Screenshots show configuration. They don't show behavior. Without live access, we can't confirm that a conversion event actually fires on a real lead submission — only that it's set to something. We also can't verify real audience sizes inside your ad account, whether your Meta Conversions API is sending quality signals, whether your pixel fires correctly on live traffic, how your tracking behaves across domain transitions, or the history of settings changes over time. These gaps are noted in the report.</p>
+
+                <h4>Guarantee</h4>
+                <p>We name the cause — or we refund you. Applies when the full required upload was complete and the data did not support a named diagnosis. Items listed above under “What we can't verify” are excluded from refund scope — they are disclosed before you pay.</p>
+
+                <h4>Credit</h4>
+                <p>The diagnostic fee is credited against your next project if you move forward within two weeks of receiving the report: fully toward a Launch Package, half toward the first month of a monthly system — up to the cost of that project. If you apply the credit, the refund guarantee closes; the two are mutually exclusive. Two weeks, because ad account data moves fast — your campaigns look different a month out, and so does the diagnosis.</p>
+
+                <p><strong>Not a fit if:</strong> your ads have been running less than 2–3 months. There is not enough history to read.</p>
+              </div>
+            </details>
+
+            <div class="section-actions">
+              <a class="btn btn-secondary" href="https://links.avenquell.com/review">Get the Ad Diagnostic →</a>
+            </div>
+            <p class="fine-print">Or DM AUDIT to <a href="https://instagram.com/avenquell.studio" target="_blank" rel="noopener noreferrer">@avenquell.studio</a> on Instagram to start there.</p>
+          </article>
+          <article id="quantitative-segment-analytics" class="pricing-card"><h3>Customer Analysis</h3><p class="service-outcome">Who buys, and where they come from</p><div class="pricing-amount">From $5,000 · one-time</div><p>Who is actually buying and where your best customers come from — analyzed from your exports. We work from files you send, not direct database access.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="decide" class="section pricing-service-section">
+      <div class="container">
+        <div class="pricing-stage-header">
+          <span class="stage-num">02</span>
+          <span class="eyebrow pricing-group-label">Decide</span>
+          <h2>Decisions you keep, and brief people from.</h2>
+          <p class="lead">One-time, two to four weeks. These settle who you are talking to and what you say &mdash; the part that survives a change of contractor.</p>
+        </div>
+
+        <div class="pricing-service-grid">
+          <article id="marketing-research" class="pricing-card">
+            <h3>Buyer Research</h3><p class="service-outcome">Who actually buys from you</p>
+            <div class="pricing-amount">$7,500 · 2 weeks / $12,500 · 4 weeks</div>
+            <p>For brands without their own data history. We map your buyers, their language, your competitive position, and where your message needs to go.</p>
+            <p>The $12,500 tier adds buyer interviews, analysis of your existing data, and live message testing.</p>
+            <p>Content planning and media planning are not included.</p>
+            <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
+          </article>
+          <article id="strategy-positioning" class="pricing-card"><h3>Positioning</h3><p class="service-outcome">What to say, and what to stop saying</p><div class="pricing-amount">From $5,000</div><p>Your segments, competitors, positioning, and offer — delivered as a working document you keep.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="make" class="section pricing-service-section">
+      <div class="container">
+        <div class="pricing-stage-header">
+          <span class="stage-num">03</span>
+          <span class="eyebrow pricing-group-label">Make</span>
+          <h2>The work itself &mdash; one project, or month after month.</h2>
+          <p class="lead">Scoped after diagnosis, with the price locked before production starts. No annual contract on anything monthly.</p>
+        </div>
+
+        <div class="pricing-service-grid">
+          <article id="launch-creative-package" class="pricing-card"><span class="pricing-label">2–4 weeks delivery</span><h3>Launch Package</h3><p class="service-outcome">Everything you need to launch</p><div class="pricing-amount">From $6,500</div><p>For product launches, seasonal campaigns, offer rollouts, and campaign-ready asset systems.</p><a class="btn btn-secondary" href="/contact/">Plan a Launch</a></article>
+          <article id="monthly-creative-content-system" class="pricing-card pricing-card-featured"><span class="pricing-label">Flagship · 2-month minimum</span><h3>Monthly Content</h3><p class="service-outcome">A steady stream of material, every month</p><div class="pricing-amount">From $9,500/mo</div><p>For brands that need ongoing creative production, visual consistency, and monthly campaign support.</p><p>No annual contract. Month-to-month after the initial two cycles.</p><a class="btn btn-primary" href="/contact/">Start the Conversation</a></article>
+          <article id="content-plan-scripts" class="pricing-card"><h3>Content Plan</h3><p class="service-outcome">What to post, written for you</p><div class="pricing-amount">From $5,000/mo</div><p>A monthly content plan and scripts your team publishes. Posting and community management are not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+          <article id="analytics-reporting" class="pricing-card"><h3>Monthly Report</h3><p class="service-outcome">What worked, what didn&rsquo;t</p><div class="pricing-amount">$2,500/mo</div><p>A monthly report built from your data exports: what worked, what didn't, what to do next. Analytics setup is not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+          <article id="full-creative-strategy-system" class="pricing-card"><h3>Full System</h3><p class="service-outcome">Strategy, content and production together</p><div class="pricing-amount">$12,500/mo — one primary segment and channel</div><div class="pricing-amount">$18,000/mo — two to three segments, each with its own funnel and content plan</div><p>Strategy, content plan and scripts, visual production, and a monthly report. Paid media management is not included.</p><a class="btn btn-secondary" href="/contact/">Start the Conversation →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         VERTICALS · поднято со страницы услуг при слиянии 11.21
+    ════════════════════════════ -->
+    <section class="section services-verticals-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Where We Work</span>
+          <h2>Categories where the visual decision is the business decision.</h2>
+        </div>
         <div class="verticals-visual-grid">
           <article class="vertical-visual-card">
             <img src="/assets/moodboard-fashion.jpeg" alt="DTC fashion and apparel visual direction by Avenquell Studio" />
@@ -529,212 +861,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════
-         02 · DIAGNOSE
-    ════════════════════════════ -->
-    <section id="know" class="section">
-      <div class="container">
-        <div class="services-stage-header">
-          <span class="stage-num">01</span>
-          <span class="eyebrow">Know</span>
-          <h2>Know what is wrong.</h2>
-          <p class="lead">Paid answers in writing, before you spend more. One-time, three to five business days &mdash; each works from material or exports you send, with no logins and no account access.</p>
-        </div>
-
-        <div class="cards">
-          <article id="premium-visual-audit" class="card service-anchor">
-            <span class="card-tag">One-time · 3 business days</span>
-            <h3>Visual Audit</h3><p class="service-outcome">Why your visuals aren&rsquo;t working</p>
-            <p class="service-price-link"><a href="/pricing/#premium-visual-audit">See price and terms &rarr;</a></p>
-            <p>
-              A paid visual diagnostic for brands that need direction before production.
-              Both tiers include a full review of your current visual system and a defined
-              production scope with fixed pricing.
-            </p>
-            <p>
-              The higher tier adds a read of your own numbers: you send your post and ad
-              creative stats, and we connect what the visuals are doing to how people
-              actually responded. No account access required.
-            </p>
-            <p>
-              <strong>Three business days from the point we have everything we need from you.</strong>
-            </p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Book the Audit</a>
-            </div>
-          </article>
-
-          <article id="ad-diagnostic" class="card service-anchor">
-            <h3>Ad Diagnostic</h3><p class="service-outcome">Where your ad spend leaks</p>
-            <p class="service-price-link"><a href="/pricing/#ad-diagnostic">See price and terms &rarr;</a></p>
-            <p>We identify where your ad budget is going and why it isn't producing results — including a check that your measurement is real.</p>
-            <p>Includes 3–5 ready-to-run ad concepts. Signed by Iryna. We name the cause — or we refund you.</p>
-            <p>You upload your exports. No account access required. Delivered in 5 business days from a complete upload.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="https://links.avenquell.com/review">Get the Ad Diagnostic →</a>
-            </div>
-          </article>
-
-          <article id="quantitative-segment-analytics" class="card service-anchor">
-            <h3>Customer Analysis</h3><p class="service-outcome">Who buys, and where they come from</p>
-            <p class="service-price-link"><a href="/pricing/#quantitative-segment-analytics">See price and terms &rarr;</a></p>
-            <p>Who is actually buying and where your best customers come from — analyzed from your exports. We work from files you send, not direct database access.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="decide" class="section">
-      <div class="container">
-        <div class="services-stage-header">
-          <span class="stage-num">02</span>
-          <span class="eyebrow">Decide</span>
-          <h2>Decide what to say, and to whom.</h2>
-          <p class="lead">Decisions you keep and brief people from. One-time, two to four weeks &mdash; this is the part that survives a change of contractor.</p>
-        </div>
-
-        <div class="cards">
-          <article id="marketing-research" class="card service-anchor">
-            <h3>Buyer Research</h3><p class="service-outcome">Who actually buys from you</p>
-            <p class="service-price-link"><a href="/pricing/#marketing-research">See price and terms &rarr;</a></p>
-            <p>For brands without their own data history. We map your buyers, their language, your competitive position, and where your message needs to go.</p>
-            <p>The four-week tier adds buyer interviews, analysis of your existing data, and live message testing.</p>
-            <p>Content planning and media planning are not included.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
-            </div>
-          </article>
-
-          <article id="strategy-positioning" class="card service-anchor">
-            <h3>Positioning</h3><p class="service-outcome">What to say, and what to stop saying</p>
-            <p class="service-price-link"><a href="/pricing/#strategy-positioning">See price and terms &rarr;</a></p>
-            <p>Your segments, competitors, positioning, and offer — delivered as a working document you keep.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="make" class="section">
-      <div class="container">
-        <div class="services-stage-header">
-          <span class="stage-num">03</span>
-          <span class="eyebrow">Make</span>
-          <h2>Have it made.</h2>
-          <p class="lead">The work itself &mdash; one project, or month after month. Scoped after diagnosis, with the price locked before production starts.</p>
-        </div>
-
-        <div class="cards">
-          <article id="launch-creative-package" class="card service-anchor">
-            <span class="card-tag">Project-based · 2–4 weeks</span>
-            <h3>Launch Package</h3><p class="service-outcome">Everything you need to launch</p>
-            <p class="service-price-link"><a href="/pricing/#launch-creative-package">See price and terms &rarr;</a></p>
-            <p>
-              A structured creative production project for launches, product stories,
-              campaign concepts, and seasonal creative needs. Scoped to your brief,
-              channel requirements, and delivery timeline.
-            </p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Plan a Launch</a>
-            </div>
-          </article>
-
-          <article id="monthly-creative-content-system" class="card highlight-card service-anchor">
-            <span class="card-tag">Flagship · 2-month minimum</span>
-            <h3>Monthly Content</h3><p class="service-outcome">A steady stream of material, every month</p>
-            <p class="service-price-link"><a href="/pricing/#monthly-creative-content-system">See price and terms &rarr;</a></p>
-            <p>
-              A recurring direction-first production system for brands that need ongoing
-              visual consistency, campaign-ready assets, and monthly creative support —
-              without rebuilding direction from zero every month.
-            </p>
-            <p>No annual contract. Month-to-month after the initial two cycles.</p>
-            <div class="section-actions">
-              <a class="btn btn-primary" href="/contact/">Start the Conversation</a>
-            </div>
-          </article>
-
-          <article id="content-plan-scripts" class="card service-anchor">
-            <h3>Content Plan</h3><p class="service-outcome">What to post, written for you</p>
-            <p class="service-price-link"><a href="/pricing/#content-plan-scripts">See price and terms &rarr;</a></p>
-            <p>A monthly content plan and scripts your team publishes. Posting and community management are not included.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
-            </div>
-          </article>
-
-          <article id="analytics-reporting" class="card service-anchor">
-            <h3>Monthly Report</h3><p class="service-outcome">What worked, what didn&rsquo;t</p>
-            <p class="service-price-link"><a href="/pricing/#analytics-reporting">See price and terms &rarr;</a></p>
-            <p>A monthly report built from your data exports: what worked, what didn't, what to do next. Analytics setup is not included.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
-            </div>
-          </article>
-
-          <article id="full-creative-strategy-system" class="card service-anchor">
-            <h3>Full System</h3><p class="service-outcome">Strategy, content and production together</p>
-            <p class="service-price-link"><a href="/pricing/#full-creative-strategy-system">See price and terms &rarr;</a></p>
-            <p>Strategy, content plan and scripts, visual production, and a monthly report. Paid media management is not included.</p>
-            <div class="section-actions">
-              <a class="btn btn-secondary" href="/contact/">Start the Conversation →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════
-         03 · WHO IT'S FOR
-    ════════════════════════════ -->
-    <section class="section fit-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Who Avenquell Is For</span>
-          <h2>For brands preparing content that needs to look intentional, controlled, and campaign-ready.</h2>
-          <p class="lead">
-            Avenquell is built for premium brands that need more than pretty visuals. We support launches,
-            seasonal campaigns, campaign refreshes, and monthly creative systems where every asset has a job.
-          </p>
-        </div>
-
-        <div class="fit-grid">
-          <article class="fit-card">
-            <span class="fit-number">01</span>
-            <h3>Product Launches</h3>
-            <p>For brands preparing a new product, collection, offer, or campaign moment. Launch assets need a direction system, not a folder of random images.</p>
-          </article>
-
-          <article class="fit-card">
-            <span class="fit-number">02</span>
-            <h3>Monthly Content Needs</h3>
-            <p>For brands that need recurring visuals without rebuilding direction from zero every month. The system creates consistency, not just volume.</p>
-          </article>
-
-          <article class="fit-card">
-            <span class="fit-number">03</span>
-            <h3>Visual Diagnostic</h3>
-            <p>For brands that need clarity before production. Start with the Visual Audit to define direction, identify creative opportunities, and lock the next production scope.</p>
-          </article>
-
-          <article class="fit-card">
-            <span class="fit-number">04</span>
-            <h3>Campaign Refresh</h3>
-            <p>For brands that need stronger visuals for social, email, web, or paid creative. Existing direction refined and production rebuilt around real use cases.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════
-         04 · WHAT YOU RECEIVE
-    ════════════════════════════ -->
-    <section class="section deliverables-section">
+<section class="section deliverables-section">
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">What You Receive</span>
@@ -780,10 +907,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════
-         05 · PROCESS — LINK TO METHOD
-    ════════════════════════════ -->
-    <section class="section process-section">
+<section class="section process-section">
       <div class="container split">
         <div>
           <span class="eyebrow">Process</span>
@@ -800,59 +924,59 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════
-         06 · PRODUCT ACCURACY
-    ════════════════════════════ -->
-    <section class="section product-accuracy-section">
+    <section class="section pricing-info-section">
       <div class="container split">
-        <div>
-          <span class="eyebrow">Product Accuracy / Brand Control</span>
-          <h2>If the product is wrong, the asset is not usable.</h2>
-        </div>
-
+        <div><span class="eyebrow">Pricing Structure</span><h2>How the price gets fixed</h2></div>
         <div class="panel">
-          <p>
-            Before production, Avenquell clarifies whether an asset is a campaign concept,
-            a brand-controlled product visual, or an accuracy-critical product representation.
-          </p>
-          <br />
-          <p>
-            If accuracy matters, stronger references or physical product may be required.
-            Avenquell does not promise perfect product accuracy without proper references.
-          </p>
+          <p>Most creative pricing is a range that moves. Ours does not.</p><br />
+          <p>The audit defines the scope: how many products, what source material exists, how many characters and settings the work requires. Once that is agreed, the price is fixed in writing before production starts.</p><br />
+          <p>If the scope changes, the price is recalculated against a published rate — not renegotiated. You will always know what a change costs before you approve it.</p><br />
+          <p>No "starting from". No mid-project adjustments.</p><br />
+          <p>The audit fee is credited against production if you move forward within two weeks of receiving the report: fully toward a launch package, half toward a monthly system. Two weeks, because the findings date quickly — a month on, your account has moved and half the report no longer applies.</p>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════
-         07 · WHAT WE DO NOT DO
-    ════════════════════════════ -->
-    <section class="section not-do-section">
+    <section class="section pricing-info-section">
+      <div class="container split">
+        <div><span class="eyebrow">Terms</span><h2>Clear terms, no annual lock-in.</h2></div>
+        <div class="panel">
+          <p>The Monthly Content runs on a two-month minimum, then month to month. All other monthly services run on a three-month minimum.</p><br />
+          <p>No annual contract. No platform fee. No prepayment for the year.</p><br />
+          <p>Cancel with 30 days notice — by email, not by process.</p><br />
+          <p>The two-month minimum exists for one reason: the second cycle is where the work compounds. Anything shorter and you are judging a first draft.</p><br />
+          <p>Marketing services run on a 3-month minimum, then month-to-month with 30 days' written notice to exit. Ad budgets are paid directly to the platforms — not through us. All ad and analytics accounts are created in your company's name, and we'll tell you exactly who on our side is running them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing-info-section">
+      <div class="container split">
+        <div><span class="eyebrow">How Pricing Works</span><h2>You pay for the system, not the number of files.</h2></div>
+        <div class="panel"><p>Avenquell pricing reflects creative direction, visual planning, production complexity, review depth, product accuracy requirements, and how the assets will be used across campaign channels.</p><br /><p>A simple visual audit is scoped differently from a launch package or a monthly creative system. Every engagement is shaped around the business use case first.</p></div>
+      </div>
+    </section>
+
+    <section class="section pricing-info-section">
+      <div class="container split">
+        <div><span class="eyebrow">Not Sure Which</span><h2>Seven questions, then one service.</h2></div>
+        <div class="panel">
+          <p>You do not have to pick from a price list. The finder asks what is actually in front of you, what you have already tried against it, and what you could put in our hands this week &mdash; then names one service and says plainly what it will not answer.</p>
+          <p><a class="btn btn-primary" href="/start/">Find your starting point &rarr;</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing-next-step-section">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">What We Do Not Do</span>
-          <h2>Clear boundaries protect the brand, the work, and the final delivery.</h2>
-          <p class="lead">
-            Avenquell is not built around unlimited files, random generations, or generic AI output.
-            We protect the creative direction by keeping scope and standards clear.
-          </p>
-        </div>
-
-        <div class="not-do-list">
-          <div class="not-do-item">We do not sell random AI files.</div>
-          <div class="not-do-item">We do not offer unlimited generations.</div>
-          <div class="not-do-item">We do not replace legal, claims, or product accuracy review.</div>
-          <div class="not-do-item">We do not guarantee sales, ROAS, followers, bookings, or performance.</div>
-          <div class="not-do-item">We do not ship work without human review.</div>
-        </div>
-
-        <div class="section-actions">
-          <a class="btn btn-primary" href="/contact/">Start the Conversation</a>
-          <a class="btn btn-secondary" href="/pricing/">View Pricing</a>
+        <div class="case-study-block case-study-dark">
+          <span class="case-number">Next Step</span>
+          <h3>Tell us what you are preparing for.</h3>
+          <p>A launch, monthly content system, product campaign, or visual audit. We will help you identify the right starting point.</p>
+          <div class="section-actions"><a class="btn btn-primary" href="/contact/">Start the Conversation</a><a class="btn btn-secondary" href="/services/">View Services</a></div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -860,19 +984,19 @@
       <div class="footer-brand-block">
         <h2 class="footer-logo-text">AVENQUELL</h2>
         <p class="footer-positioning">
-          Avenquell creates direction-first creative production systems for brands that need campaign-ready content they can actually use.
+          Avenquell Studio names what is broken in a brand&#x27;s visuals, ads and measurement before anyone spends more on production. We work with premium consumer brands &mdash; fashion, beauty, hospitality, wellness, technology and real estate.
         </p>
       </div>
 
-      <div class="footer-column">
+      <div class="footer-column footer-site-column">
         <span class="footer-heading">Site</span>
         <a href="/start/">Find your starting point</a>
-        <a href="/method/">Method</a>
-        <a href="/standard/">Standard</a>
-        <a href="/services/">Services</a>
+        <a href="/services/">Services &amp; Pricing</a>
+        <a href="/shop/">Shop</a>
         <a href="/work/">Work</a>
+        <a href="/method/">Method &amp; Standard</a>
+        <a href="/answers/">Answers</a>
         <a href="/about/">About</a>
-        <a href="/pricing/">Pricing</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact/">Contact</a>
       </div>
@@ -881,6 +1005,7 @@
         <span class="footer-heading">Connect</span>
         <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
         <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="/contact/">Contact form</a>
       </div>
     </div>
 

@@ -220,9 +220,8 @@
       </a>
 
       <nav class="nav-links-desktop">
-        <a href="/method/">Method</a>
-        <a href="/standard/">Standard</a>
         <a href="/services/">Services</a>
+        <a href="/shop/">Shop</a>
         <div class="nav-item-dropdown">
           <a href="/work/" class="nav-dropdown-toggle">Work</a>
           <div class="nav-dropdown-menu">
@@ -236,9 +235,9 @@
             </a>
           </div>
         </div>
+        <a href="/method/">Method</a>
+        <a href="/answers/">Answers</a>
         <a href="/about/">About</a>
-        <a href="/pricing/">Pricing</a>
-        <a href="/contact/">Contact</a>
         <a class="nav-cta" href="/contact/">Start Inquiry</a>
       </nav>
 
@@ -252,24 +251,24 @@
 
         <div class="nav-menu" id="navMenu">
           <nav class="nav-links-mobile">
-            <a href="/method/">Method</a>
-            <a href="/standard/">Standard</a>
             <a href="/services/">Services</a>
+            <a href="/shop/">Shop</a>
             <div class="nav-item-dropdown">
-              <a href="/work/" class="nav-dropdown-toggle">Work</a>
-              <div class="nav-dropdown-menu">
-                <a href="/work/">
-                  <span class="nav-dropdown-label">Overview</span>
-                  <span class="nav-dropdown-title">All Work / Concept Studies</span>
-                </a>
-                <a href="/work/cs01/">
-                  <span class="nav-dropdown-label">Case Study 01</span>
-                  <span class="nav-dropdown-title">Home Fragrance Launch</span>
-                </a>
-              </div>
-            </div>
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+            <a href="/method/">Method</a>
+            <a href="/answers/">Answers</a>
             <a href="/about/">About</a>
-        <a href="/pricing/">Pricing</a>
             <a href="/contact/">Contact</a>
             <a href="/contact/">Start Inquiry</a>
           </nav>
@@ -339,7 +338,7 @@
             <ul class="finder-result-notes" id="resultNotes" hidden></ul>
             <div class="finder-actions">
               <a class="btn btn-primary" id="resultCta" href="/contact/">Start with this</a>
-              <a class="btn btn-secondary" id="resultMore" href="/pricing/">See what is included</a>
+              <a class="btn btn-secondary" id="resultMore" href="/services/">See what is included</a>
             </div>
             <p class="finder-result-note">
               Not what you expected? <a href="/contact/">Say so in two lines</a> &mdash; if something
@@ -389,7 +388,7 @@
         </ol>
 
         <div class="finder-actions finder-actions-center">
-          <a class="btn btn-secondary" href="/pricing/">See every price in full &rarr;</a>
+          <a class="btn btn-secondary" href="/services/">See every price in full &rarr;</a>
         </div>
       </div>
     </section>
@@ -398,7 +397,7 @@
     /* ──────────────────────────────────────────────────────────────────────
        ПОДБОР СТАРТОВОЙ ТОЧКИ — 7 вопросов, 3 части, вывод между частями.
        Путь линейный: ответы собираются в map, решение считается в конце.
-       Цены и сроки — один в один из /pricing/. Менять только вместе с ним.
+       Цены и сроки — один в один из /services/. Менять только вместе с ней.
     ────────────────────────────────────────────────────────────────────── */
     (function () {
       var finder = document.getElementById('finder');
@@ -536,7 +535,7 @@
         material: 'What you named is production. It is the one thing on this list that cannot be shortened by being clever about it.'
       };
 
-      /* Результаты. price/time — дословно с /pricing/. interest — значение
+      /* Результаты. price/time — дословно с /services/. interest — значение
          <option> в форме, иначе поле не подставится. */
       var RESULTS = {
         auditBasic: {
@@ -919,7 +918,7 @@
 
         document.getElementById('resultCta').href =
           '/contact/?interest=' + encodeURIComponent(r.interest);
-        document.getElementById('resultMore').href = '/pricing/#' + r.anchor;
+        document.getElementById('resultMore').href = '/services/#' + r.anchor;
 
         elBody.hidden = true;
         elRead.hidden = true;
@@ -978,19 +977,19 @@
       <div class="footer-brand-block">
         <h2 class="footer-logo-text">AVENQUELL</h2>
         <p class="footer-positioning">
-          Avenquell creates direction-first creative production systems for brands that need campaign-ready content they can actually use.
+          Avenquell Studio names what is broken in a brand&#x27;s visuals, ads and measurement before anyone spends more on production. We work with premium consumer brands &mdash; fashion, beauty, hospitality, wellness, technology and real estate.
         </p>
       </div>
 
-      <div class="footer-column">
+      <div class="footer-column footer-site-column">
         <span class="footer-heading">Site</span>
         <a href="/start/">Find your starting point</a>
-        <a href="/method/">Method</a>
-        <a href="/standard/">Standard</a>
-        <a href="/services/">Services</a>
+        <a href="/services/">Services &amp; Pricing</a>
+        <a href="/shop/">Shop</a>
         <a href="/work/">Work</a>
+        <a href="/method/">Method &amp; Standard</a>
+        <a href="/answers/">Answers</a>
         <a href="/about/">About</a>
-        <a href="/pricing/">Pricing</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact/">Contact</a>
       </div>

@@ -1979,3 +1979,167 @@ a.finder-option {
 @media (max-width: 860px) {
   .stage-num { font-size: 25px; }
 }
+
+
+/* ═══════════════════════════════════════════════
+   ВИТРИНА (/shop) и ОТВЕТЫ (/answers) — добавлено 11.21
+   Витрина собрана на существующих классах прайса (.pricing-service-grid,
+   .pricing-card, .pricing-amount), поэтому своего здесь почти нет.
+   ═══════════════════════════════════════════════ */
+
+.shop-feature {
+  margin-top: 34px;
+}
+
+.shop-feature .panel .pricing-amount {
+  margin-bottom: 18px;
+}
+
+/* Статья отвечает на один вопрос, поэтому строка короче, чем на остальных
+   страницах: длинная строка в сплошном тексте теряется глазом на возврате. */
+.answer-container {
+  width: min(820px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.answer-crumbs {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+
+.answer-crumbs a {
+  color: var(--gold-soft);
+}
+
+/* Короткий ответ стоит до любых подзаголовков: и человек, и поисковая выдача
+   забирают первый абзац. Золотая грань слева отделяет его от разбора. */
+.answer-short {
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.5;
+  color: var(--ivory);
+  border-left: 2px solid var(--gold);
+  padding: 2px 0 2px 22px;
+  margin: 0 0 42px;
+}
+
+.answer-article h1 {
+  margin-bottom: 28px;
+}
+
+.answer-article h2 {
+  font-size: clamp(22px, 2.2vw, 27px);
+  margin: 44px 0 14px;
+}
+
+.answer-article p {
+  color: var(--ivory-deep);
+  margin: 0 0 16px;
+}
+
+.answer-article ul {
+  margin: 0 0 20px;
+  padding-left: 22px;
+  color: var(--ivory-deep);
+}
+
+.answer-article li {
+  margin-bottom: 10px;
+}
+
+.answer-next {
+  margin-top: 54px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.answer-next .eyebrow {
+  margin: 0 8px 0 0;
+}
+
+.answer-card {
+  min-height: 0;
+}
+
+.answer-card h3 a {
+  color: var(--ivory);
+  text-decoration: none;
+}
+
+.answer-card h3 a:hover {
+  color: var(--gold-soft);
+}
+
+.answer-read {
+  color: var(--gold-soft);
+}
+
+@media (max-width: 860px) {
+  .answer-container { width: calc(100% - 32px); }
+  .answer-short { font-size: 18px; padding-left: 16px; margin-bottom: 32px; }
+  .answer-article h2 { margin-top: 34px; }
+}
+
+.faq-more {
+  margin-top: 26px;
+}
+
+.faq-more a {
+  color: var(--gold-soft);
+}
+
+/* На витрине первый экран и первая полка стояли в 192 px друг от друга: на телефоне
+   между обещанием и первым товаром оказывался пустой экран. Смыкаем. */
+.shop-hero-section {
+  padding-bottom: 16px;
+}
+
+.shop-section {
+  padding-top: 56px;
+}
+
+/* Сетка карточек жила только во встроенных стилях страницы прайса, поэтому на
+   витрине и в ответах три карточки вставали в один столбец во всю ширину.
+   Переносим правило в общий файл: страница услуг свою копию оставляет себе
+   (встроенные стили идут после этого файла и перекрывают его). */
+.pricing-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pricing-service-grid .pricing-card {
+  height: 100%;
+}
+
+/* Полка и указатель ответов — по три в ряд: карточки короткие, в два ряда
+   они растягиваются пустотой. */
+@media (min-width: 1024px) {
+  .shop-section .pricing-service-grid,
+  .answer-section .pricing-service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .pricing-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* У блока One Photo вес на левой колонке: там цена и кнопка. */
+.shop-feature {
+  grid-template-columns: 1.1fr .9fr;
+}
+
+@media (max-width: 860px) {
+  .shop-feature {
+    grid-template-columns: 1fr;
+  }
+}

@@ -140,6 +140,51 @@ services run on a three-month minimum. Ad budgets are paid directly to the platf
 through the studio. All ad and analytics accounts are created in the client's own company name,
 and the studio names the person running them.
 
+## Bought without a call
+
+Separate from everything above. These are sold at a fixed price to small and medium
+businesses, with no scoping call, and they do not sit at the bottom of the service ladder —
+they are a different shelf for a different buyer.
+
+The Avenquell Dispatch — $29 per edition, $49 for both editions, delivered as PDFs
+immediately after payment. Ideas for running a sale, each one carried by worked examples
+from brands that have already done it: what to run, how it is built, what it looks like
+finished. The content edition covers video, posts and pages. The in-store edition covers
+window, shelf and counter.
+
+One Photo, One Day — from $240. The client sends one photograph of the product and receives
+three finished frames inside one business day: the same product, directed scenes, ready to
+post. Frames beyond the first three are priced per item and the price per frame falls with
+volume. Developing the idea for the series, rather than working from the client's own
+reference, is priced separately on the order page. A person in the frame does not add a day.
+Anything the client has already paid for a Dispatch edition is credited against this in full,
+with no deadline on it.
+
+Both are at https://avenquell.com/shop/
+
+## Answers
+
+Short written answers at https://avenquell.com/answers/, each stating its answer in the
+first two sentences before showing the working.
+
+- Why pay for a review when other studios audit for free. A free audit qualifies a lead and
+  ends in a proposal. The paid one ends in a signed written document that names one cause,
+  ranks what to fix first, and in the ads version includes three to five concepts built
+  around the diagnosis — something a client can brief any other studio from. If the required
+  material was complete and the data did not support a named cause, the fee is refunded.
+- How do I know the images won't look AI-generated. What reads as AI is light with no source,
+  product details the product does not have, sets assembled out of nowhere, and the same
+  centred composition every time — all of them decisions nobody made rather than limits of
+  the tool. Direction is approved before production, a person looks at every frame before
+  delivery, and accuracy requirements are settled before production rather than explained
+  afterwards. Perfect product accuracy without proper references is not promised.
+- Ads are running, sales aren't following, where to look first. Read what each conversion
+  event actually counts before looking at the creative; pull the last sixty to ninety days
+  at the creative level rather than the campaign level; then read the ad and the landing page
+  side by side as a stranger would. What those checks cannot show — whether the pixel fires
+  on live traffic, how tracking behaves across domains, the history of settings changes — is
+  what the Ad Diagnostic reads from exports.
+
 ## Verticals
 
 DTC fashion and apparel. Beauty and skincare, with product accuracy built into the process.

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Shop &mdash; buy it today | Avenquell Studio</title>
+  <meta name="description" content="The three things from Avenquell Studio you can buy without a call: the Dispatch idea editions as PDFs from $29, and One Photo, One Day &mdash; three finished frames from one product photo, from $240." />
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-black.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-black-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-black-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-black.png">
+
+  <meta property="og:title" content="Shop &mdash; buy it today | Avenquell Studio" />
+  <meta property="og:description" content="Idea editions as PDFs from $29. Three finished frames from one product photo, in one business day, from $240." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avenquell.com/shop/" />
+  <meta property="og:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+  <meta property="og:site_name" content="Avenquell Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shop &mdash; buy it today | Avenquell Studio" />
+  <meta name="twitter:description" content="Idea editions as PDFs from $29. Three finished frames from one product photo, from $240." />
+  <meta name="twitter:image" content="https://avenquell.com/assets/avenquell-hero-v2.png" />
+
+  <link rel="canonical" href="https://avenquell.com/shop/" />
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* ── GATE BADGE ── */
+    .method-card {
+      position: relative;
+    }
+    .method-card.is-gate {
+      /* inherits your existing .method-card styles */
+    }
+    .gate-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: 2px 7px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #B8875D;
+    }
+
+    /* ── WORK DROPDOWN NAVIGATION ── */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: "";
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 230px;
+      padding: 18px 10px 10px;
+      border: 1px solid rgba(184, 135, 93, 0.25);
+      background: rgba(255, 252, 247, 0.98);
+      box-shadow: 0 18px 45px rgba(15, 12, 9, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      height: 14px;
+    }
+
+    .nav-item-dropdown:hover .nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(184, 135, 93, 0.08);
+    }
+
+    .nav-dropdown-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #B8875D;
+      margin-bottom: 2px;
+    }
+
+    .nav-dropdown-title {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .nav-item-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+  <!-- Аналитика и согласие на cookie.
+       Consent Mode v2: счётчик работает всегда, но до согласия не пишет cookies —
+       так сохраняются и метрики, и требования GDPR. Баннер при согласии поднимает
+       analytics_storage. Раньше вызывался silktideCookieBannerManager.updateCookieBanner,
+       которого в библиотеке нет, — баннер падал с TypeError и согласие не собиралось. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J06XENM876"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('config', 'G-J06XENM876');
+  </script>
+
+  <script src="/cookie-banner/consent-init.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://avenquell.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://avenquell.com/shop/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://avenquell.com/shop/",
+    "name": "Shop",
+    "description": "What Avenquell Studio sells without a call: idea editions as PDFs, and three finished frames from one product photo in one business day."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Buy without a call",
+    "itemListElement": [
+      {
+        "@type": "ListItem", "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "The Avenquell Dispatch \u2014 Content Edition",
+          "description": "Ideas for a sale across video, posts and pages, each with worked examples. PDF, opens after payment.",
+          "brand": { "@type": "Brand", "name": "Avenquell Studio" },
+          "offers": { "@type": "Offer", "price": "29", "priceCurrency": "USD",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://avenquell.com/shop/#dispatch" }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "The Avenquell Dispatch \u2014 In-Store Edition",
+          "description": "Ideas for window, shelf and counter, each with worked examples. PDF, opens after payment.",
+          "brand": { "@type": "Brand", "name": "Avenquell Studio" },
+          "offers": { "@type": "Offer", "price": "29", "priceCurrency": "USD",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://avenquell.com/shop/#dispatch" }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "The Avenquell Dispatch \u2014 Both Editions",
+          "description": "Both editions in one order, two PDFs, delivered immediately after payment.",
+          "brand": { "@type": "Brand", "name": "Avenquell Studio" },
+          "offers": { "@type": "Offer", "price": "49", "priceCurrency": "USD",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://avenquell.com/shop/#dispatch" }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "One Photo, One Day",
+          "description": "Send one product photo, get three finished frames back in one business day. Further frames priced per item.",
+          "brand": { "@type": "Brand", "name": "Avenquell Studio" },
+          "offers": { "@type": "AggregateOffer", "lowPrice": "240", "priceCurrency": "USD",
+                      "offerCount": "1",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://avenquell.com/shop/#one-photo" }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img class="brand-mark" src="/assets/logo.png" alt="Avenquell Studio logo" />
+        <div class="brand-copy">
+          <span class="brand-title">Avenquell Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-desktop">
+        <a href="/services/">Services</a>
+        <a href="/shop/">Shop</a>
+        <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+        <a href="/method/">Method</a>
+        <a href="/answers/">Answers</a>
+        <a href="/about/">About</a>
+        <a class="nav-cta" href="/contact/">Start Inquiry</a>
+      </nav>
+
+      <div class="mobile-menu-wrap">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+          <span>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <nav class="nav-links-mobile">
+            <a href="/services/">Services</a>
+            <a href="/shop/">Shop</a>
+            <div class="nav-item-dropdown">
+          <a href="/work/" class="nav-dropdown-toggle">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="/work/">
+              <span class="nav-dropdown-label">Overview</span>
+              <span class="nav-dropdown-title">All Work / Concept Studies</span>
+            </a>
+            <a href="/work/cs01/">
+              <span class="nav-dropdown-label">Case Study 01</span>
+              <span class="nav-dropdown-title">Home Fragrance Launch</span>
+            </a>
+          </div>
+        </div>
+            <a href="/method/">Method</a>
+            <a href="/answers/">Answers</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+            <a href="/contact/">Start Inquiry</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════
+         01 · HERO
+    ════════════════════════════ -->
+    <section class="section shop-hero-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Buy Today</span>
+          <h1>What you can buy here without talking to anyone.</h1>
+          <p class="lead">
+            Everything else this studio does is scoped before it is priced, because it has to see your material first. These do not. The price is the price, delivery is immediate or inside one business day, and nothing waits on a call.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         02 · THE DISPATCH
+    ════════════════════════════ -->
+    <section id="dispatch" class="section shop-section">
+      <div class="container">
+        <div class="pricing-stage-header">
+          <span class="stage-num">01</span>
+          <span class="eyebrow pricing-group-label">Read It Yourself</span>
+          <h2>The Avenquell Dispatch</h2>
+          <p class="lead">Ideas for running a sale &mdash; what to run, how it is built, and what it looks like when someone has already done it. Every idea is carried by worked examples from real brands, so you are reading a method, not a mood board. Written for the person who will set it up themselves this week.</p>
+        </div>
+
+        <div class="pricing-service-grid">
+          <article class="pricing-card">
+            <span class="pricing-label">PDF &middot; opens after payment</span>
+            <h3>Content edition</h3>
+            <p class="service-outcome">Video, posts and pages</p>
+            <div class="pricing-amount">$29</div>
+            <p>40 ideas with 80 worked examples, across 41 pages. For the sale you run on a feed, in stories, in email and on the page people land on.</p>
+            <a class="btn btn-primary" href="https://zohosecurepay.com/checkout/734y1xz-yo5nsoh5vo3552/Dispatch-Content-Edition" rel="noopener">Buy the content edition</a>
+            <p><small><a href="https://links.avenquell.com/friday/ideas" rel="noopener">Read every title first &rarr;</a></small></p>
+          </article>
+
+          <article class="pricing-card">
+            <span class="pricing-label">PDF &middot; opens after payment</span>
+            <h3>In-store edition</h3>
+            <p class="service-outcome">Window, shelf and counter</p>
+            <div class="pricing-amount">$29</div>
+            <p>20 ideas with 58 worked examples, across 21 pages. For the sale that has to work on a street, in a room, with people walking past it.</p>
+            <a class="btn btn-primary" href="https://zohosecurepay.com/checkout/2mcfq11-knugvntucn382o/Dispatch-InStore-Edition" rel="noopener">Buy the in-store edition</a>
+            <p><small><a href="https://links.avenquell.com/friday/ideas" rel="noopener">Read every title first &rarr;</a></small></p>
+          </article>
+
+          <article class="pricing-card pricing-card-featured">
+            <span class="pricing-label">Two PDFs &middot; opens after payment</span>
+            <h3>Both editions</h3>
+            <p class="service-outcome">The shelf and the screen</p>
+            <div class="pricing-amount">$49</div>
+            <p>Both of the above in one order: 60 ideas and 138 worked examples across 62 pages. Saves $9 against buying them apart.</p>
+            <a class="btn btn-primary" href="https://zohosecurepay.com/checkout/yaqkfxr-qf7g0fl7jfpc01/Dispatch-Both-Editions" rel="noopener">Buy both editions</a>
+            <p><small><a href="https://links.avenquell.com/friday/ideas" rel="noopener">Read every title first &rarr;</a></small></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         03 · ONE PHOTO, ONE DAY
+    ════════════════════════════ -->
+    <section id="one-photo" class="section shop-section">
+      <div class="container">
+        <div class="pricing-stage-header">
+          <span class="stage-num">02</span>
+          <span class="eyebrow pricing-group-label">Have It Made</span>
+          <h2>One Photo, One Day</h2>
+          <p class="lead">Send one photograph of your product. Get three finished frames back inside one business day &mdash; your product, directed scenes, ready to post.</p>
+        </div>
+
+        <div class="split shop-feature">
+          <div class="panel">
+            <div class="pricing-amount">From $240</div>
+            <p>Three frames from the photo you send, in one business day. Beyond the first three, each additional frame is priced per item and the order page shows the whole total before you pay anything.</p>
+            <p>If you want the series invented rather than bringing your own reference, that is priced on the same page. A person in the frame does not add a day.</p>
+            <p><strong>Anything you have already paid for a Dispatch edition comes off this in full, with no deadline on it.</strong></p>
+            <a class="btn btn-primary" href="https://links.avenquell.com/friday/order" rel="noopener">Build the order and pay &rarr;</a>
+          </div>
+          <div>
+            <h3>What has to be true</h3>
+            <p>The frames are built around the product in your photograph, so the photograph decides how far they can go. One clear shot of the actual product is enough; a screenshot of a screenshot is not.</p>
+            <p>You upload the photo on the order page before paying, so you can see it arrived. The day is counted from the point the order and the photo are both in.</p>
+            <p><small>If accuracy of label copy, texture or exact colour is critical, say so in the order &mdash; that changes what references we need and we will tell you before producing anything.</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         04 · WHAT IS NOT HERE
+    ════════════════════════════ -->
+    <section class="section shop-section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Not On This Page</span>
+          <h2>Diagnostics and production are scoped before they are priced.</h2>
+        </div>
+        <div class="panel">
+          <p>A Visual Audit, an Ad Diagnostic, buyer research, positioning and production all have published prices &mdash; but none of them is an impulse purchase. Each has to see what you already have before it can promise anything, and the scope is fixed in writing before the work starts.</p>
+          <p>If you are not sure which of them your situation calls for, the finder names one in seven questions and says plainly what it will not answer.</p>
+          <p>
+            <a class="btn btn-secondary" href="/services/">Services &amp; pricing</a>
+            <a class="btn btn-secondary" href="/start/">Find your starting point</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <h2 class="footer-logo-text">AVENQUELL</h2>
+        <p class="footer-positioning">
+          Avenquell Studio names what is broken in a brand&#x27;s visuals, ads and measurement before anyone spends more on production. We work with premium consumer brands &mdash; fashion, beauty, hospitality, wellness, technology and real estate.
+        </p>
+      </div>
+
+      <div class="footer-column footer-site-column">
+        <span class="footer-heading">Site</span>
+        <a href="/start/">Find your starting point</a>
+        <a href="/services/">Services &amp; Pricing</a>
+        <a href="/shop/">Shop</a>
+        <a href="/work/">Work</a>
+        <a href="/method/">Method &amp; Standard</a>
+        <a href="/answers/">Answers</a>
+        <a href="/about/">About</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">Connect</span>
+        <a href="https://www.instagram.com/avenquell.studio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/company/avenquell-studio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="/contact/">Contact form</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Avenquell Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navMenu = document.getElementById('navMenu');
+    const mobileLinks = navMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      menuButton.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      menuButton.classList.add('active');
+      menuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    menuButton.addEventListener('click', function () {
+      navMenu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  </script>
+</body>
+</html>
